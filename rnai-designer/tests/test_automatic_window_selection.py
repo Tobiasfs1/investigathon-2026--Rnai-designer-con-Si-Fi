@@ -136,13 +136,13 @@ def test_metrics_quality_and_duplicate_audit_are_separate():
     assert selected["sirna_record_count"] == selected["sirna_unique_count"] + 1
     assert selected["exact_duplicate_record_count"] == 1
     assert selected["quality_score"] == 100 * sum(selected["quality_components"].values()) / 5
-    assert selected["efficacy_priority_score"] == pytest.approx(50.833333333333336)
+    assert selected["efficacy_priority_score"] == pytest.approx(87.5)
     assert selected["efficacy_priority_components"]["sirna_gc_30_52_fraction"] == pytest.approx(.5)
     assert selected["efficacy_priority_components"]["unique_sirna_sequence_fraction"] == pytest.approx(.025)
     assert "is_efficient" in result["selection_method"]["formula"]
 
 
-def test_efficacy_priority_uses_si_fi_efficiency_gc_band_and_sequence_diversity():
+def test_efficacy_priority_uses_si_fi_efficiency_gc_band_and_reports_diversity():
     report = make_report([(1, 180), (181, 360)], sequence_length=360)
     report["candidate"]["reference"]["sequence"] = "ACGT" * 45 + "A" * 180
     for row in report["sifi"]["records"]:

@@ -115,7 +115,7 @@ def windows_command(argv):
 def select_windows_command(argv):
     parser = argparse.ArgumentParser(
         prog="rnai-designer select-windows",
-        description="Prioriza ventanas por etiquetas si-Fi, GC y diversidad; exige filtro off-target para liberar secuencia")
+        description="Prioriza ventanas por 75% eficiencia si-Fi y 25% GC; diversidad descriptiva; exige filtro off-target para liberar secuencia")
     parser.add_argument("--report", type=Path, required=True, help="report.json integrado")
     parser.add_argument("--min-length", type=int, default=180, help="Longitud mínima (default: 180 nt)")
     parser.add_argument("--max-length", type=int, default=250, help="Longitud máxima (default: 250 nt)")

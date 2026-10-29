@@ -152,6 +152,9 @@ def test_small_scientific_differential(variant):
     assert old['warnings']==new['warnings']
     for a,b in zip(old['windows'],new['windows'],strict=True):
         a.pop('offtarget_matches')
+        c=a['efficacy_priority_components']
+        if a['efficacy_priority_score'] is not None:
+            a['efficacy_priority_score']=100*(0.75*c['sifi_is_efficient_fraction']+0.25*c['sirna_gc_30_52_fraction'])
         assert a=={k:v for k,v in b.items() if k not in ('length_penalty','adjusted_priority_score')}
 
 

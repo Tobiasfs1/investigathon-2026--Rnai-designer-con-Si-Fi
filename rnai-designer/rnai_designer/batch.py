@@ -1,16 +1,18 @@
 """Resumable batch orchestration; scientific work stays in workflow."""
 import argparse
-from contextlib import contextmanager, redirect_stdout, redirect_stderr
+from contextlib import contextmanager
 import csv
 import hashlib
 import math
 from pathlib import Path
 import sys
+from time import monotonic
 
 from .atomic_io import atomic_text, write_json
 from .data_models import Candidate, read_json
 from .simple_run import reserve_run, check_paths
 from .priority_scoring import priority_key
+from .batch_process import DEFAULT_GENE_TIMEOUT, run_gene_worker, completed_worker, CleanupFailure
 
 NOTE = "Ranking heuristico; no es una prediccion validada de eficacia biologica."
 FIELDS = ["input_index", "gene_id", "status", "error", "ranking_status", "rank",
@@ -105,7 +107,7 @@ def selected(summary):
 def result_row(entry):
     row = {key: None for key in FIELDS}
     row.update({key: entry.get(key) for key in ("input_index", "gene_id", "status", "error", "output_directory")})
-    ref, window = selected(entry.get("result") or {})
+    ref, window = ({}, None) if entry.get("status") == "incomplete_timeout" else selected(entry.get("result") or {})
     score = (window or {}).get("adjusted_priority_score")
     evaluable = type(score) in (int, float) and math.isfinite(score)
     row["ranking_status"] = "evaluable" if evaluable else "no_evaluable_result"
@@ -145,7 +147,7 @@ def save_reports(root, manifest):
             rank += 1
             row["rank"] = rank
     manifest["counts"] = {"total": len(rows), "completed": sum(r["status"] == "complete" for r in rows),
-                          "failed": sum(r["status"] in ("failed", "invalid_input") for r in rows),
+                          "failed": sum(r["status"] in ("failed", "invalid_input", "incomplete_timeout") for r in rows),
                           "evaluable": rank}
     for name, data in [("resultados_genes.csv", rows), ("ranking_genes.csv", ranked)]:
         with atomic_text(root / name, newline="") as handle:
@@ -169,7 +171,7 @@ def new_batch(records):
             index += 1
 
 
-def run_genes(root, manifest, workflow):
+def run_genes(root, manifest, workflow, timeout=DEFAULT_GENE_TIMEOUT):
     for entry in manifest["genes"]:
         if entry["status"] == "invalid_input":
             continue
@@ -180,36 +182,66 @@ def run_genes(root, manifest, workflow):
                 try:
                     result = read_json(report)
                     verified = not entry.get("result_sha256") or digest(report) == entry["result_sha256"]
-                    if verified and result.get("status") == "complete" and entry["status"] in ("complete", "running", "interrupted"):
+                    if (verified and result.get("status") == "complete"
+                            and entry["status"] in ("complete", "running", "interrupted")
+                            and completed_worker(root, (entry.get("attempts") or [{}])[-1])):
                         entry.update(status="complete", result=result, result_sha256=digest(report), error=None)
                         if entry.get("attempts"):
                             entry["attempts"][-1]["status"] = "complete"
                         continue
                 except (ValueError, OSError):
                     pass
+        started = monotonic()
         print(f"Analizando gen {entry['input_index']}/{len(manifest['genes'])}: {entry['gene_id']}", flush=True)
         try:
             fasta, out = reserve_run(root, f"g{entry['input_index']}", entry["sequence"])
-            entry.update(status="running", error=None, result=None, result_sha256=None,
+            entry.update(status="running", error=None, error_type=None, result=None, result_sha256=None,
+                         elapsed_s=None, timeout_seconds=timeout, timeout_stage=None, timeout_reference_id=None,
                          output_directory=str(out.relative_to(root)))
-            attempt = {"output_directory": entry["output_directory"], "log_file": out.name + ".log", "status": "running"}
+            attempt = {"output_directory": entry["output_directory"], "log_file": out.name + ".log",
+                       "worker_state": out.name + ".worker.json", "worker_receipt": out.name + ".done.json",
+                       "timeout_seconds": timeout, "status": "running"}
             entry["attempts"].append(attempt)
             save_reports(root, manifest)
-            with (root / (out.name + ".log")).open("x", encoding="utf-8") as log, redirect_stdout(log), redirect_stderr(log):
-                code = workflow(["--gene-id", entry["gene_id"], "--sequence-file", str(fasta),
-                                 "--out", str(out), "--run-sifi-headless"], input_metadata={
-                                     "input_mode": "rnai-designer-batch", "original_gene_name": entry["gene_id"],
-                                     "batch_input_index": entry["input_index"], "input_fasta": str(fasta)})
-            # workflow refuses nonempty output directories; the log lives outside its output.
-            report = out / "pipeline_result.json"
-            if report.is_file():
-                entry.update(result=read_json(report), result_sha256=digest(report))
-            complete = code == 0 and (entry.get("result") or {}).get("status") == "complete"
-            entry.update(status="complete" if complete else "failed", return_code=code,
-                         error=None if complete else f"Workflow incompleto o fallido (codigo {code}); ver log del intento")
-            attempt.update(status=entry["status"], return_code=code, error=entry["error"])
+            result = run_gene_worker(workflow,
+                ["--gene-id", entry["gene_id"], "--sequence-file", str(fasta),
+                 "--out", str(out), "--run-sifi-headless"],
+                {"input_mode":"rnai-designer-batch", "original_gene_name":entry["gene_id"],
+                 "batch_input_index":entry["input_index"], "input_fasta":str(fasta)},
+                root/(out.name+".log"), timeout, started=started)
+            code = result.returncode
+            entry.update(elapsed_s=result.elapsed_s, return_code=code)
+            attempt.update(elapsed_s=result.elapsed_s, return_code=code,
+                           worker_pid=result.pid, cleanup_confirmed=result.cleanup_confirmed)
+            if result.timed_out:
+                message = (f"Timeout de {timeout:g} s: {entry['gene_id']}; transcurrido {result.elapsed_s:.2f} s; "
+                           f"etapa={result.stage or 'no disponible'}; GITV={result.reference_id or 'no disponible'}")
+                entry.update(status="incomplete_timeout", error=message, error_type="GeneTimeout",
+                             result=None, result_sha256=None, timeout_stage=result.stage,
+                             timeout_reference_id=result.reference_id)
+                attempt.update(status="incomplete_timeout", error=message, stage=result.stage,
+                               reference_id=result.reference_id)
+                with (root/(out.name+".log")).open('a',encoding='utf-8') as log:
+                    log.write("\n[batch] "+message+"; arbol de procesos cancelado.\n")
+            else:
+                report = out / "pipeline_result.json"
+                if report.is_file():
+                    entry.update(result=read_json(report), result_sha256=digest(report))
+                complete = code == 0 and (entry.get("result") or {}).get("status") == "complete"
+                entry.update(status="complete" if complete else "failed",
+                             error=None if complete else f"Workflow incompleto o fallido (codigo {code}); ver log del intento")
+                attempt.update(status=entry["status"], error=entry["error"])
+        except CleanupFailure as error:
+            # Do not start another gene if tree termination could not be verified.
+            entry.update(status="incomplete_timeout" if error.timed_out else "failed",
+                         result=None,result_sha256=None,error=str(error),elapsed_s=error.elapsed_s)
+            if entry["attempts"]:
+                entry["attempts"][-1].update(status=entry["status"],cleanup_confirmed=False,error=str(error))
+            manifest["status"]="partial"
+            save_reports(root,manifest)
+            raise
         except KeyboardInterrupt:
-            entry.update(status="interrupted", error="Ejecucion interrumpida")
+            entry.update(status="interrupted", error="Ejecucion interrumpida", elapsed_s=monotonic()-started)
             if entry["attempts"]:
                 entry["attempts"][-1].update(status="interrupted", error=entry["error"])
             manifest["status"] = "interrupted"
@@ -229,6 +261,9 @@ def run_genes(root, manifest, workflow):
 def print_batch(manifest, ranked, root):
     counts = manifest["counts"]
     print(f"Genes: {counts['total']} | Completados: {counts['completed']} | Fallidos: {counts['failed']} | Evaluables: {counts['evaluable']}")
+    timeouts = sum(e["status"] == "incomplete_timeout" for e in manifest["genes"])
+    if timeouts:
+        print(f"Incompletos por timeout: {timeouts} (reintentables con --resume)")
     print(NOTE)
     print("Gen                          | Ajustado /100 | nt   | Clase / estado")
     for row in ranked:
@@ -241,7 +276,11 @@ def batch_command(argv, workflow):
     parser = argparse.ArgumentParser(prog="rnai-designer batch")
     parser.add_argument("fasta", type=Path, nargs="?")
     parser.add_argument("--resume", type=Path, help="Carpeta batch existente")
+    parser.add_argument("--gene-timeout", type=float, default=None, metavar="SEGUNDOS",
+                        help="Limite total por gen: 360 s por defecto; 0 desactiva el limite. En resume se conserva el valor guardado si no se indica.")
     args = parser.parse_args(argv)
+    if args.gene_timeout is not None and (not math.isfinite(args.gene_timeout) or args.gene_timeout < 0):
+        parser.error("--gene-timeout debe ser finito y no negativo; usar 0 para desactivar")
     if args.fasta is None and args.resume is None:
         parser.error("Se requiere genes.fasta o --resume CARPETA")
     try:
@@ -264,10 +303,14 @@ def batch_command(argv, workflow):
                     raise ValueError("Manifiesto batch incompatible")
                 if args.fasta and digest(args.fasta) != manifest["source_sha256"]:
                     raise ValueError("El FASTA no coincide con el batch original")
+            timeout = args.gene_timeout if args.gene_timeout is not None else manifest.get("gene_timeout_seconds", DEFAULT_GENE_TIMEOUT)
+            if type(timeout) not in (int,float) or not math.isfinite(timeout) or timeout < 0:
+                raise ValueError("gene_timeout_seconds invalido en el resumen batch")
+            manifest["gene_timeout_seconds"] = timeout
             manifest["status"] = "running"
             save_reports(root, manifest)
             try:
-                ranked = run_genes(root, manifest, workflow)
+                ranked = run_genes(root, manifest, workflow, timeout)
             except KeyboardInterrupt:
                 print('Batch interrumpido. Reanudar con: python -m rnai_designer batch --resume "' + str(root) + '"', file=sys.stderr)
                 return 130

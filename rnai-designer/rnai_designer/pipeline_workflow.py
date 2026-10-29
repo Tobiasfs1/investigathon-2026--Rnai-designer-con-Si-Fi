@@ -90,7 +90,7 @@ def run_integrated_workflow(candidate, imported: dict, settings, out: Path,
         selected_summary = dict(winner)
         selected_summary["score_name"] = "adjusted_priority_score"
         selected_summary["score_interpretation"] = (
-            "Prioridad heuristica exploratoria basada en si-Fi, GC y diversidad; no es eficacia medida ni validada.")
+            "Prioridad heuristica: 75% eficiencia si-Fi y 25% GC; diversidad descriptiva y de desempate, sin peso en el puntaje. No es eficacia medida ni validada.")
     summary = {
         "schema_version": "1.0", "candidate_id": candidate.gene_id,
         "main_target": ((imported.get("run") or {}).get("main_target") or

@@ -1,5 +1,7 @@
 import copy
 import csv
+from contextlib import redirect_stdout, redirect_stderr
+from time import monotonic
 import json
 from pathlib import Path
 from types import SimpleNamespace
@@ -13,6 +15,22 @@ from rnai_designer.batch import batch_command, parse_fasta, result_row
 @pytest.fixture
 def setup(tmp_path, monkeypatch):
     monkeypatch.chdir(tmp_path)
+    import rnai_designer.batch as batch_module
+    from rnai_designer.batch_process import WorkerResult
+    def inline(workflow, argv, metadata, log_path, timeout, *, started=None):
+        started = monotonic() if started is None else started
+        state = log_path.with_suffix('.worker.json')
+        state.write_text(json.dumps({'status':'running'}))
+        try:
+            with log_path.open('x',encoding='utf-8') as log, redirect_stdout(log), redirect_stderr(log):
+                code = workflow(argv,input_metadata=metadata)
+        except KeyboardInterrupt:
+            state.write_text(json.dumps({'status':'interrupted'}))
+            raise
+        log_path.with_suffix('.done.json').write_text(json.dumps({'return_code':code,'within_deadline':True}))
+        state.write_text(json.dumps({'status':'finished','returncode':code,'timed_out':False}))
+        return WorkerResult(code,monotonic()-started)
+    monkeypatch.setattr(batch_module,'run_gene_worker',inline)
     monkeypatch.setattr(simple, 'MAX_PATH_CHARS', 2000)
     return tmp_path
 
@@ -120,13 +138,15 @@ def test_interrupt_and_resume(setup):
     assert calls==['second','third']
 
 
-def test_recover_report_written_before_interruption(setup):
+def test_partial_report_without_worker_receipt_is_retried(setup):
     source=write_fasta(setup,['gene']);calls=[];base=fake_workflow(calls)
     def interrupted(*args,**kwargs):
         base(*args,**kwargs);raise KeyboardInterrupt()
     assert batch_command([str(source)],interrupted)==130
     root,_=manifest(setup)
-    assert batch_command(['--resume',str(root)],lambda *a,**k:pytest.fail('repeated completed analysis'))==0
+    calls=[]
+    assert batch_command(['--resume',str(root)],fake_workflow(calls))==0
+    assert calls==['gene']
 
 
 def test_source_mismatch_and_new_batch_collision(setup):

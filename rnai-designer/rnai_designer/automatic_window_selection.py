@@ -21,7 +21,7 @@ def _gc_percent(sequence: str) -> float | None:
 
 def _efficacy_priority(contained: list[dict], efficient_count: int,
                        evaluable_count: int) -> tuple[float | None, dict]:
-    """Exploratory rank from original si-Fi calls, GC and sequence diversity."""
+    """Exploratory rank: 75% original si-Fi efficiency, 25% GC; diversity is descriptive."""
     gc_values = [_gc_percent(item["sequence"]) for item in contained]
     gc_values = [value for value in gc_values if value is not None]
     gc_fraction = (sum(30.0 <= value <= 52.0 for value in gc_values) / len(gc_values)
@@ -34,7 +34,7 @@ def _efficacy_priority(contained: list[dict], efficient_count: int,
                   "unique_sirna_sequence_fraction": diversity}
     if None in components.values():
         return None, components
-    return 100.0 * sum(components.values()) / 3.0, components
+    return 100.0 * (0.75 * sifi_fraction + 0.25 * gc_fraction), components
 
 
 def _coverage(sirnas: list[dict], start: int, end: int, sirna_size: int) -> tuple[int, float, int, float]:
@@ -104,7 +104,8 @@ def _window_metrics(region: dict, start: int, length: int, sequence: str,
         'unique_sirna_sequence_fraction': unique_sequences / unique if unique else None,
     }
     efficacy_priority_score = (None if None in efficacy_priority_components.values() else
-                              100.0 * sum(efficacy_priority_components.values()) / 3.0)
+                              100.0 * (0.75 * efficacy_priority_components['sifi_is_efficient_fraction'] +
+                                       0.25 * efficacy_priority_components['sirna_gc_30_52_fraction']))
     alignment_count, species_counts = off_index.counts(start, end)
     row = {
         "window_id": f'{region["region_id"]}:{start}-{end}', "region_id": region["region_id"],
@@ -228,11 +229,11 @@ def select_windows(report: dict, min_length: int = 180, max_length: int = 250,
                     "offtarget_matches": _overlapping_offtargets(evaluations, start, end, len(sequence)),
                     "reference_source": reference.get("source"),
                     "reference_version": reference.get("version"),
-                    "selection_interpretation": "Prioridad heuristica exploratoria basada en etiquetas originales de si-Fi, GC y diversidad; no es una prediccion de eficacia validada.",
+                    "selection_interpretation": "Prioridad heuristica: 75% eficiencia original si-Fi y 25% GC; diversidad descriptiva y de desempate, sin peso en el puntaje. No es eficacia validada.",
                     "green_region": chosen_region}
-    formula = ("efficacy_priority_score = 100/3 * (si-Fi is_efficient True / evaluable + "
-               "siRNAs con GC 30-52% / siRNAs con GC valido + secuencias siRNA unicas / posiciones siRNA). "
-               "Los tres componentes deben estar disponibles; no se imputan. GC 30-52%: Reynolds et al. 2004. "
+    formula = ("efficacy_priority_score = 100 * (0.75 * si-Fi is_efficient True / evaluable + "
+               "0.25 * siRNAs con GC 30-52% / siRNAs con GC valido). Diversidad: 0% de peso; se conserva como metrica y desempate. "
+               "Se conserva la validacion de disponibilidad de las metricas; no se imputan. GC 30-52%: Reynolds et al. 2004. "
                "Es una heuristica exploratoria, no eficacia validada. quality_score audita la documentacion "
                "por separado y no participa en esta puntuacion.")
     warnings = list(dict.fromkeys(baseline["warnings"] + metric_warnings))

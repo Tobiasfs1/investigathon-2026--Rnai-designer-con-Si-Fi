@@ -38,16 +38,15 @@ No se rellenan métricas ausentes ni se recalculan las etiquetas de si-Fi. El co
 La ventana se prioriza por un puntaje descriptivo separado del puntaje de calidad de evidencia. Para cada ventana se calculan tres fracciones en [0,1]:
 
 ```text
-efficacy_priority_score = 100 / 3 * (
-    si-Fi is_efficient == true / is_efficient evaluables
-  + siRNAs con GC individual entre 30% y 52% / siRNAs con GC canonico disponible
-  + secuencias siRNA distintas / posiciones siRNA unicas
+efficacy_priority_score = 100 * (
+    0.75 * (si-Fi is_efficient == true / is_efficient evaluables)
+  + 0.25 * (siRNAs con GC individual entre 30% y 52% / siRNAs con GC canonico disponible)
 )
 ```
 
-Se requiere disponer de los tres componentes; no se imputan valores si-Fi faltantes. Los componentes quedan como columnas separadas en `all_windows.csv`. El GC por ventana completa tambien se conserva como estadistica descriptiva, pero el componente GC se calcula para cada siRNA de 21 nt contenido. El rango 30-52% corresponde a una regla clasica descrita por Reynolds et al. (Nature Biotechnology, 2004): https://doi.org/10.1038/nbt936. No esta validada aqui para Dalbulus maidis. La diversidad se define solo como proporcion de secuencias distintas entre siRNAs por posicion y no se interpreta como eficacia experimental.
+Se conserva la validacion existente de disponibilidad de metricas; no se imputan valores si-Fi faltantes. La eficiencia pesa 75%, GC 25% y diversidad 0%. Los componentes quedan como columnas separadas en `all_windows.csv`. El GC por ventana completa tambien se conserva como estadistica descriptiva, pero el componente GC se calcula para cada siRNA de 21 nt contenido. El rango 30-52% corresponde a una regla clasica descrita por Reynolds et al. (Nature Biotechnology, 2004): https://doi.org/10.1038/nbt936. No esta validada aqui para Dalbulus maidis. La diversidad se define solo como proporcion de secuencias distintas entre siRNAs por posicion; tiene peso 0% en el puntaje, se conserva como metrica y desempate, y no se interpreta como eficacia experimental.
 
-`is_efficient` es la clasificacion original de si-Fi y ya combina las reglas que estaban activas para seleccion de hebra, estabilidad de extremos y accesibilidad. Por eso estas variables correlacionadas no vuelven a sumarse como predictores independientes. El promedio con pesos iguales es una regla transparente de priorizacion exploratoria, no un modelo biologico validado ni una prediccion de knockdown. El `quality_score` existente y sus componentes siguen disponibles para auditar documentacion, consistencia, cobertura y trazabilidad; no forman parte de la prioridad.
+`is_efficient` es la clasificacion original de si-Fi y ya combina las reglas que estaban activas para seleccion de hebra, estabilidad de extremos y accesibilidad. Por eso estas variables correlacionadas no vuelven a sumarse como predictores independientes. La ponderacion 75% eficiencia si-Fi y 25% GC es una regla de priorizacion exploratoria, no un modelo biologico validado ni una prediccion de knockdown. El `quality_score` existente y sus componentes siguen disponibles para auditar documentacion, consistencia, cobertura y trazabilidad; no forman parte de la prioridad.
 
 Empates: mayor fraccion `is_efficient`, mayor fraccion GC objetivo, mayor diversidad, mayor `quality_score`, inicio menor, longitud menor y `region_id`. Si las etiquetas `is_efficient` son faltantes/conflictivas en todas las candidatas, no se elige ni publica una ventana.
 

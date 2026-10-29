@@ -12,6 +12,7 @@ from rnai_designer.automatic_window_selection import select_windows
 from rnai_designer.automatic_window_reporting import write_selection_outputs
 from rnai_designer.atomic_io import atomic_text
 from rnai_designer.window_explorer import _overlapping_offtargets
+from rnai_designer.priority_scoring import priority_key
 
 
 @pytest.mark.parametrize('variant', ['normal', 'missing', 'conflicts', 'short', 'gaps', 'empty', 'ambiguous', 'mixed_numeric'])
@@ -44,11 +45,20 @@ def test_every_metric_and_winner_identical(variant):
             report['sifi']['records'] = []
     old, new = original(report), select_windows(report)
     assert old['evaluated_window_count'] == new['evaluated_window_count']
+    weighted_rows = []
     for a, b in zip(old['windows'], new['windows'], strict=True):
         details = a.pop('offtarget_matches')
+        c = a['efficacy_priority_components']
+        if a['efficacy_priority_score'] is not None:
+            a['efficacy_priority_score'] = 100 * (0.75*c['sifi_is_efficient_fraction'] + 0.25*c['sirna_gc_30_52_fraction'])
+            penalty = 30 * max(0, 1-a['length_nt']/180)
+            weighted_rows.append({**a, 'adjusted_priority_score': max(0, a['efficacy_priority_score']-penalty)})
         assert a == {k: v for k, v in b.items() if k not in ("length_penalty", "adjusted_priority_score")}  # Original science remains exact.
         assert details == _overlapping_offtargets(report['offtarget_evaluations'], b['start_1based'], b['end_1based_inclusive'], 270)
-    assert old['selected_window'] == ({k: v for k, v in new['selected_window'].items() if k not in ('length_penalty', 'adjusted_priority_score')} if new['selected_window'] else None)
+    expected = min(weighted_rows, key=priority_key) if weighted_rows else None
+    assert (new['selected_window'] or {}).get('window_id') == (expected or {}).get('window_id')
+    if expected:
+        assert all(new['selected_window'][key] == value for key, value in expected.items())
     assert old['warnings'] == new['warnings']
 
 

@@ -91,7 +91,7 @@ def write_selection_outputs(report: dict, selection: dict, report_path: Path, ou
             "best_score_tie_count": tied_count,
             "tie_break_applied": tied_count > 1,
             "reason": ("Mayor prioridad entre ventanas que cumplen el filtro off-target; consultar offtarget_selection para descartes." if audit else "Mayor prioridad heuristica; calidad de evidencia se conserva como auditoria independiente."),
-            "biological_interpretation": "Prioridad exploratoria basada en datos originales, GC y diversidad; eficacia real no validada.",
+            "biological_interpretation": "Prioridad exploratoria: 75% eficiencia si-Fi y 25% GC; diversidad descriptiva y de desempate, sin peso en el puntaje. Eficacia real no validada.",
         }
     else:
         report_payload["selection_reasons"] = []
