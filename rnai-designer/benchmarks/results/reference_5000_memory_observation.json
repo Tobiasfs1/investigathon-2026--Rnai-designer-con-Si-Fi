@@ -1,0 +1,7 @@
+﻿{
+    "Id":  9252,
+    "CPU":  1097.0625,
+    "PeakWorkingSet64":  2695622656,
+    "PeakPagedMemorySize64":  6012321792,
+    "Observation":  "During 5000 nt reference export; high-water values up to this observation"
+}

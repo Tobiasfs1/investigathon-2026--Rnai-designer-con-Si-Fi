@@ -1,0 +1,338 @@
+[
+  {
+    "nt": 500,
+    "verified_identical_rows": 20306,
+    "before": {
+      "mode": "before",
+      "nt": 500,
+      "windows": 20306,
+      "compute_s": 29.93680649995804,
+      "export_s": 7.23293779976666,
+      "total_s": 37.1697442997247,
+      "tracemalloc_peak_bytes": null,
+      "traced": false,
+      "profiled": false,
+      "peak_rss_bytes": 414498816,
+      "stages": {
+        "synthetic_preparation_s": 0.0005149999633431435,
+        "sequence_validation_s": 0.0016897995956242085,
+        "json_read_s": 0.013069800101220608,
+        "sifi_import_s": 0.012253900058567524,
+        "efficiency_summary_s": 0.004096499644219875
+      },
+      "plot_s": 0.3115776996128261,
+      "table_and_json_export_s": 6.921360100153834,
+      "output_bytes": 291275642,
+      "csv_bytes": 291151124
+    },
+    "after": {
+      "mode": "after",
+      "nt": 500,
+      "windows": 20306,
+      "compute_s": 0.9940139004029334,
+      "export_s": 1.0452401996590197,
+      "total_s": 2.039254100061953,
+      "tracemalloc_peak_bytes": null,
+      "traced": false,
+      "profiled": false,
+      "peak_rss_bytes": 95223808,
+      "peak_commit_bytes": 349110272,
+      "stages": {
+        "synthetic_preparation_s": 0.0006788000464439392,
+        "sequence_validation_s": 0.0017626998014748096,
+        "json_read_s": 0.022496599704027176,
+        "sifi_import_s": 0.02416840009391308,
+        "efficiency_summary_s": 0.0008914000354707241
+      },
+      "plot_s": 0.4915306996554136,
+      "table_and_json_export_s": 0.5537095000036061,
+      "output_bytes": 9814792,
+      "csv_bytes": 9691602
+    },
+    "speedup": 18.22712740829869,
+    "peak_rss_reduction_percent": 77.0267599509862,
+    "previous_optimized_measurements": [
+      {
+        "mode": "after",
+        "nt": 500,
+        "windows": 20306,
+        "compute_s": 1.490074799861759,
+        "export_s": 0.8080409998074174,
+        "total_s": 2.2981157996691763,
+        "tracemalloc_peak_bytes": null,
+        "traced": false,
+        "profiled": false,
+        "peak_rss_bytes": 95109120,
+        "peak_commit_bytes": 349085696,
+        "stages": {
+          "synthetic_preparation_s": 0.0004972000606358051,
+          "sequence_validation_s": 0.0014570001512765884,
+          "json_read_s": 0.03126590000465512,
+          "sifi_import_s": 0.02561090001836419,
+          "efficiency_summary_s": 0.001735200174152851
+        },
+        "plot_s": 0.361039100214839,
+        "table_and_json_export_s": 0.4470018995925784,
+        "output_bytes": 9814792,
+        "csv_bytes": 9691602
+      }
+    ],
+    "final_verification": {
+      "method": "Byte-for-byte CSV equality with previously baseline-verified export, plus exact winner equality",
+      "previous_export": "C:\\Users\\tobia\\Downloads\\siFi21--1.2.3_copia\\siFi21--1.2.3_copia\\rnai-designer\\benchmarks\\results\\after\\500\\export_1793228776054378100",
+      "final_export": "C:\\Users\\tobia\\Downloads\\siFi21--1.2.3_copia\\siFi21--1.2.3_copia\\rnai-designer\\benchmarks\\results\\after\\500\\export_1793228923753141500"
+    }
+  },
+  {
+    "nt": 1000,
+    "verified_identical_rows": 55806,
+    "before": {
+      "mode": "before",
+      "nt": 1000,
+      "windows": 55806,
+      "compute_s": 90.68334749992937,
+      "export_s": 27.112915700301528,
+      "total_s": 117.7962632002309,
+      "tracemalloc_peak_bytes": null,
+      "traced": false,
+      "profiled": false,
+      "peak_rss_bytes": 989904896,
+      "stages": {
+        "synthetic_preparation_s": 0.0011335997842252254,
+        "sequence_validation_s": 0.001482099760323763,
+        "json_read_s": 0.01585999969393015,
+        "sifi_import_s": 0.017884499859064817,
+        "efficiency_summary_s": 0.005584199912846088
+      },
+      "plot_s": 0.5076108002103865,
+      "table_and_json_export_s": 26.60530490009114,
+      "output_bytes": 806573247,
+      "csv_bytes": 806440493
+    },
+    "after": {
+      "mode": "after",
+      "nt": 1000,
+      "windows": 55806,
+      "compute_s": 2.9384198002517223,
+      "export_s": 1.6674873000010848,
+      "total_s": 4.605907100252807,
+      "tracemalloc_peak_bytes": null,
+      "traced": false,
+      "profiled": false,
+      "peak_rss_bytes": 124047360,
+      "peak_commit_bytes": 378634240,
+      "stages": {
+        "synthetic_preparation_s": 0.0054373000748455524,
+        "sequence_validation_s": 0.0016017002053558826,
+        "json_read_s": 0.026261900085955858,
+        "sifi_import_s": 0.027064199559390545,
+        "efficiency_summary_s": 0.0028338003903627396
+      },
+      "plot_s": 0.4273443999700248,
+      "table_and_json_export_s": 1.24014290003106,
+      "output_bytes": 26790184,
+      "csv_bytes": 26660371
+    },
+    "speedup": 25.57504105841938,
+    "peak_rss_reduction_percent": 87.46875982720668,
+    "previous_optimized_measurements": [
+      {
+        "mode": "after",
+        "nt": 1000,
+        "windows": 55806,
+        "compute_s": 4.6522395997308195,
+        "export_s": 2.0081072002649307,
+        "total_s": 6.66034679999575,
+        "tracemalloc_peak_bytes": null,
+        "traced": false,
+        "profiled": false,
+        "peak_rss_bytes": 124305408,
+        "peak_commit_bytes": 378585088,
+        "stages": {
+          "synthetic_preparation_s": 0.003947099670767784,
+          "sequence_validation_s": 0.002311999909579754,
+          "json_read_s": 0.022545100189745426,
+          "sifi_import_s": 0.023439399898052216,
+          "efficiency_summary_s": 0.0019486998207867146
+        },
+        "plot_s": 0.41209320025518537,
+        "table_and_json_export_s": 1.5960140000097454,
+        "output_bytes": 26790184,
+        "csv_bytes": 26660371
+      }
+    ],
+    "final_verification": {
+      "method": "Byte-for-byte CSV equality with previously baseline-verified export, plus exact winner equality",
+      "previous_export": "C:\\Users\\tobia\\Downloads\\siFi21--1.2.3_copia\\siFi21--1.2.3_copia\\rnai-designer\\benchmarks\\results\\after\\1000\\export_1793228066621774600",
+      "final_export": "C:\\Users\\tobia\\Downloads\\siFi21--1.2.3_copia\\siFi21--1.2.3_copia\\rnai-designer\\benchmarks\\results\\after\\1000\\export_1793228929294048500"
+    }
+  },
+  {
+    "nt": 2500,
+    "verified_identical_rows": 162306,
+    "before": {
+      "mode": "before",
+      "nt": 2500,
+      "windows": 162306,
+      "compute_s": 284.1678855000064,
+      "export_s": 106.71879509976134,
+      "total_s": 390.8866805997677,
+      "tracemalloc_peak_bytes": null,
+      "traced": false,
+      "profiled": false,
+      "peak_rss_bytes": 2360741888,
+      "stages": {
+        "synthetic_preparation_s": 0.0029966002330183983,
+        "sequence_validation_s": 0.002125999890267849,
+        "json_read_s": 0.019529399927705526,
+        "sifi_import_s": 0.02881440008059144,
+        "efficiency_summary_s": 0.004842100199311972
+      },
+      "plot_s": 2.6424861000850797,
+      "table_and_json_export_s": 104.07630899967626,
+      "output_bytes": 2364490573,
+      "csv_bytes": 2364327670
+    },
+    "after": {
+      "mode": "after",
+      "nt": 2500,
+      "windows": 162306,
+      "compute_s": 9.358421699609607,
+      "export_s": 4.259482500143349,
+      "total_s": 13.617904199752957,
+      "tracemalloc_peak_bytes": null,
+      "traced": false,
+      "profiled": false,
+      "peak_rss_bytes": 181608448,
+      "peak_commit_bytes": 439185408,
+      "stages": {
+        "synthetic_preparation_s": 0.005310600157827139,
+        "sequence_validation_s": 0.0017233001999557018,
+        "json_read_s": 0.033257400151342154,
+        "sifi_import_s": 0.03969520004466176,
+        "efficiency_summary_s": 0.011710300110280514
+      },
+      "plot_s": 0.4037244999781251,
+      "table_and_json_export_s": 3.855758000165224,
+      "output_bytes": 78118189,
+      "csv_bytes": 77963177
+    },
+    "speedup": 28.7038794564922,
+    "peak_rss_reduction_percent": 92.3071451003118,
+    "previous_optimized_measurements": [
+      {
+        "mode": "after",
+        "nt": 2500,
+        "windows": 162306,
+        "compute_s": 16.16988559998572,
+        "export_s": 9.439785199705511,
+        "total_s": 25.60967079969123,
+        "tracemalloc_peak_bytes": null,
+        "traced": false,
+        "profiled": false,
+        "peak_rss_bytes": 185528320,
+        "peak_commit_bytes": 438394880,
+        "stages": {
+          "synthetic_preparation_s": 0.008568799588829279,
+          "sequence_validation_s": 0.0018226001411676407,
+          "json_read_s": 0.029633100144565105,
+          "sifi_import_s": 0.0428460999391973,
+          "efficiency_summary_s": 0.005498300306499004
+        },
+        "plot_s": 1.0292771998792887,
+        "table_and_json_export_s": 8.410507999826223,
+        "output_bytes": 78118189,
+        "csv_bytes": 77963177
+      }
+    ],
+    "final_verification": {
+      "method": "Byte-for-byte CSV equality with previously baseline-verified export, plus exact winner equality",
+      "previous_export": "C:\\Users\\tobia\\Downloads\\siFi21--1.2.3_copia\\siFi21--1.2.3_copia\\rnai-designer\\benchmarks\\results\\after\\2500\\export_1793228101096231600",
+      "final_export": "C:\\Users\\tobia\\Downloads\\siFi21--1.2.3_copia\\siFi21--1.2.3_copia\\rnai-designer\\benchmarks\\results\\after\\2500\\export_1793228941965526300"
+    }
+  },
+  {
+    "nt": 5000,
+    "verified_identical_rows": 339806,
+    "before": {
+      "mode": "before",
+      "nt": 5000,
+      "windows": 339806,
+      "compute_s": 1029.5064642000943,
+      "export_s": 590.5356177003123,
+      "total_s": 1620.0420819004066,
+      "tracemalloc_peak_bytes": null,
+      "traced": false,
+      "profiled": false,
+      "peak_rss_bytes": 2695622656,
+      "stages": {
+        "synthetic_preparation_s": 0.018446700181812048,
+        "sequence_validation_s": 0.004014899954199791,
+        "json_read_s": 0.08266300009563565,
+        "sifi_import_s": 0.12354139983654022,
+        "efficiency_summary_s": 0.028525299858301878
+      },
+      "plot_s": 4.7547360002063215,
+      "table_and_json_export_s": 585.780881700106,
+      "output_bytes": 4962616325,
+      "csv_bytes": 4962400744
+    },
+    "after": {
+      "mode": "after",
+      "nt": 5000,
+      "windows": 339806,
+      "compute_s": 19.02255000034347,
+      "export_s": 9.104822999797761,
+      "total_s": 28.127373000141233,
+      "tracemalloc_peak_bytes": null,
+      "traced": false,
+      "profiled": false,
+      "peak_rss_bytes": 287879168,
+      "peak_commit_bytes": 544407552,
+      "stages": {
+        "synthetic_preparation_s": 0.010028600227087736,
+        "sequence_validation_s": 0.0021218997426331043,
+        "json_read_s": 0.04230150021612644,
+        "sifi_import_s": 0.061161600053310394,
+        "efficiency_summary_s": 0.012192899826914072
+      },
+      "plot_s": 0.4594040000811219,
+      "table_and_json_export_s": 8.64541899971664,
+      "output_bytes": 163776441,
+      "csv_bytes": 163577001
+    },
+    "speedup": 57.596636624837735,
+    "peak_rss_reduction_percent": 89.32049456702593,
+    "previous_optimized_measurements": [
+      {
+        "mode": "after",
+        "nt": 5000,
+        "windows": 339806,
+        "compute_s": 61.541043099947274,
+        "export_s": 21.398992399685085,
+        "total_s": 82.94003549963236,
+        "tracemalloc_peak_bytes": null,
+        "traced": false,
+        "profiled": false,
+        "peak_rss_bytes": 287760384,
+        "peak_commit_bytes": 543612928,
+        "stages": {
+          "synthetic_preparation_s": 0.0341694001108408,
+          "sequence_validation_s": 0.003079500049352646,
+          "json_read_s": 0.07394299982115626,
+          "sifi_import_s": 0.13610700005665421,
+          "efficiency_summary_s": 0.03086220007389784
+        },
+        "plot_s": 0.9232807997614145,
+        "table_and_json_export_s": 20.47571159992367,
+        "output_bytes": 163776441,
+        "csv_bytes": 163577001
+      }
+    ],
+    "final_verification": {
+      "method": "Byte-for-byte CSV equality with previously baseline-verified export, plus exact winner equality",
+      "previous_export": "C:\\Users\\tobia\\Downloads\\siFi21--1.2.3_copia\\siFi21--1.2.3_copia\\rnai-designer\\benchmarks\\results\\after\\5000\\export_1793228253633391500",
+      "final_export": "C:\\Users\\tobia\\Downloads\\siFi21--1.2.3_copia\\siFi21--1.2.3_copia\\rnai-designer\\benchmarks\\results\\after\\5000\\export_1793228966993456800"
+    }
+  }
+]

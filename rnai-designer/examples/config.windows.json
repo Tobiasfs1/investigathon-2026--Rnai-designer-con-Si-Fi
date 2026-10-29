@@ -1,0 +1,10 @@
+{
+  "schema_version": "1.0",
+  "database_dir": "%LOCALAPPDATA%/siFi2015/Databases",
+  "databases": {
+    "Dalbulus maidis": {"prefix": "Dalbulus_maidis", "source": null, "version": null},
+    "Homo sapiens": {"prefix": "Homo_sapiens", "source": null, "version": null},
+    "Zea mays": {"prefix": "zea_mays", "source": null, "version": null},
+    "Apis mellifera": {"prefix": "Apis_mellifera", "source": null, "version": null}
+  }
+}

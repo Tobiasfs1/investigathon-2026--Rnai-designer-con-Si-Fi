@@ -1,0 +1,5 @@
+..............................................s......................... [ 59%]
+.................................................                        [100%]
+=========================== short test summary info ===========================
+SKIPPED [1] tests\test_legacy_sifi_integration.py:23: si-Fi Conda runtime unavailable
+120 passed, 1 skipped in 54.27s

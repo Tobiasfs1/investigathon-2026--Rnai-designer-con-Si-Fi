@@ -1,0 +1,68 @@
+         271799002 function calls (271788755 primitive calls) in 117.322 seconds
+
+   Ordered by: cumulative time
+   List reduced from 1744 to 60 due to restriction <60>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.154    0.154  117.525  117.525 automatic_window_selection.py:146(select_windows)
+    20306    7.654    0.000  116.783    0.006 automatic_window_selection.py:56(_window_metrics)
+  4552182   30.730    0.000   82.388    0.000 {built-in method builtins.sum}
+    20306    2.415    0.000   41.866    0.002 automatic_window_selection.py:17(_efficacy_priority)
+  3950156   10.359    0.000   39.873    0.000 automatic_window_selection.py:10(_gc_percent)
+ 90812976   11.965    0.000   11.965    0.000 automatic_window_selection.py:14(<genexpr>)
+        1    0.000    0.000   11.633   11.633 automatic_window_reporting.py:17(write_selection_outputs)
+        1    0.000    0.000   10.385   10.385 csv.py:227(writerows)
+        1    5.588    5.588   10.385   10.385 {method 'writerows' of '_csv.writer' objects}
+ 23579100    6.792    0.000    6.792    0.000 automatic_window_selection.py:68(<genexpr>)
+    20306    1.255    0.000    6.347    0.000 automatic_window_selection.py:35(_coverage)
+ 19669556    6.139    0.000    6.139    0.000 automatic_window_selection.py:67(<genexpr>)
+ 23579100    5.647    0.000    5.647    0.000 automatic_window_selection.py:77(<genexpr>)
+    53766    1.259    0.000    4.840    0.000 {built-in method builtins.sorted}
+    20627    3.031    0.000    4.411    0.000 window_explorer.py:135(_overlapping_offtargets)
+    20307    0.013    0.000    3.992    0.000 automatic_window_reporting.py:39(<genexpr>)
+    20306    0.484    0.000    3.979    0.000 automatic_window_reporting.py:12(_jsonable_row)
+  3950156    2.376    0.000    3.576    0.000 automatic_window_selection.py:40(<genexpr>)
+    81706    0.144    0.000    3.260    0.000 __init__.py:185(dumps)
+    81706    0.113    0.000    3.099    0.000 encoder.py:185(encode)
+    81706    2.936    0.000    2.936    0.000 encoder.py:207(iterencode)
+ 11378004    2.172    0.000    2.172    0.000 {method 'get' of 'dict' objects}
+    20627    0.634    0.000    2.045    0.000 window_explorer.py:168(_offtarget_counts)
+  3950156    1.320    0.000    2.020    0.000 automatic_window_selection.py:75(<genexpr>)
+ 15800624    1.705    0.000    1.705    0.000 automatic_window_selection.py:140(<genexpr>)
+ 15800624    1.696    0.000    1.696    0.000 automatic_window_selection.py:139(<genexpr>)
+  8878165    1.475    0.000    1.484    0.000 {built-in method builtins.max}
+8368143/8368092    1.241    0.000    1.241    0.000 {built-in method builtins.len}
+  3951438    0.936    0.000    0.936    0.000 {method 'upper' of 'str' objects}
+  4906806    0.833    0.000    0.850    0.000 {built-in method builtins.min}
+        1    0.000    0.000    0.821    0.821 benchmark.py:96(timed_plot)
+        1    0.001    0.001    0.821    0.821 automatic_window_reporting.py:71(_plot_selected)
+  1380876    0.434    0.000    0.700    0.000 csv.py:222(<genexpr>)
+        2    0.000    0.000    0.687    0.343 figure.py:3360(savefig)
+        2    0.000    0.000    0.686    0.343 backend_bases.py:2155(print_figure)
+  3950156    0.658    0.000    0.658    0.000 automatic_window_selection.py:71(<genexpr>)
+  3950156    0.614    0.000    0.614    0.000 automatic_window_selection.py:22(<genexpr>)
+        4    0.000    0.000    0.592    0.148 artist.py:92(draw_wrapper)
+    680/4    0.003    0.000    0.592    0.148 artist.py:53(draw_wrapper)
+        4    0.000    0.000    0.592    0.148 figure.py:3262(draw)
+  3950156    0.548    0.000    0.548    0.000 automatic_window_selection.py:104(<genexpr>)
+  3950156    0.541    0.000    0.541    0.000 automatic_window_selection.py:72(<genexpr>)
+  3950156    0.534    0.000    0.534    0.000 automatic_window_selection.py:81(<genexpr>)
+        1    0.005    0.005    0.515    0.515 window_explorer.py:202(explore_windows)
+      321    0.012    0.000    0.399    0.001 window_explorer.py:114(_metric_summary)
+        6    0.237    0.040    0.387    0.064 {built-in method fromkeys}
+     12/4    0.001    0.000    0.354    0.089 image.py:115(_draw_list_compositing_images)
+        8    0.000    0.000    0.354    0.044 _base.py:3307(draw)
+        5    0.000    0.000    0.338    0.068 backend_bases.py:2146(<lambda>)
+  1554926    0.279    0.000    0.285    0.000 {built-in method builtins.isinstance}
+   539402    0.185    0.000    0.277    0.000 window_explorer.py:179(<genexpr>)
+   539402    0.173    0.000    0.260    0.000 window_explorer.py:180(<genexpr>)
+   539402    0.173    0.000    0.259    0.000 window_explorer.py:181(<genexpr>)
+        2    0.000    0.000    0.233    0.116 layout_engine.py:265(execute)
+        2    0.000    0.000    0.233    0.116 _constrained_layout.py:63(do_constrained_layout)
+        4    0.000    0.000    0.226    0.056 _constrained_layout.py:343(make_layout_margins)
+        8    0.000    0.000    0.225    0.028 _constrained_layout.py:617(get_pos_and_bbox)
+     24/8    0.000    0.000    0.224    0.028 artist.py:1478(_get_tightbbox_for_layout_only)
+        8    0.001    0.000    0.223    0.028 _base.py:4706(get_tightbbox)
+        2    0.000    0.000    0.219    0.110 backend_agg.py:490(print_png)
+
+

@@ -1,0 +1,13 @@
+__pycache__/
+.pytest_cache/
+.venv/
+output/
+*.egg-info/
+benchmarks/results/**/export_*/
+benchmarks/results/**/input.json
+benchmarks/results/**/raw_sifi.json
+benchmarks/results/**/*.pstats
+benchmarks/test-temp*/
+
+.test-portability*/
+.doctor-portability.json

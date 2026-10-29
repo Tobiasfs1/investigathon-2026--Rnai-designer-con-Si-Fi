@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0",
+  "gene_id": "DM_FICTICIO_001",
+  "tribolium_homolog_id": "TC_FICTICIO_001",
+  "reference": {
+    "sequence": "ACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGT",
+    "source": "SIMULADO: patrón artificial, no gen real",
+    "version": "demo-1"
+  },
+  "priority_score": 0.75,
+  "metadata": {
+    "simulated": true
+  },
+  "evidence": [
+    {
+      "type": "fictitious",
+      "description": "Sin evidencia experimental; demostración de software"
+    }
+  ]
+}

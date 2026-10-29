@@ -1,0 +1,20 @@
+# Resultados
+**/output/
+
+# Python
+**/__pycache__/
+**/.pytest_cache/
+**/.venv/
+*.pyc
+*.egg-info/
+
+# Respaldo Git interno
+**/.git_backup/
+
+# Bases de datos e índices pesados
+*.ebwt
+*.bt2
+*.bt2l
+
+# Configuración local
+.vscode/

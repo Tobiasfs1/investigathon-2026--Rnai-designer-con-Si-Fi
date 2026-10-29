@@ -1,0 +1,30 @@
+C:\Users\tobia\Downloads\siFi21--1.2.3_copia\siFi21--1.2.3_copia\rnai-designer\rnai_designer\compact_windows.py:74: size=11.2 MiB, count=70, average=164 KiB
+<frozen importlib._bootstrap_external>:511: size=337 KiB, count=2614, average=132 B
+C:\Users\tobia\Downloads\siFi21--1.2.3_copia\siFi21--1.2.3_copia\rnai-designer\.venv\Lib\site-packages\matplotlib\font_manager.py:1753: size=129 KiB, count=18, average=7365 B
+C:\Users\tobia\Downloads\siFi21--1.2.3_copia\siFi21--1.2.3_copia\rnai-designer\.venv\Lib\site-packages\matplotlib\font_manager.py:1757: size=129 KiB, count=12, average=10.7 KiB
+C:\Users\tobia\Downloads\siFi21--1.2.3_copia\siFi21--1.2.3_copia\rnai-designer\.venv\Lib\site-packages\matplotlib\transforms.py:194: size=62.1 KiB, count=545, average=117 B
+C:\Users\tobia\Downloads\siFi21--1.2.3_copia\siFi21--1.2.3_copia\rnai-designer\.venv\Lib\site-packages\matplotlib\text.py:241: size=44.5 KiB, count=30, average=1520 B
+C:\Users\tobia\Downloads\siFi21--1.2.3_copia\siFi21--1.2.3_copia\rnai-designer\rnai_designer\window_index.py:22: size=39.0 KiB, count=482, average=83 B
+<frozen abc>:123: size=38.3 KiB, count=431, average=91 B
+C:\Users\tobia\Downloads\siFi21--1.2.3_copia\siFi21--1.2.3_copia\rnai-designer\.venv\Lib\site-packages\matplotlib\lines.py:412: size=35.6 KiB, count=24, average=1520 B
+C:\Users\tobia\Downloads\siFi21--1.2.3_copia\siFi21--1.2.3_copia\rnai-designer\.venv\Lib\site-packages\matplotlib\transforms.py:195: size=33.0 KiB, count=179, average=189 B
+C:\Users\tobia\Downloads\siFi21--1.2.3_copia\siFi21--1.2.3_copia\rnai-designer\rnai_designer\window_explorer.py:100: size=22.1 KiB, count=314, average=72 B
+C:\Users\tobia\Downloads\siFi21--1.2.3_copia\siFi21--1.2.3_copia\rnai-designer\.venv\Lib\site-packages\matplotlib\transforms.py:116: size=20.2 KiB, count=324, average=64 B
+C:\Users\tobia\Downloads\siFi21--1.2.3_copia\siFi21--1.2.3_copia\rnai-designer\.venv\Lib\site-packages\matplotlib\transforms.py:193: size=20.2 KiB, count=259, average=80 B
+C:\Users\tobia\Downloads\siFi21--1.2.3_copia\siFi21--1.2.3_copia\rnai-designer\.venv\Lib\site-packages\matplotlib\cbook.py:273: size=18.6 KiB, count=88, average=216 B
+C:\Users\tobia\Downloads\siFi21--1.2.3_copia\siFi21--1.2.3_copia\rnai-designer\.venv\Lib\site-packages\matplotlib\patches.py:592: size=16.3 KiB, count=11, average=1520 B
+C:\Users\tobia\Downloads\siFi21--1.2.3_copia\siFi21--1.2.3_copia\rnai-designer\.venv\Lib\site-packages\cycler\__init__.py:262: size=12.9 KiB, count=135, average=98 B
+C:\Users\tobia\Downloads\siFi21--1.2.3_copia\siFi21--1.2.3_copia\rnai-designer\.venv\Lib\site-packages\matplotlib\axis.py:117: size=12.4 KiB, count=16, average=792 B
+C:\Users\tobia\Downloads\siFi21--1.2.3_copia\siFi21--1.2.3_copia\rnai-designer\.venv\Lib\site-packages\matplotlib\backends\backend_agg.py:189: size=12.0 KiB, count=271, average=45 B
+C:\Users\tobia\Downloads\siFi21--1.2.3_copia\siFi21--1.2.3_copia\rnai-designer\rnai_designer\automatic_window_selection.py:18: size=11.2 KiB, count=480, average=24 B
+C:\Users\tobia\Downloads\siFi21--1.2.3_copia\siFi21--1.2.3_copia\rnai-designer\.venv\Lib\site-packages\matplotlib\artist.py:214: size=11.2 KiB, count=81, average=142 B
+<frozen abc>:106: size=11.1 KiB, count=33, average=344 B
+C:\Users\tobia\Downloads\siFi21--1.2.3_copia\siFi21--1.2.3_copia\rnai-designer\rnai_designer\window_explorer.py:161: size=11.1 KiB, count=49, average=231 B
+C:\Users\tobia\Downloads\siFi21--1.2.3_copia\siFi21--1.2.3_copia\rnai-designer\.venv\Lib\site-packages\matplotlib\artist.py:1269: size=10.8 KiB, count=205, average=54 B
+C:\Users\tobia\Downloads\siFi21--1.2.3_copia\siFi21--1.2.3_copia\rnai-designer\.venv\Lib\site-packages\matplotlib\transforms.py:1960: size=10.6 KiB, count=150, average=72 B
+C:\Users\tobia\Downloads\siFi21--1.2.3_copia\siFi21--1.2.3_copia\rnai-designer\.venv\Lib\site-packages\matplotlib\cbook.py:271: size=10.0 KiB, count=90, average=114 B
+C:\Users\tobia\Downloads\siFi21--1.2.3_copia\siFi21--1.2.3_copia\rnai-designer\.venv\Lib\site-packages\matplotlib\backends\backend_agg.py:196: size=10185 B, count=207, average=49 B
+C:\Users\tobia\Downloads\siFi21--1.2.3_copia\siFi21--1.2.3_copia\rnai-designer\.venv\Lib\site-packages\matplotlib\transforms.py:844: size=9608 B, count=147, average=65 B
+C:\Users\tobia\Downloads\siFi21--1.2.3_copia\siFi21--1.2.3_copia\rnai-designer\.venv\Lib\site-packages\matplotlib\transforms.py:2582: size=8840 B, count=66, average=134 B
+C:\Users\tobia\Downloads\siFi21--1.2.3_copia\siFi21--1.2.3_copia\rnai-designer\.venv\Lib\site-packages\matplotlib\transforms.py:791: size=8352 B, count=161, average=52 B
+C:\Users\tobia\Downloads\siFi21--1.2.3_copia\siFi21--1.2.3_copia\rnai-designer\.venv\Lib\site-packages\matplotlib\lines.py:404: size=7496 B, count=34, average=220 B

@@ -1,0 +1,13 @@
+{
+  "nt_per_reference": 500,
+  "references": 2,
+  "sequential_s": 6.229174499865621,
+  "spawn_and_transfer_s": 4.240988899953663,
+  "speedup": 1.4688023587927053,
+  "child_peak_rss_bytes": [
+    46895104,
+    46960640
+  ],
+  "parent_peak_rss_bytes": 139227136,
+  "scope": "Python window calculation only, not concurrent si-Fi/Conda or Bowtie"
+}

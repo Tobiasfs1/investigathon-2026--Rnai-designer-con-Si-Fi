@@ -1,0 +1,24 @@
+{
+  "mode": "after",
+  "nt": 500,
+  "windows": 20306,
+  "compute_s": 18.86930050002411,
+  "export_s": 13.817041800357401,
+  "total_s": 32.68634230038151,
+  "tracemalloc_peak_bytes": 14067515,
+  "traced": true,
+  "profiled": false,
+  "peak_rss_bytes": 99016704,
+  "peak_commit_bytes": 352825344,
+  "stages": {
+    "synthetic_preparation_s": 0.0011916998773813248,
+    "sequence_validation_s": 0.0029094000346958637,
+    "json_read_s": 0.036940000019967556,
+    "sifi_import_s": 0.03984740003943443,
+    "efficiency_summary_s": 0.0023484998382627964
+  },
+  "plot_s": 2.5282204998657107,
+  "table_and_json_export_s": 11.28882130049169,
+  "output_bytes": 9814792,
+  "csv_bytes": 9691602
+}

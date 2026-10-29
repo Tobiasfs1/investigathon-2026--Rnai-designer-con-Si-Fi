@@ -1,0 +1,68 @@
+         5545905 function calls (5537441 primitive calls) in 4.729 seconds
+
+   Ordered by: cumulative time
+   List reduced from 1803 to 60 due to restriction <60>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.062    0.062    3.383    3.383 automatic_window_selection.py:153(select_windows)
+    20306    1.121    0.000    1.898    0.000 compact_windows.py:22(append)
+    20306    0.538    0.000    1.362    0.000 automatic_window_selection.py:60(_window_metrics)
+        1    0.000    0.000    1.346    1.346 atomic_io.py:91(wrapped)
+        1    0.000    0.000    1.343    1.343 automatic_window_reporting.py:15(write_selection_outputs)
+        1    0.000    0.000    0.699    0.699 benchmark.py:98(timed_plot)
+        1    0.000    0.000    0.699    0.699 automatic_window_reporting.py:82(_plot_selected)
+        1    0.528    0.528    0.636    0.636 {method 'writerows' of '_csv.writer' objects}
+        2    0.000    0.000    0.607    0.304 figure.py:3360(savefig)
+        2    0.000    0.000    0.607    0.304 backend_bases.py:2155(print_figure)
+        4    0.000    0.000    0.539    0.135 artist.py:92(draw_wrapper)
+    492/4    0.003    0.000    0.539    0.135 artist.py:53(draw_wrapper)
+        4    0.000    0.000    0.538    0.135 figure.py:3262(draw)
+  1421420    0.427    0.000    0.427    0.000 {method 'append' of 'array.array' objects}
+     12/4    0.000    0.000    0.309    0.077 image.py:115(_draw_list_compositing_images)
+        8    0.000    0.000    0.308    0.039 _base.py:3307(draw)
+   446732    0.170    0.000    0.288    0.000 automatic_window_selection.py:69(<lambda>)
+  1447460    0.273    0.000    0.280    0.000 {built-in method builtins.isinstance}
+        5    0.000    0.000    0.270    0.054 backend_bases.py:2146(<lambda>)
+        2    0.000    0.000    0.226    0.113 layout_engine.py:265(execute)
+        2    0.000    0.000    0.226    0.113 _constrained_layout.py:63(do_constrained_layout)
+        4    0.000    0.000    0.219    0.055 _constrained_layout.py:343(make_layout_margins)
+        8    0.000    0.000    0.218    0.027 _constrained_layout.py:617(get_pos_and_bbox)
+     24/8    0.000    0.000    0.217    0.027 artist.py:1478(_get_tightbbox_for_layout_only)
+        8    0.001    0.000    0.217    0.027 _base.py:4706(get_tightbbox)
+       16    0.001    0.000    0.213    0.013 axis.py:1469(draw)
+    20306    0.130    0.000    0.191    0.000 window_index.py:41(range_data)
+       32    0.001    0.000    0.165    0.005 axis.py:1411(get_tightbbox)
+        2    0.000    0.000    0.149    0.075 backend_agg.py:490(print_png)
+        2    0.000    0.000    0.149    0.075 backend_agg.py:480(_print_pil)
+      228    0.005    0.000    0.143    0.001 text.py:1033(get_window_extent)
+      208    0.012    0.000    0.138    0.001 text.py:416(_get_layout)
+      176    0.007    0.000    0.129    0.001 axis.py:1335(_update_ticks)
+   487344    0.128    0.000    0.128    0.000 window_index.py:74(count)
+        3    0.000    0.000    0.120    0.040 backend_svg.py:1323(print_svg)
+      160    0.004    0.000    0.120    0.001 text.py:840(draw)
+    20307    0.108    0.000    0.108    0.000 compact_windows.py:107(scalar_rows)
+        2    0.000    0.000    0.099    0.050 backend_agg.py:431(draw)
+   415194    0.090    0.000    0.090    0.000 {method 'get' of 'dict' objects}
+       24    0.000    0.000    0.087    0.004 axis.py:2605(_update_label_position)
+    20306    0.048    0.000    0.085    0.000 window_index.py:130(counts)
+       96    0.001    0.000    0.082    0.001 axis.py:1402(_get_ticklabel_bboxes)
+    66692    0.076    0.000    0.081    0.000 {built-in method builtins.sum}
+       80    0.002    0.000    0.075    0.001 spines.py:142(get_window_extent)
+       16    0.001    0.000    0.070    0.004 _base.py:3231(_update_title_position)
+       48    0.001    0.000    0.068    0.001 axis.py:2385(_get_tick_boxes_siblings)
+        4    0.000    0.000    0.068    0.017 _base.py:1478(clear)
+        4    0.000    0.000    0.068    0.017 _base.py:1341(__clear)
+       52    0.001    0.000    0.065    0.001 axis.py:286(draw)
+      208    0.001    0.000    0.063    0.000 text.py:47(_get_text_metrics_with_cache)
+      289    0.006    0.000    0.059    0.000 font_manager.py:1462(findfont)
+       48    0.000    0.000    0.059    0.001 text.py:114(_text_metrics)
+        1    0.000    0.000    0.056    0.056 figure.py:792(subplots)
+        1    0.000    0.000    0.056    0.056 gridspec.py:250(subplots)
+        2    0.000    0.000    0.056    0.028 figure.py:651(add_subplot)
+        2    0.000    0.000    0.056    0.028 _base.py:633(__init__)
+       48    0.052    0.001    0.052    0.001 {built-in method matplotlib.ft2font.set_text}
+        1    0.000    0.000    0.050    0.050 image.py:1600(imsave)
+        1    0.000    0.000    0.050    0.050 Image.py:2593(save)
+       12    0.000    0.000    0.047    0.004 backend_agg.py:235(draw_text)
+
+

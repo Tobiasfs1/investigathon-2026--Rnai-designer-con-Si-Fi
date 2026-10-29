@@ -1,0 +1,13 @@
+{
+  "query_id": "DM_FICTICIO_001",
+  "tool": "si-Fi (fixture, no ejecutado)",
+  "tool_version": "formato local v1.2.3-0008",
+  "database": "FICTICIA",
+  "database_version": "demo-1",
+  "source": "SIMULADO: fixture manual",
+  "parameters": {
+    "simulated": true,
+    "sirna_size": 21,
+    "mismatches": 0
+  }
+}

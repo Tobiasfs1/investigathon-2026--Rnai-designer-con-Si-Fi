@@ -1,0 +1,18 @@
+[
+  {
+    "query_name": "DM_FICTICIO_001",
+    "sirna_name": "sirna1",
+    "sirna_position": 1,
+    "sirna_sequence": "ACGTACGTACGTACGTACGTA",
+    "is_efficient": true,
+    "strand_selection": true,
+    "end_stability": true,
+    "target_site_accessibility": true,
+    "accessibility_value": 0.2,
+    "is_off_target": null,
+    "hit_name": "HIT_FICTICIO_bee",
+    "reference_strand_pos": 0,
+    "strand": "+",
+    "mismatches": 0
+  }
+]
