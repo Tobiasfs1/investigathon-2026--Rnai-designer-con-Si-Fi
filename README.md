@@ -1,4 +1,4 @@
-[README_github_limpio.md](https://github.com/user-attachments/files/34157436/README_github_limpio.md)
+[README_COMPLETO.md](https://github.com/user-attachments/files/34158168/README_COMPLETO.md)
 # RNAi en *Dalbulus maidis*: si-Fi y rnai-designer
 Proyecto para explorar regiones candidatas de RNA de doble cadena (dsRNA), integrar predicciones de siRNAs y priorizar ventanas en investigación de RNAi en *Dalbulus maidis*.
 
@@ -10,6 +10,7 @@ Proyecto para explorar regiones candidatas de RNA de doble cadena (dsRNA), integ
 - [Pipeline](#pipeline)
 - [Estructura](#estructura)
 - [Instalación](#instalación)
+- [Configuración de bases de datos](#configuración-de-bases-de-datos)
 - [Uso individual y batch](#uso-individual-y-batch)
 - [Puntuación y selección](#puntuación-y-selección)
 - [Resultados](#resultados)
@@ -74,7 +75,61 @@ El filtro del gen completo y el de una ventana tienen alcances distintos. Véans
 Las bases y los ejecutables externos se localizan mediante configuración. Su presencia local no implica permiso de redistribución.
 
 ## Instalación
-Desde la raíz Git, en PowerShell, con Python 3.10 o posterior:
+
+El proyecto utiliza **dos entornos distintos**: Python 2.7 de 32 bits para el si-Fi21 original y Python 3.10 o posterior para `rnai-designer`. Los comandos siguientes están pensados para **Windows**. Las rutas son relativas a la raíz del repositorio, sin depender de la ubicación en el disco.
+
+### 1. Instalar Miniforge y preparar si-Fi21 (Python 2.7, 32 bits)
+
+1. Descargar e instalar [Miniforge](https://github.com/conda-forge/miniforge#install) siguiendo la sección **Install**.
+2. Abrir **Miniforge Prompt** (terminal de tipo CMD, no PowerShell).
+3. Crear y activar el entorno heredado:
+
+```bat
+set CONDA_FORCE_32BIT=1
+conda create -n sifi_32bit python=2.7 pyqt=4 -c free -c defaults -y
+conda activate sifi_32bit
+```
+
+> **Compatibilidad:** Python 2.7, PyQt4 y los paquetes de 32 bits están obsoletos. Este comando documenta la configuración utilizada en el proyecto, pero su instalación puede fallar según la plataforma, los canales disponibles y la versión de Conda. `CONDA_FORCE_32BIT` se establece en esa sesión de **CMD**; no es la sintaxis de PowerShell.
+
+### 2. Habilitar Conda en PowerShell (opcional)
+
+Si se va a usar PowerShell, ejecutar una vez en una ventana de **PowerShell**:
+
+```powershell
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+```
+
+Luego, desde **Miniforge Prompt**:
+
+```bat
+conda init powershell
+```
+
+Cerrar y volver a abrir PowerShell antes de utilizar `conda activate`. La configuración de la política de ejecución es una modificación de seguridad del usuario de Windows: realizarla solamente si es necesaria y está permitida por las políticas del equipo.
+
+### 3. Abrir y ejecutar el si-Fi original desde VS Code
+
+En **Miniforge Prompt**, con el entorno legado activado, ubicarse en la **raíz del repositorio clonado** y abrir la carpeta de si-Fi:
+
+```bat
+conda activate sifi_32bit
+cd siFi21--1.2.3
+code .
+```
+
+Si `code` no se reconoce, abrir esa carpeta manualmente desde VS Code. En la terminal integrada de VS Code, verificar que esté seleccionado el entorno `sifi_32bit`; después, dentro de `siFi21--1.2.3/`:
+
+```powershell
+python -m pip install seaborn matplotlib biopython numpy pillow
+python main.py
+```
+
+Estas dependencias adicionales son las indicadas para la instalación local; otras dependencias o versiones compatibles pueden ser necesarias para Python 2.7. No se garantiza que las versiones más recientes de los paquetes admitan ese Python antiguo. Los ejecutables Bowtie y RNAplfold, así como sus índices, se configuran por separado.
+
+### 4. Instalar `rnai-designer` (Python 3)
+
+Desde la **raíz del repositorio** en PowerShell, con Python 3.10 o posterior disponible (fuera del entorno `sifi_32bit`):
 
 ```powershell
 cd rnai-designer
@@ -83,9 +138,46 @@ python -m venv .venv
 .\.venv\Scripts\python.exe -m rnai_designer doctor
 ```
 
-Esto instala la capa Python 3. El workflow completo requiere además Conda, el entorno Python 2.7 de si-Fi, Bowtie clásico, RNAplfold y los índices biológicos. No se instalan automáticamente con pip.
+**¿Por qué instalar `rnai-designer` si el código ya está en el repositorio?** No se descarga otro programa: `python -m pip install -e .` registra **este mismo proyecto** como paquete editable e instala las dependencias declaradas en `pyproject.toml`. Los cambios al código fuente se reflejan sin tener que reinstalarlo. El entorno `.venv` aísla las dependencias de Python 3 de las del si-Fi21 original en Python 2.7.
 
-Consulte [instalación y reproducibilidad](docs/instalacion-y-reproducibilidad.md) para conocer versiones verificadas, dependencias y datos pendientes. No ejecutar instalaciones ni diagnósticos sobre el entorno de un batch activo.
+El comando `python -m rnai_designer doctor` comprueba la configuración y los requisitos que la herramienta es capaz de diagnosticar; no instala bases ni ejecutables por sí mismo. Si el entorno Python 3 ya tiene todas las dependencias, puede ejecutarse `python -m rnai_designer ...` desde `rnai-designer/` sin instalación editable, pero para reproducibilidad se recomienda el método anterior.
+
+El workflow completo requiere además el entorno legado de si-Fi, Bowtie clásico, RNAplfold y los índices biológicos. **No se instalan automáticamente con `pip`.**
+
+Consultar [instalación y reproducibilidad](docs/instalacion-y-reproducibilidad.md) para versiones verificadas, dependencias y datos pendientes. No ejecutar instalaciones ni diagnósticos sobre el entorno de un batch activo.
+
+## Configuración de bases de datos
+
+**La instalación del software no incluye automáticamente las referencias biológicas.** Antes de utilizar el workflow completo, hay que obtener y configurar tanto el transcriptoma de *Dalbulus maidis* como las referencias de organismos no objetivo. Registrar para cada base su **fuente, versión/fecha, organismo y archivo de origen**; cambiar la referencia puede cambiar los resultados.
+
+### 1. Transcriptoma de *Dalbulus maidis* en si-Fi21
+
+si-Fi21 necesita una base de secuencias de referencia para comparar los siRNAs y mostrar las coincidencias en los transcritos. Para reproducir los análisis del proyecto debe utilizarse el **transcriptoma de *Dalbulus maidis* correspondiente a la investigación**, y no sustituirlo silenciosamente por otro ensamblado o por el genoma.
+
+1. Obtener el archivo **FASTA del transcriptoma** con su procedencia documentada.
+2. Activar `sifi_32bit`, abrir si-Fi21 con `python main.py` desde `siFi21--1.2.3/` y acceder a su **administración de bases de datos**.
+3. Importar/registrar allí el FASTA mediante las opciones de si-Fi21 y generar el índice **Bowtie** cuando la interfaz lo requiera. Los nombres exactos de las opciones pueden variar con la versión instalada.
+4. Comprobar que la referencia se pueda **seleccionar en si-Fi21** y que los índices asociados existan en la ubicación esperada.
+
+> **Importante:** tener un FASTA guardado en una carpeta no equivale a tener una base preparada para Bowtie. Para usar el mismo análisis del proyecto, deben coincidir también la versión de la referencia y la configuración de búsqueda.
+
+### 2. Referencias off-target de `rnai-designer`
+
+El filtro adicional de `rnai-designer` consulta referencias de **humano** (*Homo sapiens*), **maíz** (*Zea mays*) y **abeja** (*Apis mellifera*). Se deben obtener las referencias utilizadas por el proyecto, preparar los índices compatibles con el Bowtie configurado y establecer sus **rutas/prefijos de índice** en la configuración de la herramienta. La ubicación exacta de los parámetros depende del archivo de configuración y de la versión del repositorio; consultar [instalación y reproducibilidad](docs/instalacion-y-reproducibilidad.md) y [criterios científicos](docs/criterios-cientificos.md).
+
+**Cargar *Dalbulus* en si-Fi21 no configura automáticamente estas otras tres referencias.** Tampoco se debe interpretar la disponibilidad de una base como una validación de seguridad biológica.
+
+### 3. Verificar la configuración
+
+Desde la carpeta `rnai-designer/` y utilizando Python 3:
+
+```powershell
+.\.venv\Scripts\python.exe -m rnai_designer doctor
+```
+
+Revisar cualquier dependencia, ejecutable, ruta o índice que aparezca como faltante. El diagnóstico puede no comprobar todos los aspectos científicos de cada base de datos.
+
+**No subir a GitHub los FASTA o índices voluminosos sin revisar tamaño, licencias y permisos de redistribución.** El README debe documentar de dónde obtenerlos y cómo configurarlos; las bases de datos locales pueden quedar fuera del control de versiones.
 
 ## Uso individual y batch
 Los ejemplos se ejecutan desde `rnai-designer/`. Con un entorno Python 3 adecuado activo, puede sustituir `.\.venv\Scripts\python.exe` por `python`.
