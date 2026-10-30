@@ -1,0 +1,89 @@
+{
+  "upstream_tag": "v1.2.3-0008",
+  "upstream_commit": "65c197250f396783022f07907ca44cf5509f24e0",
+  "original_pipeline_file_history_commit": "5d86eada37bbaf929fb5a658aef3c0cbc3597520",
+  "source_method_matches": {
+    "sifi_pipeline.py:data_to_json": true,
+    "general_helpers.py:get_target_data": true
+  },
+  "checks": [
+    {
+      "check": "data_to_json_strand_check_0",
+      "input_rows": 2,
+      "exported_rows": 1,
+      "exported_strands": [
+        "+"
+      ],
+      "negative_rows_exported": 0
+    },
+    {
+      "check": "data_to_json_strand_check_2",
+      "input_rows": 2,
+      "exported_rows": 1,
+      "exported_strands": [
+        "+"
+      ],
+      "negative_rows_exported": 0
+    },
+    {
+      "check": "helper_has_no_strand_filter",
+      "negative_json_row_green_nt": 21
+    },
+    {
+      "check": "target_selector_includes_both_strands",
+      "names": [
+        "negative",
+        "positive"
+      ]
+    },
+    {
+      "check": "original_GUI_plot_after_filter",
+      "green_positions": 0,
+      "red_patches": 21,
+      "actual_GUI_opened": false
+    }
+  ],
+  "stored_examples": [
+    {
+      "gene": "cand0007_mts",
+      "target": "GITV01003170_1",
+      "raw_main_positive": 0,
+      "raw_main_negative": 1135,
+      "main_rows_in_json": 0,
+      "all_rows_in_json": 1,
+      "all_negative_rows_in_json": 0,
+      "green_nt": 0
+    },
+    {
+      "gene": "cand0010_Hsp83",
+      "target": "GITV01000126_1",
+      "raw_main_positive": 0,
+      "raw_main_negative": 2404,
+      "main_rows_in_json": 0,
+      "all_rows_in_json": 7,
+      "all_negative_rows_in_json": 0,
+      "green_nt": 0
+    },
+    {
+      "gene": "cand0011_snRNP-U1-70K",
+      "target": "GITV01001014_1",
+      "raw_main_positive": 0,
+      "raw_main_negative": 1258,
+      "main_rows_in_json": 0,
+      "all_rows_in_json": 3,
+      "all_negative_rows_in_json": 0,
+      "green_nt": 0
+    }
+  ],
+  "actual_GUI_opened": false,
+  "pipeline_or_engines_executed": false,
+  "manual": {
+    "url": "https://github.com/snowformatics/siFi21-/blob/7ef3e82003883156ecfa2cc73c5d36e93e02f9c2/Quick_help.pdf",
+    "relevant_pages": [
+      2,
+      6,
+      7
+    ],
+    "finding": "Design query is target mRNA; database typically cDNA/transcriptome. No explicit rule requiring all negative alignments to be dropped was found."
+  }
+}

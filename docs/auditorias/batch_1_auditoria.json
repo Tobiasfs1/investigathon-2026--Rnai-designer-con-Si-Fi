@@ -1,0 +1,3716 @@
+{
+  "audit_type": "read_only_existing_results",
+  "batch_directory": "rnai-designer/output/batch_1",
+  "method": "Original get_target_data body executed without GUI/engines; only range semantics adapted to Python 2. JSON/CSV and existing Bowtie evidence inspected, no pipeline execution.",
+  "issues": [],
+  "genes": [
+    {
+      "input_index": 1,
+      "gene_id": "cand0002_Rpt5 tcas=656024 StringTie STRG.22351.1 (coincide con Helixer) intrones=7/7 cds_cubierto=1.0",
+      "query_length_nt": 1482,
+      "counts": {
+        "references": 2,
+        "green_regions": 2,
+        "references_with_green": 2,
+        "references_with_conventional": 0,
+        "windows": 2,
+        "conventional_windows": 0,
+        "raw_export_rows": 5440,
+        "errors": 0,
+        "green_red_overlap_nt": 0,
+        "order_sensitive_references": 0,
+        "negative_only_refs": 0,
+        "offtarget_attempts": 1,
+        "offtarget_rejected_attempts": 0
+      },
+      "max_green_length_nt": 34,
+      "max_main_positive_coverage_nt": 705,
+      "max_main_both_strands_coverage_nt": 705,
+      "unique_green_query_nt": 38,
+      "largest_green_regions": [
+        {
+          "reference_id": "GITV01002308_1",
+          "region_id": "green-001",
+          "start_1based": 1417,
+          "end_1based_inclusive": 1450,
+          "length_nt": 34
+        },
+        {
+          "reference_id": "GITV01000966_1",
+          "region_id": "green-001",
+          "start_1based": 1,
+          "end_1based_inclusive": 4,
+          "length_nt": 4
+        }
+      ],
+      "best_conventional_window": null,
+      "selected_window": {
+        "window_id": "green-001:1417-1450",
+        "main_target": "GITV01002308_1",
+        "start_1based": 1417,
+        "end_1based_inclusive": 1450,
+        "length_nt": 34,
+        "window_class": "short_green_region",
+        "efficacy_priority_score": 71.42857142857143,
+        "length_penalty": 24.333333333333332,
+        "adjusted_priority_score": 47.0952380952381,
+        "is_efficient_true_count": 3,
+        "is_efficient_evaluable_count": 14,
+        "selected_priority_rank": 1
+      },
+      "issues": [],
+      "references": [
+        {
+          "input_index": 1,
+          "gene_id": "cand0002_Rpt5 tcas=656024 StringTie STRG.22351.1 (coincide con Helixer) intrones=7/7 cds_cubierto=1.0",
+          "reference_id": "GITV01000966_1",
+          "reference_status": "complete",
+          "original_record_count": 2720,
+          "raw_alignment_count": 2720,
+          "main_positive_hits": 1354,
+          "main_negative_hits": 0,
+          "green_region_count": 1,
+          "green_nt": 4,
+          "red_nt": 1444,
+          "max_green_length_nt": 4,
+          "max_main_positive_coverage_nt": 705,
+          "max_main_both_strands_coverage_nt": 705,
+          "green_red_overlap_nt": 0,
+          "green_vs_final_subtraction_diff_nt": 0,
+          "evaluated_window_count": 1,
+          "conventional_window_count": 0,
+          "eligible_window_count": 0,
+          "length_penalty_weight": 30.0,
+          "selected_length_nt": null,
+          "selected_adjusted_score": null,
+          "offtarget_attempts": 0,
+          "offtarget_rejected_attempts": 0,
+          "issues": [],
+          "green_regions": [
+            {
+              "region_id": "green-001",
+              "start_1based": 1,
+              "end_1based_inclusive": 4,
+              "length_nt": 4
+            }
+          ],
+          "best_window_per_region": {},
+          "green_red_overlap_positions": [],
+          "selected_green_red_overlap_positions": [],
+          "strict_final_green_max_nt": 4,
+          "raw_main_both_strand_regions": [
+            {
+              "region_id": "green-001",
+              "start_1based": 1,
+              "end_1based_inclusive": 705,
+              "length_nt": 705
+            },
+            {
+              "region_id": "green-002",
+              "start_1based": 707,
+              "end_1based_inclusive": 1356,
+              "length_nt": 650
+            },
+            {
+              "region_id": "green-003",
+              "start_1based": 1358,
+              "end_1based_inclusive": 1416,
+              "length_nt": 59
+            }
+          ]
+        },
+        {
+          "input_index": 1,
+          "gene_id": "cand0002_Rpt5 tcas=656024 StringTie STRG.22351.1 (coincide con Helixer) intrones=7/7 cds_cubierto=1.0",
+          "reference_id": "GITV01002308_1",
+          "reference_status": "complete",
+          "original_record_count": 2720,
+          "raw_alignment_count": 2720,
+          "main_positive_hits": 1366,
+          "main_negative_hits": 0,
+          "green_region_count": 1,
+          "green_nt": 34,
+          "red_nt": 1414,
+          "max_green_length_nt": 34,
+          "max_main_positive_coverage_nt": 701,
+          "max_main_both_strands_coverage_nt": 701,
+          "green_red_overlap_nt": 0,
+          "green_vs_final_subtraction_diff_nt": 0,
+          "evaluated_window_count": 1,
+          "conventional_window_count": 0,
+          "eligible_window_count": 1,
+          "length_penalty_weight": 30.0,
+          "selected_length_nt": 34,
+          "selected_adjusted_score": 47.0952380952381,
+          "offtarget_attempts": 1,
+          "offtarget_rejected_attempts": 0,
+          "issues": [],
+          "green_regions": [
+            {
+              "region_id": "green-001",
+              "start_1based": 1417,
+              "end_1based_inclusive": 1450,
+              "length_nt": 34
+            }
+          ],
+          "best_window_per_region": {
+            "green-001": {
+              "reference_id": "GITV01002308_1",
+              "window_id": "green-001:1417-1450",
+              "start_1based": 1417,
+              "end_1based_inclusive": 1450,
+              "length_nt": 34,
+              "efficacy_priority_score": 71.42857142857143,
+              "length_penalty": 24.333333333333332,
+              "adjusted_priority_score": 47.0952380952381
+            }
+          },
+          "green_red_overlap_positions": [],
+          "selected_green_red_overlap_positions": [],
+          "strict_final_green_max_nt": 34,
+          "raw_main_both_strand_regions": [
+            {
+              "region_id": "green-001",
+              "start_1based": 5,
+              "end_1based_inclusive": 705,
+              "length_nt": 701
+            },
+            {
+              "region_id": "green-002",
+              "start_1based": 707,
+              "end_1based_inclusive": 1356,
+              "length_nt": 650
+            },
+            {
+              "region_id": "green-003",
+              "start_1based": 1358,
+              "end_1based_inclusive": 1450,
+              "length_nt": 93
+            }
+          ]
+        }
+      ],
+      "schema_notes": [
+        "GITV01002308_1: el resumen añade score_name y score_interpretation; el contenido compartido es idéntico."
+      ],
+      "max_raw_both_reference": "GITV01000966_1",
+      "diagnosis": {
+        "confirmed": "Las dos máscaras originales suman dos tramos (4 y 34 nt); no existe región verde de 180 nt en estos resultados. La ganadora de 34 nt coincide con su secuencia y puntaje.",
+        "requires_review": "Hay cobertura main positiva continua de 705 nt en GITV01000966_1, reducida por hits a otras referencias bajo la política de un main target por vez. Revisar significado biológico de esas referencias y alcance de exclusividad, no asumir ausencia de homología larga."
+      }
+    },
+    {
+      "input_index": 2,
+      "gene_id": "cand0005_EloC tcas=664284 StringTie STRG.15183.1 (coincide con Helixer) intrones=2/2 cds_cubierto=1.0",
+      "query_length_nt": 2009,
+      "counts": {
+        "references": 15,
+        "green_regions": 9,
+        "references_with_green": 5,
+        "references_with_conventional": 1,
+        "windows": 26315,
+        "conventional_windows": 26309,
+        "raw_export_rows": 43050,
+        "errors": 0,
+        "green_red_overlap_nt": 1,
+        "order_sensitive_references": 1,
+        "negative_only_refs": 8,
+        "offtarget_attempts": 2,
+        "offtarget_rejected_attempts": 0
+      },
+      "max_green_length_nt": 409,
+      "max_main_positive_coverage_nt": 846,
+      "max_main_both_strands_coverage_nt": 846,
+      "unique_green_query_nt": 1104,
+      "largest_green_regions": [
+        {
+          "reference_id": "GITV01017907_1",
+          "region_id": "green-004",
+          "start_1based": 1570,
+          "end_1based_inclusive": 1978,
+          "length_nt": 409
+        },
+        {
+          "reference_id": "GITV01017907_1",
+          "region_id": "green-001",
+          "start_1based": 906,
+          "end_1based_inclusive": 1283,
+          "length_nt": 378
+        },
+        {
+          "reference_id": "GITV01017907_1",
+          "region_id": "green-002",
+          "start_1based": 1285,
+          "end_1based_inclusive": 1503,
+          "length_nt": 219
+        },
+        {
+          "reference_id": "GITV01017907_1",
+          "region_id": "green-003",
+          "start_1based": 1505,
+          "end_1based_inclusive": 1568,
+          "length_nt": 64
+        },
+        {
+          "reference_id": "GITV01029909_1",
+          "region_id": "green-001",
+          "start_1based": 1989,
+          "end_1based_inclusive": 2009,
+          "length_nt": 21
+        }
+      ],
+      "best_conventional_window": {
+        "reference_id": "GITV01017907_1",
+        "window_id": "green-004:1608-1801",
+        "start_1based": 1608,
+        "end_1based_inclusive": 1801,
+        "length_nt": 194,
+        "efficacy_priority_score": 56.89655172413793,
+        "length_penalty": 0.0,
+        "adjusted_priority_score": 56.89655172413793
+      },
+      "selected_window": {
+        "window_id": "green-004:1608-1801",
+        "main_target": "GITV01017907_1",
+        "start_1based": 1608,
+        "end_1based_inclusive": 1801,
+        "length_nt": 194,
+        "window_class": "conventional_180_250nt",
+        "efficacy_priority_score": 56.89655172413793,
+        "length_penalty": 0.0,
+        "adjusted_priority_score": 56.89655172413793,
+        "is_efficient_true_count": 27,
+        "is_efficient_evaluable_count": 174,
+        "selected_priority_rank": 1
+      },
+      "issues": [],
+      "references": [
+        {
+          "input_index": 2,
+          "gene_id": "cand0005_EloC tcas=664284 StringTie STRG.15183.1 (coincide con Helixer) intrones=2/2 cds_cubierto=1.0",
+          "reference_id": "GITV01000823_1",
+          "reference_status": "complete",
+          "original_record_count": 2870,
+          "raw_alignment_count": 4806,
+          "main_positive_hits": 826,
+          "main_negative_hits": 0,
+          "green_region_count": 2,
+          "green_nt": 2,
+          "red_nt": 1969,
+          "max_green_length_nt": 1,
+          "max_main_positive_coverage_nt": 846,
+          "max_main_both_strands_coverage_nt": 846,
+          "green_red_overlap_nt": 1,
+          "green_vs_final_subtraction_diff_nt": 1,
+          "evaluated_window_count": 2,
+          "conventional_window_count": 0,
+          "eligible_window_count": 0,
+          "length_penalty_weight": 30.0,
+          "selected_length_nt": null,
+          "selected_adjusted_score": null,
+          "offtarget_attempts": 0,
+          "offtarget_rejected_attempts": 0,
+          "issues": [],
+          "green_regions": [
+            {
+              "region_id": "green-001",
+              "start_1based": 665,
+              "end_1based_inclusive": 665,
+              "length_nt": 1
+            },
+            {
+              "region_id": "green-002",
+              "start_1based": 868,
+              "end_1based_inclusive": 868,
+              "length_nt": 1
+            }
+          ],
+          "best_window_per_region": {},
+          "green_red_overlap_positions": [
+            868
+          ],
+          "selected_green_red_overlap_positions": [],
+          "strict_final_green_max_nt": 1,
+          "raw_main_both_strand_regions": [
+            {
+              "region_id": "green-001",
+              "start_1based": 23,
+              "end_1based_inclusive": 868,
+              "length_nt": 846
+            }
+          ]
+        },
+        {
+          "input_index": 2,
+          "gene_id": "cand0005_EloC tcas=664284 StringTie STRG.15183.1 (coincide con Helixer) intrones=2/2 cds_cubierto=1.0",
+          "reference_id": "GITV01000967_1",
+          "reference_status": "complete",
+          "original_record_count": 2870,
+          "raw_alignment_count": 4806,
+          "main_positive_hits": 632,
+          "main_negative_hits": 0,
+          "green_region_count": 1,
+          "green_nt": 10,
+          "red_nt": 1960,
+          "max_green_length_nt": 10,
+          "max_main_positive_coverage_nt": 652,
+          "max_main_both_strands_coverage_nt": 652,
+          "green_red_overlap_nt": 0,
+          "green_vs_final_subtraction_diff_nt": 0,
+          "evaluated_window_count": 1,
+          "conventional_window_count": 0,
+          "eligible_window_count": 0,
+          "length_penalty_weight": 30.0,
+          "selected_length_nt": null,
+          "selected_adjusted_score": null,
+          "offtarget_attempts": 0,
+          "offtarget_rejected_attempts": 0,
+          "issues": [],
+          "green_regions": [
+            {
+              "region_id": "green-001",
+              "start_1based": 13,
+              "end_1based_inclusive": 22,
+              "length_nt": 10
+            }
+          ],
+          "best_window_per_region": {},
+          "green_red_overlap_positions": [],
+          "selected_green_red_overlap_positions": [],
+          "strict_final_green_max_nt": 10,
+          "raw_main_both_strand_regions": [
+            {
+              "region_id": "green-001",
+              "start_1based": 13,
+              "end_1based_inclusive": 664,
+              "length_nt": 652
+            }
+          ]
+        },
+        {
+          "input_index": 2,
+          "gene_id": "cand0005_EloC tcas=664284 StringTie STRG.15183.1 (coincide con Helixer) intrones=2/2 cds_cubierto=1.0",
+          "reference_id": "GITV01003424_1",
+          "reference_status": "complete",
+          "original_record_count": 2870,
+          "raw_alignment_count": 4806,
+          "main_positive_hits": 0,
+          "main_negative_hits": 1888,
+          "green_region_count": 0,
+          "green_nt": 0,
+          "red_nt": 1970,
+          "max_green_length_nt": 0,
+          "max_main_positive_coverage_nt": 0,
+          "max_main_both_strands_coverage_nt": 637,
+          "green_red_overlap_nt": 0,
+          "green_vs_final_subtraction_diff_nt": 0,
+          "evaluated_window_count": 0,
+          "conventional_window_count": 0,
+          "eligible_window_count": 0,
+          "length_penalty_weight": 30.0,
+          "selected_length_nt": null,
+          "selected_adjusted_score": null,
+          "offtarget_attempts": 0,
+          "offtarget_rejected_attempts": 0,
+          "issues": [],
+          "green_regions": [],
+          "best_window_per_region": {},
+          "green_red_overlap_positions": [],
+          "selected_green_red_overlap_positions": [],
+          "strict_final_green_max_nt": 0,
+          "raw_main_both_strand_regions": [
+            {
+              "region_id": "green-001",
+              "start_1based": 28,
+              "end_1based_inclusive": 664,
+              "length_nt": 637
+            },
+            {
+              "region_id": "green-002",
+              "start_1based": 666,
+              "end_1based_inclusive": 1298,
+              "length_nt": 633
+            },
+            {
+              "region_id": "green-003",
+              "start_1based": 1300,
+              "end_1based_inclusive": 1568,
+              "length_nt": 269
+            },
+            {
+              "region_id": "green-004",
+              "start_1based": 1570,
+              "end_1based_inclusive": 1998,
+              "length_nt": 429
+            }
+          ]
+        },
+        {
+          "input_index": 2,
+          "gene_id": "cand0005_EloC tcas=664284 StringTie STRG.15183.1 (coincide con Helixer) intrones=2/2 cds_cubierto=1.0",
+          "reference_id": "GITV01004791_1",
+          "reference_status": "complete",
+          "original_record_count": 2870,
+          "raw_alignment_count": 4806,
+          "main_positive_hits": 0,
+          "main_negative_hits": 21,
+          "green_region_count": 0,
+          "green_nt": 0,
+          "red_nt": 1970,
+          "max_green_length_nt": 0,
+          "max_main_positive_coverage_nt": 0,
+          "max_main_both_strands_coverage_nt": 35,
+          "green_red_overlap_nt": 0,
+          "green_vs_final_subtraction_diff_nt": 0,
+          "evaluated_window_count": 0,
+          "conventional_window_count": 0,
+          "eligible_window_count": 0,
+          "length_penalty_weight": 30.0,
+          "selected_length_nt": null,
+          "selected_adjusted_score": null,
+          "offtarget_attempts": 0,
+          "offtarget_rejected_attempts": 0,
+          "issues": [],
+          "green_regions": [],
+          "best_window_per_region": {},
+          "green_red_overlap_positions": [],
+          "selected_green_red_overlap_positions": [],
+          "strict_final_green_max_nt": 0,
+          "raw_main_both_strand_regions": [
+            {
+              "region_id": "green-001",
+              "start_1based": 196,
+              "end_1based_inclusive": 230,
+              "length_nt": 35
+            },
+            {
+              "region_id": "green-002",
+              "start_1based": 295,
+              "end_1based_inclusive": 317,
+              "length_nt": 23
+            },
+            {
+              "region_id": "green-003",
+              "start_1based": 446,
+              "end_1based_inclusive": 468,
+              "length_nt": 23
+            }
+          ]
+        },
+        {
+          "input_index": 2,
+          "gene_id": "cand0005_EloC tcas=664284 StringTie STRG.15183.1 (coincide con Helixer) intrones=2/2 cds_cubierto=1.0",
+          "reference_id": "GITV01013274_1",
+          "reference_status": "complete",
+          "original_record_count": 2870,
+          "raw_alignment_count": 4806,
+          "main_positive_hits": 0,
+          "main_negative_hits": 3,
+          "green_region_count": 0,
+          "green_nt": 0,
+          "red_nt": 1970,
+          "max_green_length_nt": 0,
+          "max_main_positive_coverage_nt": 0,
+          "max_main_both_strands_coverage_nt": 23,
+          "green_red_overlap_nt": 0,
+          "green_vs_final_subtraction_diff_nt": 0,
+          "evaluated_window_count": 0,
+          "conventional_window_count": 0,
+          "eligible_window_count": 0,
+          "length_penalty_weight": 30.0,
+          "selected_length_nt": null,
+          "selected_adjusted_score": null,
+          "offtarget_attempts": 0,
+          "offtarget_rejected_attempts": 0,
+          "issues": [],
+          "green_regions": [],
+          "best_window_per_region": {},
+          "green_red_overlap_positions": [],
+          "selected_green_red_overlap_positions": [],
+          "strict_final_green_max_nt": 0,
+          "raw_main_both_strand_regions": [
+            {
+              "region_id": "green-001",
+              "start_1based": 884,
+              "end_1based_inclusive": 906,
+              "length_nt": 23
+            }
+          ]
+        },
+        {
+          "input_index": 2,
+          "gene_id": "cand0005_EloC tcas=664284 StringTie STRG.15183.1 (coincide con Helixer) intrones=2/2 cds_cubierto=1.0",
+          "reference_id": "GITV01013537_1",
+          "reference_status": "complete",
+          "original_record_count": 2870,
+          "raw_alignment_count": 4806,
+          "main_positive_hits": 2,
+          "main_negative_hits": 0,
+          "green_region_count": 0,
+          "green_nt": 0,
+          "red_nt": 1970,
+          "max_green_length_nt": 0,
+          "max_main_positive_coverage_nt": 22,
+          "max_main_both_strands_coverage_nt": 22,
+          "green_red_overlap_nt": 0,
+          "green_vs_final_subtraction_diff_nt": 0,
+          "evaluated_window_count": 0,
+          "conventional_window_count": 0,
+          "eligible_window_count": 0,
+          "length_penalty_weight": 30.0,
+          "selected_length_nt": null,
+          "selected_adjusted_score": null,
+          "offtarget_attempts": 0,
+          "offtarget_rejected_attempts": 0,
+          "issues": [],
+          "green_regions": [],
+          "best_window_per_region": {}
+        },
+        {
+          "input_index": 2,
+          "gene_id": "cand0005_EloC tcas=664284 StringTie STRG.15183.1 (coincide con Helixer) intrones=2/2 cds_cubierto=1.0",
+          "reference_id": "GITV01013686_1",
+          "reference_status": "complete",
+          "original_record_count": 2870,
+          "raw_alignment_count": 4806,
+          "main_positive_hits": 0,
+          "main_negative_hits": 2,
+          "green_region_count": 0,
+          "green_nt": 0,
+          "red_nt": 1970,
+          "max_green_length_nt": 0,
+          "max_main_positive_coverage_nt": 0,
+          "max_main_both_strands_coverage_nt": 22,
+          "green_red_overlap_nt": 0,
+          "green_vs_final_subtraction_diff_nt": 0,
+          "evaluated_window_count": 0,
+          "conventional_window_count": 0,
+          "eligible_window_count": 0,
+          "length_penalty_weight": 30.0,
+          "selected_length_nt": null,
+          "selected_adjusted_score": null,
+          "offtarget_attempts": 0,
+          "offtarget_rejected_attempts": 0,
+          "issues": [],
+          "green_regions": [],
+          "best_window_per_region": {},
+          "green_red_overlap_positions": [],
+          "selected_green_red_overlap_positions": [],
+          "strict_final_green_max_nt": 0,
+          "raw_main_both_strand_regions": [
+            {
+              "region_id": "green-001",
+              "start_1based": 884,
+              "end_1based_inclusive": 905,
+              "length_nt": 22
+            }
+          ]
+        },
+        {
+          "input_index": 2,
+          "gene_id": "cand0005_EloC tcas=664284 StringTie STRG.15183.1 (coincide con Helixer) intrones=2/2 cds_cubierto=1.0",
+          "reference_id": "GITV01015439_1",
+          "reference_status": "complete",
+          "original_record_count": 2870,
+          "raw_alignment_count": 4806,
+          "main_positive_hits": 0,
+          "main_negative_hits": 15,
+          "green_region_count": 0,
+          "green_nt": 0,
+          "red_nt": 1970,
+          "max_green_length_nt": 0,
+          "max_main_positive_coverage_nt": 0,
+          "max_main_both_strands_coverage_nt": 35,
+          "green_red_overlap_nt": 0,
+          "green_vs_final_subtraction_diff_nt": 0,
+          "evaluated_window_count": 0,
+          "conventional_window_count": 0,
+          "eligible_window_count": 0,
+          "length_penalty_weight": 30.0,
+          "selected_length_nt": null,
+          "selected_adjusted_score": null,
+          "offtarget_attempts": 0,
+          "offtarget_rejected_attempts": 0,
+          "issues": [],
+          "green_regions": [],
+          "best_window_per_region": {},
+          "green_red_overlap_positions": [],
+          "selected_green_red_overlap_positions": [],
+          "strict_final_green_max_nt": 0,
+          "raw_main_both_strand_regions": [
+            {
+              "region_id": "green-001",
+              "start_1based": 196,
+              "end_1based_inclusive": 230,
+              "length_nt": 35
+            }
+          ]
+        },
+        {
+          "input_index": 2,
+          "gene_id": "cand0005_EloC tcas=664284 StringTie STRG.15183.1 (coincide con Helixer) intrones=2/2 cds_cubierto=1.0",
+          "reference_id": "GITV01017907_1",
+          "reference_status": "complete",
+          "original_record_count": 2870,
+          "raw_alignment_count": 4806,
+          "main_positive_hits": 1317,
+          "main_negative_hits": 0,
+          "green_region_count": 4,
+          "green_nt": 1070,
+          "red_nt": 900,
+          "max_green_length_nt": 409,
+          "max_main_positive_coverage_nt": 409,
+          "max_main_both_strands_coverage_nt": 409,
+          "green_red_overlap_nt": 0,
+          "green_vs_final_subtraction_diff_nt": 0,
+          "evaluated_window_count": 26310,
+          "conventional_window_count": 26309,
+          "eligible_window_count": 26310,
+          "length_penalty_weight": 30.0,
+          "selected_length_nt": 194,
+          "selected_adjusted_score": 56.89655172413793,
+          "offtarget_attempts": 1,
+          "offtarget_rejected_attempts": 0,
+          "issues": [],
+          "green_regions": [
+            {
+              "region_id": "green-001",
+              "start_1based": 906,
+              "end_1based_inclusive": 1283,
+              "length_nt": 378
+            },
+            {
+              "region_id": "green-002",
+              "start_1based": 1285,
+              "end_1based_inclusive": 1503,
+              "length_nt": 219
+            },
+            {
+              "region_id": "green-003",
+              "start_1based": 1505,
+              "end_1based_inclusive": 1568,
+              "length_nt": 64
+            },
+            {
+              "region_id": "green-004",
+              "start_1based": 1570,
+              "end_1based_inclusive": 1978,
+              "length_nt": 409
+            }
+          ],
+          "best_window_per_region": {
+            "green-001": {
+              "reference_id": "GITV01017907_1",
+              "window_id": "green-001:1104-1283",
+              "start_1based": 1104,
+              "end_1based_inclusive": 1283,
+              "length_nt": 180,
+              "efficacy_priority_score": 53.541666666666664,
+              "length_penalty": 0.0,
+              "adjusted_priority_score": 53.541666666666664
+            },
+            "green-002": {
+              "reference_id": "GITV01017907_1",
+              "window_id": "green-002:1318-1497",
+              "start_1based": 1318,
+              "end_1based_inclusive": 1497,
+              "length_nt": 180,
+              "efficacy_priority_score": 50.833333333333336,
+              "length_penalty": 0.0,
+              "adjusted_priority_score": 50.833333333333336
+            },
+            "green-003": {
+              "reference_id": "GITV01017907_1",
+              "window_id": "green-003:1505-1568",
+              "start_1based": 1505,
+              "end_1based_inclusive": 1568,
+              "length_nt": 64,
+              "efficacy_priority_score": 49.24242424242424,
+              "length_penalty": 19.333333333333332,
+              "adjusted_priority_score": 29.90909090909091
+            },
+            "green-004": {
+              "reference_id": "GITV01017907_1",
+              "window_id": "green-004:1608-1801",
+              "start_1based": 1608,
+              "end_1based_inclusive": 1801,
+              "length_nt": 194,
+              "efficacy_priority_score": 56.89655172413793,
+              "length_penalty": 0.0,
+              "adjusted_priority_score": 56.89655172413793
+            }
+          },
+          "green_red_overlap_positions": [],
+          "selected_green_red_overlap_positions": [],
+          "strict_final_green_max_nt": 409,
+          "raw_main_both_strand_regions": [
+            {
+              "region_id": "green-001",
+              "start_1based": 523,
+              "end_1based_inclusive": 664,
+              "length_nt": 142
+            },
+            {
+              "region_id": "green-002",
+              "start_1based": 666,
+              "end_1based_inclusive": 868,
+              "length_nt": 203
+            },
+            {
+              "region_id": "green-003",
+              "start_1based": 884,
+              "end_1based_inclusive": 1283,
+              "length_nt": 400
+            },
+            {
+              "region_id": "green-004",
+              "start_1based": 1285,
+              "end_1based_inclusive": 1503,
+              "length_nt": 219
+            },
+            {
+              "region_id": "green-005",
+              "start_1based": 1505,
+              "end_1based_inclusive": 1568,
+              "length_nt": 64
+            },
+            {
+              "region_id": "green-006",
+              "start_1based": 1570,
+              "end_1based_inclusive": 1978,
+              "length_nt": 409
+            }
+          ]
+        },
+        {
+          "input_index": 2,
+          "gene_id": "cand0005_EloC tcas=664284 StringTie STRG.15183.1 (coincide con Helixer) intrones=2/2 cds_cubierto=1.0",
+          "reference_id": "GITV01018932_1",
+          "reference_status": "complete",
+          "original_record_count": 2870,
+          "raw_alignment_count": 4806,
+          "main_positive_hits": 0,
+          "main_negative_hits": 2,
+          "green_region_count": 0,
+          "green_nt": 0,
+          "red_nt": 1970,
+          "max_green_length_nt": 0,
+          "max_main_positive_coverage_nt": 0,
+          "max_main_both_strands_coverage_nt": 22,
+          "green_red_overlap_nt": 0,
+          "green_vs_final_subtraction_diff_nt": 0,
+          "evaluated_window_count": 0,
+          "conventional_window_count": 0,
+          "eligible_window_count": 0,
+          "length_penalty_weight": 30.0,
+          "selected_length_nt": null,
+          "selected_adjusted_score": null,
+          "offtarget_attempts": 0,
+          "offtarget_rejected_attempts": 0,
+          "issues": [],
+          "green_regions": [],
+          "best_window_per_region": {},
+          "green_red_overlap_positions": [],
+          "selected_green_red_overlap_positions": [],
+          "strict_final_green_max_nt": 0,
+          "raw_main_both_strand_regions": [
+            {
+              "region_id": "green-001",
+              "start_1based": 884,
+              "end_1based_inclusive": 905,
+              "length_nt": 22
+            }
+          ]
+        },
+        {
+          "input_index": 2,
+          "gene_id": "cand0005_EloC tcas=664284 StringTie STRG.15183.1 (coincide con Helixer) intrones=2/2 cds_cubierto=1.0",
+          "reference_id": "GITV01029909_1",
+          "reference_status": "complete",
+          "original_record_count": 2870,
+          "raw_alignment_count": 4806,
+          "main_positive_hits": 1,
+          "main_negative_hits": 0,
+          "green_region_count": 1,
+          "green_nt": 21,
+          "red_nt": 1949,
+          "max_green_length_nt": 21,
+          "max_main_positive_coverage_nt": 21,
+          "max_main_both_strands_coverage_nt": 21,
+          "green_red_overlap_nt": 0,
+          "green_vs_final_subtraction_diff_nt": 0,
+          "evaluated_window_count": 1,
+          "conventional_window_count": 0,
+          "eligible_window_count": 1,
+          "length_penalty_weight": 30.0,
+          "selected_length_nt": 21,
+          "selected_adjusted_score": 6.833333333333336,
+          "offtarget_attempts": 1,
+          "offtarget_rejected_attempts": 0,
+          "issues": [],
+          "green_regions": [
+            {
+              "region_id": "green-001",
+              "start_1based": 1989,
+              "end_1based_inclusive": 2009,
+              "length_nt": 21
+            }
+          ],
+          "best_window_per_region": {
+            "green-001": {
+              "reference_id": "GITV01029909_1",
+              "window_id": "green-001:1989-2009",
+              "start_1based": 1989,
+              "end_1based_inclusive": 2009,
+              "length_nt": 21,
+              "efficacy_priority_score": 33.333333333333336,
+              "length_penalty": 26.5,
+              "adjusted_priority_score": 6.833333333333336
+            }
+          },
+          "green_red_overlap_positions": [],
+          "selected_green_red_overlap_positions": [],
+          "strict_final_green_max_nt": 21,
+          "raw_main_both_strand_regions": [
+            {
+              "region_id": "green-001",
+              "start_1based": 1989,
+              "end_1based_inclusive": 2009,
+              "length_nt": 21
+            }
+          ]
+        },
+        {
+          "input_index": 2,
+          "gene_id": "cand0005_EloC tcas=664284 StringTie STRG.15183.1 (coincide con Helixer) intrones=2/2 cds_cubierto=1.0",
+          "reference_id": "GITV01030656_1",
+          "reference_status": "complete",
+          "original_record_count": 2870,
+          "raw_alignment_count": 4806,
+          "main_positive_hits": 0,
+          "main_negative_hits": 3,
+          "green_region_count": 0,
+          "green_nt": 0,
+          "red_nt": 1970,
+          "max_green_length_nt": 0,
+          "max_main_positive_coverage_nt": 0,
+          "max_main_both_strands_coverage_nt": 23,
+          "green_red_overlap_nt": 0,
+          "green_vs_final_subtraction_diff_nt": 0,
+          "evaluated_window_count": 0,
+          "conventional_window_count": 0,
+          "eligible_window_count": 0,
+          "length_penalty_weight": 30.0,
+          "selected_length_nt": null,
+          "selected_adjusted_score": null,
+          "offtarget_attempts": 0,
+          "offtarget_rejected_attempts": 0,
+          "issues": [],
+          "green_regions": [],
+          "best_window_per_region": {},
+          "green_red_overlap_positions": [],
+          "selected_green_red_overlap_positions": [],
+          "strict_final_green_max_nt": 0,
+          "raw_main_both_strand_regions": [
+            {
+              "region_id": "green-001",
+              "start_1based": 446,
+              "end_1based_inclusive": 468,
+              "length_nt": 23
+            }
+          ]
+        },
+        {
+          "input_index": 2,
+          "gene_id": "cand0005_EloC tcas=664284 StringTie STRG.15183.1 (coincide con Helixer) intrones=2/2 cds_cubierto=1.0",
+          "reference_id": "GITV01041887_1",
+          "reference_status": "complete",
+          "original_record_count": 2870,
+          "raw_alignment_count": 4806,
+          "main_positive_hits": 90,
+          "main_negative_hits": 0,
+          "green_region_count": 1,
+          "green_nt": 1,
+          "red_nt": 1969,
+          "max_green_length_nt": 1,
+          "max_main_positive_coverage_nt": 109,
+          "max_main_both_strands_coverage_nt": 109,
+          "green_red_overlap_nt": 0,
+          "green_vs_final_subtraction_diff_nt": 0,
+          "evaluated_window_count": 1,
+          "conventional_window_count": 0,
+          "eligible_window_count": 0,
+          "length_penalty_weight": 30.0,
+          "selected_length_nt": null,
+          "selected_adjusted_score": null,
+          "offtarget_attempts": 0,
+          "offtarget_rejected_attempts": 0,
+          "issues": [],
+          "green_regions": [
+            {
+              "region_id": "green-001",
+              "start_1based": 869,
+              "end_1based_inclusive": 869,
+              "length_nt": 1
+            }
+          ],
+          "best_window_per_region": {},
+          "green_red_overlap_positions": [],
+          "selected_green_red_overlap_positions": [],
+          "strict_final_green_max_nt": 1,
+          "raw_main_both_strand_regions": [
+            {
+              "region_id": "green-001",
+              "start_1based": 666,
+              "end_1based_inclusive": 774,
+              "length_nt": 109
+            },
+            {
+              "region_id": "green-002",
+              "start_1based": 849,
+              "end_1based_inclusive": 869,
+              "length_nt": 21
+            }
+          ]
+        },
+        {
+          "input_index": 2,
+          "gene_id": "cand0005_EloC tcas=664284 StringTie STRG.15183.1 (coincide con Helixer) intrones=2/2 cds_cubierto=1.0",
+          "reference_id": "GITV01048835_1",
+          "reference_status": "complete",
+          "original_record_count": 2870,
+          "raw_alignment_count": 4806,
+          "main_positive_hits": 2,
+          "main_negative_hits": 0,
+          "green_region_count": 0,
+          "green_nt": 0,
+          "red_nt": 1970,
+          "max_green_length_nt": 0,
+          "max_main_positive_coverage_nt": 22,
+          "max_main_both_strands_coverage_nt": 22,
+          "green_red_overlap_nt": 0,
+          "green_vs_final_subtraction_diff_nt": 0,
+          "evaluated_window_count": 0,
+          "conventional_window_count": 0,
+          "eligible_window_count": 0,
+          "length_penalty_weight": 30.0,
+          "selected_length_nt": null,
+          "selected_adjusted_score": null,
+          "offtarget_attempts": 0,
+          "offtarget_rejected_attempts": 0,
+          "issues": [],
+          "green_regions": [],
+          "best_window_per_region": {}
+        },
+        {
+          "input_index": 2,
+          "gene_id": "cand0005_EloC tcas=664284 StringTie STRG.15183.1 (coincide con Helixer) intrones=2/2 cds_cubierto=1.0",
+          "reference_id": "GITV01054895_1",
+          "reference_status": "complete",
+          "original_record_count": 2870,
+          "raw_alignment_count": 4806,
+          "main_positive_hits": 0,
+          "main_negative_hits": 2,
+          "green_region_count": 0,
+          "green_nt": 0,
+          "red_nt": 1970,
+          "max_green_length_nt": 0,
+          "max_main_positive_coverage_nt": 0,
+          "max_main_both_strands_coverage_nt": 22,
+          "green_red_overlap_nt": 0,
+          "green_vs_final_subtraction_diff_nt": 0,
+          "evaluated_window_count": 0,
+          "conventional_window_count": 0,
+          "eligible_window_count": 0,
+          "length_penalty_weight": 30.0,
+          "selected_length_nt": null,
+          "selected_adjusted_score": null,
+          "offtarget_attempts": 0,
+          "offtarget_rejected_attempts": 0,
+          "issues": [],
+          "green_regions": [],
+          "best_window_per_region": {},
+          "green_red_overlap_positions": [],
+          "selected_green_red_overlap_positions": [],
+          "strict_final_green_max_nt": 0,
+          "raw_main_both_strand_regions": [
+            {
+              "region_id": "green-001",
+              "start_1based": 884,
+              "end_1based_inclusive": 905,
+              "length_nt": 22
+            }
+          ]
+        }
+      ],
+      "schema_notes": [
+        "GITV01017907_1: el resumen añade score_name y score_interpretation; el contenido compartido es idéntico.",
+        "GITV01029909_1: el resumen añade score_name y score_interpretation; el contenido compartido es idéntico."
+      ],
+      "max_raw_both_reference": "GITV01000823_1",
+      "diagnosis": {
+        "confirmed": "Regiones verdes máximas de 409, 378 y 219 nt; las 26.309 ventanas convencionales están presentes. La ganadora de 194 nt es consistente.",
+        "requires_review": "Un artefacto original deja la posición 868 simultáneamente verde y roja en GITV01000823_1. No afecta a la ganadora; revisar dependencia del orden de filas si se cambia la implementación."
+      }
+    },
+    {
+      "input_index": 3,
+      "gene_id": "cand0007_mts tcas=662352 StringTie STRG.7615.1 (coincide con Helixer) intrones=5/5 cds_cubierto=1.0",
+      "query_length_nt": 2123,
+      "counts": {
+        "references": 3,
+        "green_regions": 1,
+        "references_with_green": 1,
+        "references_with_conventional": 0,
+        "windows": 1,
+        "conventional_windows": 0,
+        "raw_export_rows": 3,
+        "errors": 0,
+        "green_red_overlap_nt": 0,
+        "order_sensitive_references": 0,
+        "negative_only_refs": 2,
+        "offtarget_attempts": 1,
+        "offtarget_rejected_attempts": 0
+      },
+      "max_green_length_nt": 21,
+      "max_main_positive_coverage_nt": 21,
+      "max_main_both_strands_coverage_nt": 315,
+      "unique_green_query_nt": 21,
+      "largest_green_regions": [
+        {
+          "reference_id": "GITV01004263_1",
+          "region_id": "green-001",
+          "start_1based": 428,
+          "end_1based_inclusive": 448,
+          "length_nt": 21
+        }
+      ],
+      "best_conventional_window": null,
+      "selected_window": {
+        "window_id": "green-001:428-448",
+        "main_target": "GITV01004263_1",
+        "start_1based": 428,
+        "end_1based_inclusive": 448,
+        "length_nt": 21,
+        "window_class": "short_green_region",
+        "efficacy_priority_score": 33.333333333333336,
+        "length_penalty": 26.5,
+        "adjusted_priority_score": 6.833333333333336,
+        "is_efficient_true_count": 0,
+        "is_efficient_evaluable_count": 1,
+        "selected_priority_rank": 1
+      },
+      "issues": [],
+      "references": [
+        {
+          "input_index": 3,
+          "gene_id": "cand0007_mts tcas=662352 StringTie STRG.7615.1 (coincide con Helixer) intrones=5/5 cds_cubierto=1.0",
+          "reference_id": "GITV01003170_1",
+          "reference_status": "complete",
+          "original_record_count": 1,
+          "raw_alignment_count": 1299,
+          "main_positive_hits": 0,
+          "main_negative_hits": 1135,
+          "green_region_count": 0,
+          "green_nt": 0,
+          "red_nt": 21,
+          "max_green_length_nt": 0,
+          "max_main_positive_coverage_nt": 0,
+          "max_main_both_strands_coverage_nt": 315,
+          "green_red_overlap_nt": 0,
+          "green_vs_final_subtraction_diff_nt": 0,
+          "evaluated_window_count": 0,
+          "conventional_window_count": 0,
+          "eligible_window_count": 0,
+          "length_penalty_weight": 30.0,
+          "selected_length_nt": null,
+          "selected_adjusted_score": null,
+          "offtarget_attempts": 0,
+          "offtarget_rejected_attempts": 0,
+          "issues": [],
+          "green_regions": [],
+          "best_window_per_region": {},
+          "green_red_overlap_positions": [],
+          "selected_green_red_overlap_positions": [],
+          "strict_final_green_max_nt": 0,
+          "raw_main_both_strand_regions": [
+            {
+              "region_id": "green-001",
+              "start_1based": 3,
+              "end_1based_inclusive": 87,
+              "length_nt": 85
+            },
+            {
+              "region_id": "green-002",
+              "start_1based": 89,
+              "end_1based_inclusive": 185,
+              "length_nt": 97
+            },
+            {
+              "region_id": "green-003",
+              "start_1based": 187,
+              "end_1based_inclusive": 300,
+              "length_nt": 114
+            },
+            {
+              "region_id": "green-004",
+              "start_1based": 582,
+              "end_1based_inclusive": 603,
+              "length_nt": 22
+            },
+            {
+              "region_id": "green-005",
+              "start_1based": 935,
+              "end_1based_inclusive": 972,
+              "length_nt": 38
+            },
+            {
+              "region_id": "green-006",
+              "start_1based": 974,
+              "end_1based_inclusive": 1288,
+              "length_nt": 315
+            },
+            {
+              "region_id": "green-007",
+              "start_1based": 1290,
+              "end_1based_inclusive": 1433,
+              "length_nt": 144
+            },
+            {
+              "region_id": "green-008",
+              "start_1based": 1440,
+              "end_1based_inclusive": 1474,
+              "length_nt": 35
+            },
+            {
+              "region_id": "green-009",
+              "start_1based": 1476,
+              "end_1based_inclusive": 1517,
+              "length_nt": 42
+            },
+            {
+              "region_id": "green-010",
+              "start_1based": 1519,
+              "end_1based_inclusive": 1612,
+              "length_nt": 94
+            },
+            {
+              "region_id": "green-011",
+              "start_1based": 1617,
+              "end_1based_inclusive": 1641,
+              "length_nt": 25
+            },
+            {
+              "region_id": "green-012",
+              "start_1based": 1643,
+              "end_1based_inclusive": 1696,
+              "length_nt": 54
+            },
+            {
+              "region_id": "green-013",
+              "start_1based": 1701,
+              "end_1based_inclusive": 1780,
+              "length_nt": 80
+            },
+            {
+              "region_id": "green-014",
+              "start_1based": 1782,
+              "end_1based_inclusive": 1846,
+              "length_nt": 65
+            },
+            {
+              "region_id": "green-015",
+              "start_1based": 1848,
+              "end_1based_inclusive": 1884,
+              "length_nt": 37
+            },
+            {
+              "region_id": "green-016",
+              "start_1based": 1886,
+              "end_1based_inclusive": 1917,
+              "length_nt": 32
+            },
+            {
+              "region_id": "green-017",
+              "start_1based": 1927,
+              "end_1based_inclusive": 2122,
+              "length_nt": 196
+            }
+          ]
+        },
+        {
+          "input_index": 3,
+          "gene_id": "cand0007_mts tcas=662352 StringTie STRG.7615.1 (coincide con Helixer) intrones=5/5 cds_cubierto=1.0",
+          "reference_id": "GITV01004263_1",
+          "reference_status": "complete",
+          "original_record_count": 1,
+          "raw_alignment_count": 1299,
+          "main_positive_hits": 1,
+          "main_negative_hits": 0,
+          "green_region_count": 1,
+          "green_nt": 21,
+          "red_nt": 0,
+          "max_green_length_nt": 21,
+          "max_main_positive_coverage_nt": 21,
+          "max_main_both_strands_coverage_nt": 21,
+          "green_red_overlap_nt": 0,
+          "green_vs_final_subtraction_diff_nt": 0,
+          "evaluated_window_count": 1,
+          "conventional_window_count": 0,
+          "eligible_window_count": 1,
+          "length_penalty_weight": 30.0,
+          "selected_length_nt": 21,
+          "selected_adjusted_score": 6.833333333333336,
+          "offtarget_attempts": 1,
+          "offtarget_rejected_attempts": 0,
+          "issues": [],
+          "green_regions": [
+            {
+              "region_id": "green-001",
+              "start_1based": 428,
+              "end_1based_inclusive": 448,
+              "length_nt": 21
+            }
+          ],
+          "best_window_per_region": {
+            "green-001": {
+              "reference_id": "GITV01004263_1",
+              "window_id": "green-001:428-448",
+              "start_1based": 428,
+              "end_1based_inclusive": 448,
+              "length_nt": 21,
+              "efficacy_priority_score": 33.333333333333336,
+              "length_penalty": 26.5,
+              "adjusted_priority_score": 6.833333333333336
+            }
+          },
+          "green_red_overlap_positions": [],
+          "selected_green_red_overlap_positions": [],
+          "strict_final_green_max_nt": 21,
+          "raw_main_both_strand_regions": [
+            {
+              "region_id": "green-001",
+              "start_1based": 428,
+              "end_1based_inclusive": 448,
+              "length_nt": 21
+            }
+          ]
+        },
+        {
+          "input_index": 3,
+          "gene_id": "cand0007_mts tcas=662352 StringTie STRG.7615.1 (coincide con Helixer) intrones=5/5 cds_cubierto=1.0",
+          "reference_id": "GITV01030531_1",
+          "reference_status": "complete",
+          "original_record_count": 1,
+          "raw_alignment_count": 1299,
+          "main_positive_hits": 0,
+          "main_negative_hits": 163,
+          "green_region_count": 0,
+          "green_nt": 0,
+          "red_nt": 21,
+          "max_green_length_nt": 0,
+          "max_main_positive_coverage_nt": 0,
+          "max_main_both_strands_coverage_nt": 183,
+          "green_red_overlap_nt": 0,
+          "green_vs_final_subtraction_diff_nt": 0,
+          "evaluated_window_count": 0,
+          "conventional_window_count": 0,
+          "eligible_window_count": 0,
+          "length_penalty_weight": 30.0,
+          "selected_length_nt": null,
+          "selected_adjusted_score": null,
+          "offtarget_attempts": 0,
+          "offtarget_rejected_attempts": 0,
+          "issues": [],
+          "green_regions": [],
+          "best_window_per_region": {},
+          "green_red_overlap_positions": [],
+          "selected_green_red_overlap_positions": [],
+          "strict_final_green_max_nt": 0,
+          "raw_main_both_strand_regions": [
+            {
+              "region_id": "green-001",
+              "start_1based": 1940,
+              "end_1based_inclusive": 2122,
+              "length_nt": 183
+            }
+          ]
+        }
+      ],
+      "schema_notes": [
+        "GITV01004263_1: el resumen añade score_name y score_interpretation; el contenido compartido es idéntico."
+      ],
+      "max_raw_both_reference": "GITV01003170_1",
+      "diagnosis": {
+        "confirmed": "Solo un tramo verde exportado de 21 nt y un siRNA evaluable, marcado no eficiente. No hay ventanas convencionales omitidas de esa máscara.",
+        "requires_review": "GITV01003170_1 tiene 1.135 alineamientos negativos y cobertura continua de 315 nt (974–1288), no exportada por data_to_json. Revisar limitación de hebra y orientación de las referencias/candidato antes de concluir que no hay regiones largas."
+      }
+    },
+    {
+      "input_index": 4,
+      "gene_id": "cand0010_Hsp83 tcas=656270 StringTie STRG.14232.1 (coincide con Helixer) intrones=2/2 cds_cubierto=1.0",
+      "query_length_nt": 2504,
+      "counts": {
+        "references": 10,
+        "green_regions": 1,
+        "references_with_green": 1,
+        "references_with_conventional": 0,
+        "windows": 1,
+        "conventional_windows": 0,
+        "raw_export_rows": 70,
+        "errors": 0,
+        "green_red_overlap_nt": 0,
+        "order_sensitive_references": 0,
+        "negative_only_refs": 9,
+        "offtarget_attempts": 1,
+        "offtarget_rejected_attempts": 0
+      },
+      "max_green_length_nt": 27,
+      "max_main_positive_coverage_nt": 27,
+      "max_main_both_strands_coverage_nt": 1107,
+      "unique_green_query_nt": 27,
+      "largest_green_regions": [
+        {
+          "reference_id": "GITV01022783_1",
+          "region_id": "green-001",
+          "start_1based": 410,
+          "end_1based_inclusive": 436,
+          "length_nt": 27
+        }
+      ],
+      "best_conventional_window": null,
+      "selected_window": {
+        "window_id": "green-001:410-436",
+        "main_target": "GITV01022783_1",
+        "start_1based": 410,
+        "end_1based_inclusive": 436,
+        "length_nt": 27,
+        "window_class": "short_green_region",
+        "efficacy_priority_score": 66.66666666666667,
+        "length_penalty": 25.5,
+        "adjusted_priority_score": 41.16666666666667,
+        "is_efficient_true_count": 0,
+        "is_efficient_evaluable_count": 7,
+        "selected_priority_rank": 1
+      },
+      "issues": [],
+      "references": [
+        {
+          "input_index": 4,
+          "gene_id": "cand0010_Hsp83 tcas=656270 StringTie STRG.14232.1 (coincide con Helixer) intrones=2/2 cds_cubierto=1.0",
+          "reference_id": "GITV01000126_1",
+          "reference_status": "complete",
+          "original_record_count": 7,
+          "raw_alignment_count": 12887,
+          "main_positive_hits": 0,
+          "main_negative_hits": 2404,
+          "green_region_count": 0,
+          "green_nt": 0,
+          "red_nt": 27,
+          "max_green_length_nt": 0,
+          "max_main_positive_coverage_nt": 0,
+          "max_main_both_strands_coverage_nt": 1107,
+          "green_red_overlap_nt": 0,
+          "green_vs_final_subtraction_diff_nt": 0,
+          "evaluated_window_count": 0,
+          "conventional_window_count": 0,
+          "eligible_window_count": 0,
+          "length_penalty_weight": 30.0,
+          "selected_length_nt": null,
+          "selected_adjusted_score": null,
+          "offtarget_attempts": 0,
+          "offtarget_rejected_attempts": 0,
+          "issues": [],
+          "green_regions": [],
+          "best_window_per_region": {},
+          "green_red_overlap_positions": [],
+          "selected_green_red_overlap_positions": [],
+          "strict_final_green_max_nt": 0,
+          "raw_main_both_strand_regions": [
+            {
+              "region_id": "green-001",
+              "start_1based": 18,
+              "end_1based_inclusive": 715,
+              "length_nt": 698
+            },
+            {
+              "region_id": "green-002",
+              "start_1based": 717,
+              "end_1based_inclusive": 913,
+              "length_nt": 197
+            },
+            {
+              "region_id": "green-003",
+              "start_1based": 915,
+              "end_1based_inclusive": 1396,
+              "length_nt": 482
+            },
+            {
+              "region_id": "green-004",
+              "start_1based": 1398,
+              "end_1based_inclusive": 2504,
+              "length_nt": 1107
+            }
+          ]
+        },
+        {
+          "input_index": 4,
+          "gene_id": "cand0010_Hsp83 tcas=656270 StringTie STRG.14232.1 (coincide con Helixer) intrones=2/2 cds_cubierto=1.0",
+          "reference_id": "GITV01000727_1",
+          "reference_status": "complete",
+          "original_record_count": 7,
+          "raw_alignment_count": 12887,
+          "main_positive_hits": 0,
+          "main_negative_hits": 1908,
+          "green_region_count": 0,
+          "green_nt": 0,
+          "red_nt": 27,
+          "max_green_length_nt": 0,
+          "max_main_positive_coverage_nt": 0,
+          "max_main_both_strands_coverage_nt": 503,
+          "green_red_overlap_nt": 0,
+          "green_vs_final_subtraction_diff_nt": 0,
+          "evaluated_window_count": 0,
+          "conventional_window_count": 0,
+          "eligible_window_count": 0,
+          "length_penalty_weight": 30.0,
+          "selected_length_nt": null,
+          "selected_adjusted_score": null,
+          "offtarget_attempts": 0,
+          "offtarget_rejected_attempts": 0,
+          "issues": [],
+          "green_regions": [],
+          "best_window_per_region": {},
+          "green_red_overlap_positions": [],
+          "selected_green_red_overlap_positions": [],
+          "strict_final_green_max_nt": 0,
+          "raw_main_both_strand_regions": [
+            {
+              "region_id": "green-001",
+              "start_1based": 20,
+              "end_1based_inclusive": 211,
+              "length_nt": 192
+            },
+            {
+              "region_id": "green-002",
+              "start_1based": 213,
+              "end_1based_inclusive": 715,
+              "length_nt": 503
+            },
+            {
+              "region_id": "green-003",
+              "start_1based": 717,
+              "end_1based_inclusive": 844,
+              "length_nt": 128
+            },
+            {
+              "region_id": "green-004",
+              "start_1based": 846,
+              "end_1based_inclusive": 886,
+              "length_nt": 41
+            },
+            {
+              "region_id": "green-005",
+              "start_1based": 888,
+              "end_1based_inclusive": 913,
+              "length_nt": 26
+            },
+            {
+              "region_id": "green-006",
+              "start_1based": 915,
+              "end_1based_inclusive": 1396,
+              "length_nt": 482
+            },
+            {
+              "region_id": "green-007",
+              "start_1based": 1398,
+              "end_1based_inclusive": 1624,
+              "length_nt": 227
+            },
+            {
+              "region_id": "green-008",
+              "start_1based": 1626,
+              "end_1based_inclusive": 2094,
+              "length_nt": 469
+            }
+          ]
+        },
+        {
+          "input_index": 4,
+          "gene_id": "cand0010_Hsp83 tcas=656270 StringTie STRG.14232.1 (coincide con Helixer) intrones=2/2 cds_cubierto=1.0",
+          "reference_id": "GITV01001250_1",
+          "reference_status": "complete",
+          "original_record_count": 7,
+          "raw_alignment_count": 12887,
+          "main_positive_hits": 0,
+          "main_negative_hits": 2337,
+          "green_region_count": 0,
+          "green_nt": 0,
+          "red_nt": 27,
+          "max_green_length_nt": 0,
+          "max_main_positive_coverage_nt": 0,
+          "max_main_both_strands_coverage_nt": 879,
+          "green_red_overlap_nt": 0,
+          "green_vs_final_subtraction_diff_nt": 0,
+          "evaluated_window_count": 0,
+          "conventional_window_count": 0,
+          "eligible_window_count": 0,
+          "length_penalty_weight": 30.0,
+          "selected_length_nt": null,
+          "selected_adjusted_score": null,
+          "offtarget_attempts": 0,
+          "offtarget_rejected_attempts": 0,
+          "issues": [],
+          "green_regions": [],
+          "best_window_per_region": {},
+          "green_red_overlap_positions": [],
+          "selected_green_red_overlap_positions": [],
+          "strict_final_green_max_nt": 0,
+          "raw_main_both_strand_regions": [
+            {
+              "region_id": "green-001",
+              "start_1based": 1,
+              "end_1based_inclusive": 211,
+              "length_nt": 211
+            },
+            {
+              "region_id": "green-002",
+              "start_1based": 213,
+              "end_1based_inclusive": 715,
+              "length_nt": 503
+            },
+            {
+              "region_id": "green-003",
+              "start_1based": 717,
+              "end_1based_inclusive": 844,
+              "length_nt": 128
+            },
+            {
+              "region_id": "green-004",
+              "start_1based": 846,
+              "end_1based_inclusive": 886,
+              "length_nt": 41
+            },
+            {
+              "region_id": "green-005",
+              "start_1based": 888,
+              "end_1based_inclusive": 913,
+              "length_nt": 26
+            },
+            {
+              "region_id": "green-006",
+              "start_1based": 915,
+              "end_1based_inclusive": 1396,
+              "length_nt": 482
+            },
+            {
+              "region_id": "green-007",
+              "start_1based": 1398,
+              "end_1based_inclusive": 1624,
+              "length_nt": 227
+            },
+            {
+              "region_id": "green-008",
+              "start_1based": 1626,
+              "end_1based_inclusive": 2504,
+              "length_nt": 879
+            }
+          ]
+        },
+        {
+          "input_index": 4,
+          "gene_id": "cand0010_Hsp83 tcas=656270 StringTie STRG.14232.1 (coincide con Helixer) intrones=2/2 cds_cubierto=1.0",
+          "reference_id": "GITV01002109_1",
+          "reference_status": "complete",
+          "original_record_count": 7,
+          "raw_alignment_count": 12887,
+          "main_positive_hits": 0,
+          "main_negative_hits": 2337,
+          "green_region_count": 0,
+          "green_nt": 0,
+          "red_nt": 27,
+          "max_green_length_nt": 0,
+          "max_main_positive_coverage_nt": 0,
+          "max_main_both_strands_coverage_nt": 879,
+          "green_red_overlap_nt": 0,
+          "green_vs_final_subtraction_diff_nt": 0,
+          "evaluated_window_count": 0,
+          "conventional_window_count": 0,
+          "eligible_window_count": 0,
+          "length_penalty_weight": 30.0,
+          "selected_length_nt": null,
+          "selected_adjusted_score": null,
+          "offtarget_attempts": 0,
+          "offtarget_rejected_attempts": 0,
+          "issues": [],
+          "green_regions": [],
+          "best_window_per_region": {},
+          "green_red_overlap_positions": [],
+          "selected_green_red_overlap_positions": [],
+          "strict_final_green_max_nt": 0,
+          "raw_main_both_strand_regions": [
+            {
+              "region_id": "green-001",
+              "start_1based": 1,
+              "end_1based_inclusive": 211,
+              "length_nt": 211
+            },
+            {
+              "region_id": "green-002",
+              "start_1based": 213,
+              "end_1based_inclusive": 715,
+              "length_nt": 503
+            },
+            {
+              "region_id": "green-003",
+              "start_1based": 717,
+              "end_1based_inclusive": 844,
+              "length_nt": 128
+            },
+            {
+              "region_id": "green-004",
+              "start_1based": 846,
+              "end_1based_inclusive": 886,
+              "length_nt": 41
+            },
+            {
+              "region_id": "green-005",
+              "start_1based": 888,
+              "end_1based_inclusive": 913,
+              "length_nt": 26
+            },
+            {
+              "region_id": "green-006",
+              "start_1based": 915,
+              "end_1based_inclusive": 1396,
+              "length_nt": 482
+            },
+            {
+              "region_id": "green-007",
+              "start_1based": 1398,
+              "end_1based_inclusive": 1624,
+              "length_nt": 227
+            },
+            {
+              "region_id": "green-008",
+              "start_1based": 1626,
+              "end_1based_inclusive": 2504,
+              "length_nt": 879
+            }
+          ]
+        },
+        {
+          "input_index": 4,
+          "gene_id": "cand0010_Hsp83 tcas=656270 StringTie STRG.14232.1 (coincide con Helixer) intrones=2/2 cds_cubierto=1.0",
+          "reference_id": "GITV01003028_1",
+          "reference_status": "complete",
+          "original_record_count": 7,
+          "raw_alignment_count": 12887,
+          "main_positive_hits": 0,
+          "main_negative_hits": 2,
+          "green_region_count": 0,
+          "green_nt": 0,
+          "red_nt": 27,
+          "max_green_length_nt": 0,
+          "max_main_positive_coverage_nt": 0,
+          "max_main_both_strands_coverage_nt": 22,
+          "green_red_overlap_nt": 0,
+          "green_vs_final_subtraction_diff_nt": 0,
+          "evaluated_window_count": 0,
+          "conventional_window_count": 0,
+          "eligible_window_count": 0,
+          "length_penalty_weight": 30.0,
+          "selected_length_nt": null,
+          "selected_adjusted_score": null,
+          "offtarget_attempts": 0,
+          "offtarget_rejected_attempts": 0,
+          "issues": [],
+          "green_regions": [],
+          "best_window_per_region": {},
+          "green_red_overlap_positions": [],
+          "selected_green_red_overlap_positions": [],
+          "strict_final_green_max_nt": 0,
+          "raw_main_both_strand_regions": [
+            {
+              "region_id": "green-001",
+              "start_1based": 957,
+              "end_1based_inclusive": 978,
+              "length_nt": 22
+            }
+          ]
+        },
+        {
+          "input_index": 4,
+          "gene_id": "cand0010_Hsp83 tcas=656270 StringTie STRG.14232.1 (coincide con Helixer) intrones=2/2 cds_cubierto=1.0",
+          "reference_id": "GITV01003436_1",
+          "reference_status": "complete",
+          "original_record_count": 7,
+          "raw_alignment_count": 12887,
+          "main_positive_hits": 0,
+          "main_negative_hits": 2289,
+          "green_region_count": 0,
+          "green_nt": 0,
+          "red_nt": 27,
+          "max_green_length_nt": 0,
+          "max_main_positive_coverage_nt": 0,
+          "max_main_both_strands_coverage_nt": 719,
+          "green_red_overlap_nt": 0,
+          "green_vs_final_subtraction_diff_nt": 0,
+          "evaluated_window_count": 0,
+          "conventional_window_count": 0,
+          "eligible_window_count": 0,
+          "length_penalty_weight": 30.0,
+          "selected_length_nt": null,
+          "selected_adjusted_score": null,
+          "offtarget_attempts": 0,
+          "offtarget_rejected_attempts": 0,
+          "issues": [],
+          "green_regions": [],
+          "best_window_per_region": {},
+          "green_red_overlap_positions": [],
+          "selected_green_red_overlap_positions": [],
+          "strict_final_green_max_nt": 0,
+          "raw_main_both_strand_regions": [
+            {
+              "region_id": "green-001",
+              "start_1based": 1,
+              "end_1based_inclusive": 211,
+              "length_nt": 211
+            },
+            {
+              "region_id": "green-002",
+              "start_1based": 213,
+              "end_1based_inclusive": 715,
+              "length_nt": 503
+            },
+            {
+              "region_id": "green-003",
+              "start_1based": 717,
+              "end_1based_inclusive": 844,
+              "length_nt": 128
+            },
+            {
+              "region_id": "green-004",
+              "start_1based": 846,
+              "end_1based_inclusive": 886,
+              "length_nt": 41
+            },
+            {
+              "region_id": "green-005",
+              "start_1based": 888,
+              "end_1based_inclusive": 913,
+              "length_nt": 26
+            },
+            {
+              "region_id": "green-006",
+              "start_1based": 915,
+              "end_1based_inclusive": 1396,
+              "length_nt": 482
+            },
+            {
+              "region_id": "green-007",
+              "start_1based": 1398,
+              "end_1based_inclusive": 1624,
+              "length_nt": 227
+            },
+            {
+              "region_id": "green-008",
+              "start_1based": 1626,
+              "end_1based_inclusive": 2344,
+              "length_nt": 719
+            },
+            {
+              "region_id": "green-009",
+              "start_1based": 2373,
+              "end_1based_inclusive": 2504,
+              "length_nt": 132
+            }
+          ]
+        },
+        {
+          "input_index": 4,
+          "gene_id": "cand0010_Hsp83 tcas=656270 StringTie STRG.14232.1 (coincide con Helixer) intrones=2/2 cds_cubierto=1.0",
+          "reference_id": "GITV01003437_1",
+          "reference_status": "complete",
+          "original_record_count": 7,
+          "raw_alignment_count": 12887,
+          "main_positive_hits": 0,
+          "main_negative_hits": 1599,
+          "green_region_count": 0,
+          "green_nt": 0,
+          "red_nt": 27,
+          "max_green_length_nt": 0,
+          "max_main_positive_coverage_nt": 0,
+          "max_main_both_strands_coverage_nt": 906,
+          "green_red_overlap_nt": 0,
+          "green_vs_final_subtraction_diff_nt": 0,
+          "evaluated_window_count": 0,
+          "conventional_window_count": 0,
+          "eligible_window_count": 0,
+          "length_penalty_weight": 30.0,
+          "selected_length_nt": null,
+          "selected_adjusted_score": null,
+          "offtarget_attempts": 0,
+          "offtarget_rejected_attempts": 0,
+          "issues": [],
+          "green_regions": [],
+          "best_window_per_region": {},
+          "green_red_overlap_positions": [],
+          "selected_green_red_overlap_positions": [],
+          "strict_final_green_max_nt": 0,
+          "raw_main_both_strand_regions": [
+            {
+              "region_id": "green-001",
+              "start_1based": 1,
+              "end_1based_inclusive": 211,
+              "length_nt": 211
+            },
+            {
+              "region_id": "green-002",
+              "start_1based": 213,
+              "end_1based_inclusive": 694,
+              "length_nt": 482
+            },
+            {
+              "region_id": "green-003",
+              "start_1based": 1041,
+              "end_1based_inclusive": 1120,
+              "length_nt": 80
+            },
+            {
+              "region_id": "green-004",
+              "start_1based": 1599,
+              "end_1based_inclusive": 2504,
+              "length_nt": 906
+            }
+          ]
+        },
+        {
+          "input_index": 4,
+          "gene_id": "cand0010_Hsp83 tcas=656270 StringTie STRG.14232.1 (coincide con Helixer) intrones=2/2 cds_cubierto=1.0",
+          "reference_id": "GITV01022783_1",
+          "reference_status": "complete",
+          "original_record_count": 7,
+          "raw_alignment_count": 12887,
+          "main_positive_hits": 7,
+          "main_negative_hits": 0,
+          "green_region_count": 1,
+          "green_nt": 27,
+          "red_nt": 0,
+          "max_green_length_nt": 27,
+          "max_main_positive_coverage_nt": 27,
+          "max_main_both_strands_coverage_nt": 27,
+          "green_red_overlap_nt": 0,
+          "green_vs_final_subtraction_diff_nt": 0,
+          "evaluated_window_count": 1,
+          "conventional_window_count": 0,
+          "eligible_window_count": 1,
+          "length_penalty_weight": 30.0,
+          "selected_length_nt": 27,
+          "selected_adjusted_score": 41.16666666666667,
+          "offtarget_attempts": 1,
+          "offtarget_rejected_attempts": 0,
+          "issues": [],
+          "green_regions": [
+            {
+              "region_id": "green-001",
+              "start_1based": 410,
+              "end_1based_inclusive": 436,
+              "length_nt": 27
+            }
+          ],
+          "best_window_per_region": {
+            "green-001": {
+              "reference_id": "GITV01022783_1",
+              "window_id": "green-001:410-436",
+              "start_1based": 410,
+              "end_1based_inclusive": 436,
+              "length_nt": 27,
+              "efficacy_priority_score": 66.66666666666667,
+              "length_penalty": 25.5,
+              "adjusted_priority_score": 41.16666666666667
+            }
+          },
+          "green_red_overlap_positions": [],
+          "selected_green_red_overlap_positions": [],
+          "strict_final_green_max_nt": 27,
+          "raw_main_both_strand_regions": [
+            {
+              "region_id": "green-001",
+              "start_1based": 410,
+              "end_1based_inclusive": 436,
+              "length_nt": 27
+            }
+          ]
+        },
+        {
+          "input_index": 4,
+          "gene_id": "cand0010_Hsp83 tcas=656270 StringTie STRG.14232.1 (coincide con Helixer) intrones=2/2 cds_cubierto=1.0",
+          "reference_id": "GITV01024756_1",
+          "reference_status": "complete",
+          "original_record_count": 7,
+          "raw_alignment_count": 12887,
+          "main_positive_hits": 0,
+          "main_negative_hits": 3,
+          "green_region_count": 0,
+          "green_nt": 0,
+          "red_nt": 27,
+          "max_green_length_nt": 0,
+          "max_main_positive_coverage_nt": 0,
+          "max_main_both_strands_coverage_nt": 23,
+          "green_red_overlap_nt": 0,
+          "green_vs_final_subtraction_diff_nt": 0,
+          "evaluated_window_count": 0,
+          "conventional_window_count": 0,
+          "eligible_window_count": 0,
+          "length_penalty_weight": 30.0,
+          "selected_length_nt": null,
+          "selected_adjusted_score": null,
+          "offtarget_attempts": 0,
+          "offtarget_rejected_attempts": 0,
+          "issues": [],
+          "green_regions": [],
+          "best_window_per_region": {},
+          "green_red_overlap_positions": [],
+          "selected_green_red_overlap_positions": [],
+          "strict_final_green_max_nt": 0,
+          "raw_main_both_strand_regions": [
+            {
+              "region_id": "green-001",
+              "start_1based": 437,
+              "end_1based_inclusive": 459,
+              "length_nt": 23
+            }
+          ]
+        },
+        {
+          "input_index": 4,
+          "gene_id": "cand0010_Hsp83 tcas=656270 StringTie STRG.14232.1 (coincide con Helixer) intrones=2/2 cds_cubierto=1.0",
+          "reference_id": "GITV01029866_1",
+          "reference_status": "complete",
+          "original_record_count": 7,
+          "raw_alignment_count": 12887,
+          "main_positive_hits": 0,
+          "main_negative_hits": 1,
+          "green_region_count": 0,
+          "green_nt": 0,
+          "red_nt": 27,
+          "max_green_length_nt": 0,
+          "max_main_positive_coverage_nt": 0,
+          "max_main_both_strands_coverage_nt": 21,
+          "green_red_overlap_nt": 0,
+          "green_vs_final_subtraction_diff_nt": 0,
+          "evaluated_window_count": 0,
+          "conventional_window_count": 0,
+          "eligible_window_count": 0,
+          "length_penalty_weight": 30.0,
+          "selected_length_nt": null,
+          "selected_adjusted_score": null,
+          "offtarget_attempts": 0,
+          "offtarget_rejected_attempts": 0,
+          "issues": [],
+          "green_regions": [],
+          "best_window_per_region": {},
+          "green_red_overlap_positions": [],
+          "selected_green_red_overlap_positions": [],
+          "strict_final_green_max_nt": 0,
+          "raw_main_both_strand_regions": [
+            {
+              "region_id": "green-001",
+              "start_1based": 171,
+              "end_1based_inclusive": 191,
+              "length_nt": 21
+            }
+          ]
+        }
+      ],
+      "schema_notes": [
+        "GITV01022783_1: el resumen añade score_name y score_interpretation; el contenido compartido es idéntico."
+      ],
+      "max_raw_both_reference": "GITV01000126_1",
+      "diagnosis": {
+        "confirmed": "Solo un tramo verde exportado de 27 nt; los siete siRNAs evaluables tienen is_efficient=False. Penalización 25,5 y ajustado 41,1667 correctos.",
+        "requires_review": "GITV01000126_1 contiene 2.404 alineamientos negativos y cobertura continua de 1.107 nt (1398–2504), ausente del JSON original por el filtro de hebra positiva. Revisión de orientación/exportación prioritaria."
+      }
+    },
+    {
+      "input_index": 5,
+      "gene_id": "cand0011_snRNP-U1-70K tcas=662320 StringTie STRG.15363.1 (coincide con Helixer) intrones=8/8 cds_cubierto=1.0",
+      "query_length_nt": 1529,
+      "counts": {
+        "references": 5,
+        "green_regions": 2,
+        "references_with_green": 2,
+        "references_with_conventional": 0,
+        "windows": 2,
+        "conventional_windows": 0,
+        "raw_export_rows": 15,
+        "errors": 0,
+        "green_red_overlap_nt": 0,
+        "order_sensitive_references": 0,
+        "negative_only_refs": 3,
+        "offtarget_attempts": 2,
+        "offtarget_rejected_attempts": 0
+      },
+      "max_green_length_nt": 22,
+      "max_main_positive_coverage_nt": 22,
+      "max_main_both_strands_coverage_nt": 390,
+      "unique_green_query_nt": 43,
+      "largest_green_regions": [
+        {
+          "reference_id": "GITV01037515_1",
+          "region_id": "green-001",
+          "start_1based": 575,
+          "end_1based_inclusive": 596,
+          "length_nt": 22
+        },
+        {
+          "reference_id": "GITV01012319_1",
+          "region_id": "green-001",
+          "start_1based": 597,
+          "end_1based_inclusive": 617,
+          "length_nt": 21
+        }
+      ],
+      "best_conventional_window": null,
+      "selected_window": {
+        "window_id": "green-001:575-596",
+        "main_target": "GITV01037515_1",
+        "start_1based": 575,
+        "end_1based_inclusive": 596,
+        "length_nt": 22,
+        "window_class": "short_green_region",
+        "efficacy_priority_score": 66.66666666666667,
+        "length_penalty": 26.333333333333332,
+        "adjusted_priority_score": 40.33333333333334,
+        "is_efficient_true_count": 0,
+        "is_efficient_evaluable_count": 2,
+        "selected_priority_rank": 1
+      },
+      "issues": [],
+      "references": [
+        {
+          "input_index": 5,
+          "gene_id": "cand0011_snRNP-U1-70K tcas=662320 StringTie STRG.15363.1 (coincide con Helixer) intrones=8/8 cds_cubierto=1.0",
+          "reference_id": "GITV01001014_1",
+          "reference_status": "complete",
+          "original_record_count": 3,
+          "raw_alignment_count": 1265,
+          "main_positive_hits": 0,
+          "main_negative_hits": 1258,
+          "green_region_count": 0,
+          "green_nt": 0,
+          "red_nt": 43,
+          "max_green_length_nt": 0,
+          "max_main_positive_coverage_nt": 0,
+          "max_main_both_strands_coverage_nt": 390,
+          "green_red_overlap_nt": 0,
+          "green_vs_final_subtraction_diff_nt": 0,
+          "evaluated_window_count": 0,
+          "conventional_window_count": 0,
+          "eligible_window_count": 0,
+          "length_penalty_weight": 30.0,
+          "selected_length_nt": null,
+          "selected_adjusted_score": null,
+          "offtarget_attempts": 0,
+          "offtarget_rejected_attempts": 0,
+          "issues": [],
+          "green_regions": [],
+          "best_window_per_region": {},
+          "green_red_overlap_positions": [],
+          "selected_green_red_overlap_positions": [],
+          "strict_final_green_max_nt": 0,
+          "raw_main_both_strand_regions": [
+            {
+              "region_id": "green-001",
+              "start_1based": 1,
+              "end_1based_inclusive": 390,
+              "length_nt": 390
+            },
+            {
+              "region_id": "green-002",
+              "start_1based": 392,
+              "end_1based_inclusive": 433,
+              "length_nt": 42
+            },
+            {
+              "region_id": "green-003",
+              "start_1based": 435,
+              "end_1based_inclusive": 525,
+              "length_nt": 91
+            },
+            {
+              "region_id": "green-004",
+              "start_1based": 539,
+              "end_1based_inclusive": 651,
+              "length_nt": 113
+            },
+            {
+              "region_id": "green-005",
+              "start_1based": 653,
+              "end_1based_inclusive": 721,
+              "length_nt": 69
+            },
+            {
+              "region_id": "green-006",
+              "start_1based": 749,
+              "end_1based_inclusive": 783,
+              "length_nt": 35
+            },
+            {
+              "region_id": "green-007",
+              "start_1based": 785,
+              "end_1based_inclusive": 1014,
+              "length_nt": 230
+            },
+            {
+              "region_id": "green-008",
+              "start_1based": 1016,
+              "end_1based_inclusive": 1165,
+              "length_nt": 150
+            },
+            {
+              "region_id": "green-009",
+              "start_1based": 1167,
+              "end_1based_inclusive": 1466,
+              "length_nt": 300
+            },
+            {
+              "region_id": "green-010",
+              "start_1based": 1468,
+              "end_1based_inclusive": 1520,
+              "length_nt": 53
+            }
+          ]
+        },
+        {
+          "input_index": 5,
+          "gene_id": "cand0011_snRNP-U1-70K tcas=662320 StringTie STRG.15363.1 (coincide con Helixer) intrones=8/8 cds_cubierto=1.0",
+          "reference_id": "GITV01012319_1",
+          "reference_status": "complete",
+          "original_record_count": 3,
+          "raw_alignment_count": 1265,
+          "main_positive_hits": 1,
+          "main_negative_hits": 0,
+          "green_region_count": 1,
+          "green_nt": 21,
+          "red_nt": 22,
+          "max_green_length_nt": 21,
+          "max_main_positive_coverage_nt": 21,
+          "max_main_both_strands_coverage_nt": 21,
+          "green_red_overlap_nt": 0,
+          "green_vs_final_subtraction_diff_nt": 0,
+          "evaluated_window_count": 1,
+          "conventional_window_count": 0,
+          "eligible_window_count": 1,
+          "length_penalty_weight": 30.0,
+          "selected_length_nt": 21,
+          "selected_adjusted_score": 6.833333333333336,
+          "offtarget_attempts": 1,
+          "offtarget_rejected_attempts": 0,
+          "issues": [],
+          "green_regions": [
+            {
+              "region_id": "green-001",
+              "start_1based": 597,
+              "end_1based_inclusive": 617,
+              "length_nt": 21
+            }
+          ],
+          "best_window_per_region": {
+            "green-001": {
+              "reference_id": "GITV01012319_1",
+              "window_id": "green-001:597-617",
+              "start_1based": 597,
+              "end_1based_inclusive": 617,
+              "length_nt": 21,
+              "efficacy_priority_score": 33.333333333333336,
+              "length_penalty": 26.5,
+              "adjusted_priority_score": 6.833333333333336
+            }
+          },
+          "green_red_overlap_positions": [],
+          "selected_green_red_overlap_positions": [],
+          "strict_final_green_max_nt": 21,
+          "raw_main_both_strand_regions": [
+            {
+              "region_id": "green-001",
+              "start_1based": 597,
+              "end_1based_inclusive": 617,
+              "length_nt": 21
+            }
+          ]
+        },
+        {
+          "input_index": 5,
+          "gene_id": "cand0011_snRNP-U1-70K tcas=662320 StringTie STRG.15363.1 (coincide con Helixer) intrones=8/8 cds_cubierto=1.0",
+          "reference_id": "GITV01015287_1",
+          "reference_status": "complete",
+          "original_record_count": 3,
+          "raw_alignment_count": 1265,
+          "main_positive_hits": 0,
+          "main_negative_hits": 1,
+          "green_region_count": 0,
+          "green_nt": 0,
+          "red_nt": 43,
+          "max_green_length_nt": 0,
+          "max_main_positive_coverage_nt": 0,
+          "max_main_both_strands_coverage_nt": 21,
+          "green_red_overlap_nt": 0,
+          "green_vs_final_subtraction_diff_nt": 0,
+          "evaluated_window_count": 0,
+          "conventional_window_count": 0,
+          "eligible_window_count": 0,
+          "length_penalty_weight": 30.0,
+          "selected_length_nt": null,
+          "selected_adjusted_score": null,
+          "offtarget_attempts": 0,
+          "offtarget_rejected_attempts": 0,
+          "issues": [],
+          "green_regions": [],
+          "best_window_per_region": {},
+          "green_red_overlap_positions": [],
+          "selected_green_red_overlap_positions": [],
+          "strict_final_green_max_nt": 0,
+          "raw_main_both_strand_regions": [
+            {
+              "region_id": "green-001",
+              "start_1based": 597,
+              "end_1based_inclusive": 617,
+              "length_nt": 21
+            }
+          ]
+        },
+        {
+          "input_index": 5,
+          "gene_id": "cand0011_snRNP-U1-70K tcas=662320 StringTie STRG.15363.1 (coincide con Helixer) intrones=8/8 cds_cubierto=1.0",
+          "reference_id": "GITV01037515_1",
+          "reference_status": "complete",
+          "original_record_count": 3,
+          "raw_alignment_count": 1265,
+          "main_positive_hits": 2,
+          "main_negative_hits": 0,
+          "green_region_count": 1,
+          "green_nt": 22,
+          "red_nt": 21,
+          "max_green_length_nt": 22,
+          "max_main_positive_coverage_nt": 22,
+          "max_main_both_strands_coverage_nt": 22,
+          "green_red_overlap_nt": 0,
+          "green_vs_final_subtraction_diff_nt": 0,
+          "evaluated_window_count": 1,
+          "conventional_window_count": 0,
+          "eligible_window_count": 1,
+          "length_penalty_weight": 30.0,
+          "selected_length_nt": 22,
+          "selected_adjusted_score": 40.33333333333334,
+          "offtarget_attempts": 1,
+          "offtarget_rejected_attempts": 0,
+          "issues": [],
+          "green_regions": [
+            {
+              "region_id": "green-001",
+              "start_1based": 575,
+              "end_1based_inclusive": 596,
+              "length_nt": 22
+            }
+          ],
+          "best_window_per_region": {
+            "green-001": {
+              "reference_id": "GITV01037515_1",
+              "window_id": "green-001:575-596",
+              "start_1based": 575,
+              "end_1based_inclusive": 596,
+              "length_nt": 22,
+              "efficacy_priority_score": 66.66666666666667,
+              "length_penalty": 26.333333333333332,
+              "adjusted_priority_score": 40.33333333333334
+            }
+          },
+          "green_red_overlap_positions": [],
+          "selected_green_red_overlap_positions": [],
+          "strict_final_green_max_nt": 22,
+          "raw_main_both_strand_regions": [
+            {
+              "region_id": "green-001",
+              "start_1based": 575,
+              "end_1based_inclusive": 596,
+              "length_nt": 22
+            }
+          ]
+        },
+        {
+          "input_index": 5,
+          "gene_id": "cand0011_snRNP-U1-70K tcas=662320 StringTie STRG.15363.1 (coincide con Helixer) intrones=8/8 cds_cubierto=1.0",
+          "reference_id": "GITV01044132_1",
+          "reference_status": "complete",
+          "original_record_count": 3,
+          "raw_alignment_count": 1265,
+          "main_positive_hits": 0,
+          "main_negative_hits": 3,
+          "green_region_count": 0,
+          "green_nt": 0,
+          "red_nt": 43,
+          "max_green_length_nt": 0,
+          "max_main_positive_coverage_nt": 0,
+          "max_main_both_strands_coverage_nt": 23,
+          "green_red_overlap_nt": 0,
+          "green_vs_final_subtraction_diff_nt": 0,
+          "evaluated_window_count": 0,
+          "conventional_window_count": 0,
+          "eligible_window_count": 0,
+          "length_penalty_weight": 30.0,
+          "selected_length_nt": null,
+          "selected_adjusted_score": null,
+          "offtarget_attempts": 0,
+          "offtarget_rejected_attempts": 0,
+          "issues": [],
+          "green_regions": [],
+          "best_window_per_region": {},
+          "green_red_overlap_positions": [],
+          "selected_green_red_overlap_positions": [],
+          "strict_final_green_max_nt": 0,
+          "raw_main_both_strand_regions": [
+            {
+              "region_id": "green-001",
+              "start_1based": 574,
+              "end_1based_inclusive": 596,
+              "length_nt": 23
+            }
+          ]
+        }
+      ],
+      "schema_notes": [
+        "GITV01012319_1: el resumen añade score_name y score_interpretation; el contenido compartido es idéntico.",
+        "GITV01037515_1: el resumen añade score_name y score_interpretation; el contenido compartido es idéntico."
+      ],
+      "max_raw_both_reference": "GITV01001014_1",
+      "diagnosis": {
+        "confirmed": "Dos tramos verdes de 21 y 22 nt; la ganadora de 22 nt tiene dos siRNAs evaluables, ninguno eficiente. Coordenadas, secuencia y puntaje consistentes.",
+        "requires_review": "GITV01001014_1 contiene 1.258 alineamientos negativos; el tramo continuo 1–390 no llega al JSON original. Revisar la política de hebras. No hay evidencia de que solo existan coincidencias cortas."
+      }
+    },
+    {
+      "input_index": 6,
+      "gene_id": "cand0015_Rpt4,Rpt4R tcas=656146 StringTie STRG.8886.1 (coincide con Helixer) intrones=8/8 cds_cubierto=1.0",
+      "query_length_nt": 1360,
+      "counts": {
+        "references": 3,
+        "green_regions": 11,
+        "references_with_green": 3,
+        "references_with_conventional": 0,
+        "windows": 11,
+        "conventional_windows": 0,
+        "raw_export_rows": 7272,
+        "errors": 0,
+        "green_red_overlap_nt": 2,
+        "order_sensitive_references": 2,
+        "negative_only_refs": 0,
+        "offtarget_attempts": 1,
+        "offtarget_rejected_attempts": 0
+      },
+      "max_green_length_nt": 68,
+      "max_main_positive_coverage_nt": 1360,
+      "max_main_both_strands_coverage_nt": 1360,
+      "unique_green_query_nt": 99,
+      "largest_green_regions": [
+        {
+          "reference_id": "GITV01001584_1",
+          "region_id": "green-009",
+          "start_1based": 1293,
+          "end_1based_inclusive": 1360,
+          "length_nt": 68
+        },
+        {
+          "reference_id": "GITV01001584_1",
+          "region_id": "green-002",
+          "start_1based": 855,
+          "end_1based_inclusive": 876,
+          "length_nt": 22
+        },
+        {
+          "reference_id": "GITV01001584_1",
+          "region_id": "green-001",
+          "start_1based": 783,
+          "end_1based_inclusive": 783,
+          "length_nt": 1
+        },
+        {
+          "reference_id": "GITV01001584_1",
+          "region_id": "green-003",
+          "start_1based": 904,
+          "end_1based_inclusive": 904,
+          "length_nt": 1
+        },
+        {
+          "reference_id": "GITV01001584_1",
+          "region_id": "green-004",
+          "start_1based": 1002,
+          "end_1based_inclusive": 1002,
+          "length_nt": 1
+        }
+      ],
+      "best_conventional_window": null,
+      "selected_window": {
+        "window_id": "green-002:855-876",
+        "main_target": "GITV01001584_1",
+        "start_1based": 855,
+        "end_1based_inclusive": 876,
+        "length_nt": 22,
+        "window_class": "short_green_region",
+        "efficacy_priority_score": 50.0,
+        "length_penalty": 26.333333333333332,
+        "adjusted_priority_score": 23.666666666666668,
+        "is_efficient_true_count": 0,
+        "is_efficient_evaluable_count": 2,
+        "selected_priority_rank": 1
+      },
+      "issues": [],
+      "references": [
+        {
+          "input_index": 6,
+          "gene_id": "cand0015_Rpt4,Rpt4R tcas=656146 StringTie STRG.8886.1 (coincide con Helixer) intrones=8/8 cds_cubierto=1.0",
+          "reference_id": "GITV01001584_1",
+          "reference_status": "complete",
+          "original_record_count": 2424,
+          "raw_alignment_count": 2424,
+          "main_positive_hits": 1340,
+          "main_negative_hits": 0,
+          "green_region_count": 9,
+          "green_nt": 97,
+          "red_nt": 1263,
+          "max_green_length_nt": 68,
+          "max_main_positive_coverage_nt": 1360,
+          "max_main_both_strands_coverage_nt": 1360,
+          "green_red_overlap_nt": 0,
+          "green_vs_final_subtraction_diff_nt": 0,
+          "evaluated_window_count": 9,
+          "conventional_window_count": 0,
+          "eligible_window_count": 2,
+          "length_penalty_weight": 30.0,
+          "selected_length_nt": 22,
+          "selected_adjusted_score": 23.666666666666668,
+          "offtarget_attempts": 1,
+          "offtarget_rejected_attempts": 0,
+          "issues": [],
+          "green_regions": [
+            {
+              "region_id": "green-001",
+              "start_1based": 783,
+              "end_1based_inclusive": 783,
+              "length_nt": 1
+            },
+            {
+              "region_id": "green-002",
+              "start_1based": 855,
+              "end_1based_inclusive": 876,
+              "length_nt": 22
+            },
+            {
+              "region_id": "green-003",
+              "start_1based": 904,
+              "end_1based_inclusive": 904,
+              "length_nt": 1
+            },
+            {
+              "region_id": "green-004",
+              "start_1based": 1002,
+              "end_1based_inclusive": 1002,
+              "length_nt": 1
+            },
+            {
+              "region_id": "green-005",
+              "start_1based": 1074,
+              "end_1based_inclusive": 1074,
+              "length_nt": 1
+            },
+            {
+              "region_id": "green-006",
+              "start_1based": 1104,
+              "end_1based_inclusive": 1104,
+              "length_nt": 1
+            },
+            {
+              "region_id": "green-007",
+              "start_1based": 1167,
+              "end_1based_inclusive": 1167,
+              "length_nt": 1
+            },
+            {
+              "region_id": "green-008",
+              "start_1based": 1260,
+              "end_1based_inclusive": 1260,
+              "length_nt": 1
+            },
+            {
+              "region_id": "green-009",
+              "start_1based": 1293,
+              "end_1based_inclusive": 1360,
+              "length_nt": 68
+            }
+          ],
+          "best_window_per_region": {
+            "green-002": {
+              "reference_id": "GITV01001584_1",
+              "window_id": "green-002:855-876",
+              "start_1based": 855,
+              "end_1based_inclusive": 876,
+              "length_nt": 22,
+              "efficacy_priority_score": 50.0,
+              "length_penalty": 26.333333333333332,
+              "adjusted_priority_score": 23.666666666666668
+            },
+            "green-009": {
+              "reference_id": "GITV01001584_1",
+              "window_id": "green-009:1293-1360",
+              "start_1based": 1293,
+              "end_1based_inclusive": 1360,
+              "length_nt": 68,
+              "efficacy_priority_score": 38.88888888888889,
+              "length_penalty": 18.666666666666668,
+              "adjusted_priority_score": 20.222222222222225
+            }
+          },
+          "green_red_overlap_positions": [],
+          "selected_green_red_overlap_positions": [],
+          "strict_final_green_max_nt": 68,
+          "raw_main_both_strand_regions": [
+            {
+              "region_id": "green-001",
+              "start_1based": 1,
+              "end_1based_inclusive": 1360,
+              "length_nt": 1360
+            }
+          ]
+        },
+        {
+          "input_index": 6,
+          "gene_id": "cand0015_Rpt4,Rpt4R tcas=656146 StringTie STRG.8886.1 (coincide con Helixer) intrones=8/8 cds_cubierto=1.0",
+          "reference_id": "GITV01003734_1",
+          "reference_status": "complete",
+          "original_record_count": 2424,
+          "raw_alignment_count": 2424,
+          "main_positive_hits": 1083,
+          "main_negative_hits": 0,
+          "green_region_count": 1,
+          "green_nt": 1,
+          "red_nt": 1360,
+          "max_green_length_nt": 1,
+          "max_main_positive_coverage_nt": 782,
+          "max_main_both_strands_coverage_nt": 782,
+          "green_red_overlap_nt": 1,
+          "green_vs_final_subtraction_diff_nt": 1,
+          "evaluated_window_count": 1,
+          "conventional_window_count": 0,
+          "eligible_window_count": 0,
+          "length_penalty_weight": 30.0,
+          "selected_length_nt": null,
+          "selected_adjusted_score": null,
+          "offtarget_attempts": 0,
+          "offtarget_rejected_attempts": 0,
+          "issues": [],
+          "green_regions": [
+            {
+              "region_id": "green-001",
+              "start_1based": 1292,
+              "end_1based_inclusive": 1292,
+              "length_nt": 1
+            }
+          ],
+          "best_window_per_region": {},
+          "green_red_overlap_positions": [
+            1292
+          ],
+          "selected_green_red_overlap_positions": [],
+          "strict_final_green_max_nt": 0,
+          "raw_main_both_strand_regions": [
+            {
+              "region_id": "green-001",
+              "start_1based": 1,
+              "end_1based_inclusive": 782,
+              "length_nt": 782
+            },
+            {
+              "region_id": "green-002",
+              "start_1based": 784,
+              "end_1based_inclusive": 854,
+              "length_nt": 71
+            },
+            {
+              "region_id": "green-003",
+              "start_1based": 877,
+              "end_1based_inclusive": 903,
+              "length_nt": 27
+            },
+            {
+              "region_id": "green-004",
+              "start_1based": 905,
+              "end_1based_inclusive": 1001,
+              "length_nt": 97
+            },
+            {
+              "region_id": "green-005",
+              "start_1based": 1003,
+              "end_1based_inclusive": 1073,
+              "length_nt": 71
+            },
+            {
+              "region_id": "green-006",
+              "start_1based": 1075,
+              "end_1based_inclusive": 1103,
+              "length_nt": 29
+            },
+            {
+              "region_id": "green-007",
+              "start_1based": 1105,
+              "end_1based_inclusive": 1166,
+              "length_nt": 62
+            },
+            {
+              "region_id": "green-008",
+              "start_1based": 1168,
+              "end_1based_inclusive": 1259,
+              "length_nt": 92
+            },
+            {
+              "region_id": "green-009",
+              "start_1based": 1261,
+              "end_1based_inclusive": 1292,
+              "length_nt": 32
+            }
+          ]
+        },
+        {
+          "input_index": 6,
+          "gene_id": "cand0015_Rpt4,Rpt4R tcas=656146 StringTie STRG.8886.1 (coincide con Helixer) intrones=8/8 cds_cubierto=1.0",
+          "reference_id": "GITV01016098_1",
+          "reference_status": "complete",
+          "original_record_count": 2424,
+          "raw_alignment_count": 2424,
+          "main_positive_hits": 1,
+          "main_negative_hits": 0,
+          "green_region_count": 1,
+          "green_nt": 1,
+          "red_nt": 1360,
+          "max_green_length_nt": 1,
+          "max_main_positive_coverage_nt": 21,
+          "max_main_both_strands_coverage_nt": 21,
+          "green_red_overlap_nt": 1,
+          "green_vs_final_subtraction_diff_nt": 1,
+          "evaluated_window_count": 1,
+          "conventional_window_count": 0,
+          "eligible_window_count": 0,
+          "length_penalty_weight": 30.0,
+          "selected_length_nt": null,
+          "selected_adjusted_score": null,
+          "offtarget_attempts": 0,
+          "offtarget_rejected_attempts": 0,
+          "issues": [],
+          "green_regions": [
+            {
+              "region_id": "green-001",
+              "start_1based": 1037,
+              "end_1based_inclusive": 1037,
+              "length_nt": 1
+            }
+          ],
+          "best_window_per_region": {},
+          "green_red_overlap_positions": [
+            1037
+          ],
+          "selected_green_red_overlap_positions": [],
+          "strict_final_green_max_nt": 0,
+          "raw_main_both_strand_regions": [
+            {
+              "region_id": "green-001",
+              "start_1based": 1017,
+              "end_1based_inclusive": 1037,
+              "length_nt": 21
+            }
+          ]
+        }
+      ],
+      "schema_notes": [
+        "GITV01001584_1: el resumen añade score_name y score_interpretation; el contenido compartido es idéntico."
+      ],
+      "max_raw_both_reference": "GITV01001584_1",
+      "diagnosis": {
+        "confirmed": "Los 11 tramos verdes están presentes, incluido 1293–1360 (68 nt). La ventana 855–876 (22 nt) obtiene 23,6667 ajustados frente a 20,2222 de la de 68 nt: no fue omitida. La ganadora tiene 0/2 siRNAs eficientes.",
+        "requires_review": "La cobertura main positiva llega a 1.360 nt, pero otras referencias restan casi toda ella con la lógica original. Además hay dos posiciones verdes/rojas aisladas en otros GITV; ninguna cae en la ganadora. Revisar exclusividad entre referencias y adecuación biológica del puntaje."
+      }
+    },
+    {
+      "input_index": 7,
+      "gene_id": "cand0021_Rpt3,Rpt3R tcas=656344 StringTie STRG.19698.1 (coincide con Helixer) intrones=8/8 cds_cubierto=1.0",
+      "query_length_nt": 1485,
+      "counts": {
+        "references": 6,
+        "green_regions": 2,
+        "references_with_green": 1,
+        "references_with_conventional": 1,
+        "windows": 72562,
+        "conventional_windows": 72562,
+        "raw_export_rows": 8460,
+        "errors": 0,
+        "green_red_overlap_nt": 0,
+        "order_sensitive_references": 0,
+        "negative_only_refs": 5,
+        "offtarget_attempts": 1,
+        "offtarget_rejected_attempts": 0
+      },
+      "max_green_length_nt": 1107,
+      "max_main_positive_coverage_nt": 1107,
+      "max_main_both_strands_coverage_nt": 1111,
+      "unique_green_query_nt": 1450,
+      "largest_green_regions": [
+        {
+          "reference_id": "GITV01000607_1",
+          "region_id": "green-001",
+          "start_1based": 5,
+          "end_1based_inclusive": 1111,
+          "length_nt": 1107
+        },
+        {
+          "reference_id": "GITV01000607_1",
+          "region_id": "green-002",
+          "start_1based": 1113,
+          "end_1based_inclusive": 1455,
+          "length_nt": 343
+        }
+      ],
+      "best_conventional_window": {
+        "reference_id": "GITV01000607_1",
+        "window_id": "green-001:321-503",
+        "start_1based": 321,
+        "end_1based_inclusive": 503,
+        "length_nt": 183,
+        "efficacy_priority_score": 64.0081799591002,
+        "length_penalty": 0.0,
+        "adjusted_priority_score": 64.0081799591002
+      },
+      "selected_window": {
+        "window_id": "green-001:321-503",
+        "main_target": "GITV01000607_1",
+        "start_1based": 321,
+        "end_1based_inclusive": 503,
+        "length_nt": 183,
+        "window_class": "conventional_180_250nt",
+        "efficacy_priority_score": 64.0081799591002,
+        "length_penalty": 0.0,
+        "adjusted_priority_score": 64.0081799591002,
+        "is_efficient_true_count": 16,
+        "is_efficient_evaluable_count": 163,
+        "selected_priority_rank": 1
+      },
+      "issues": [],
+      "references": [
+        {
+          "input_index": 7,
+          "gene_id": "cand0021_Rpt3,Rpt3R tcas=656344 StringTie STRG.19698.1 (coincide con Helixer) intrones=8/8 cds_cubierto=1.0",
+          "reference_id": "GITV01000607_1",
+          "reference_status": "complete",
+          "original_record_count": 1410,
+          "raw_alignment_count": 4245,
+          "main_positive_hits": 1410,
+          "main_negative_hits": 0,
+          "green_region_count": 2,
+          "green_nt": 1450,
+          "red_nt": 0,
+          "max_green_length_nt": 1107,
+          "max_main_positive_coverage_nt": 1107,
+          "max_main_both_strands_coverage_nt": 1107,
+          "green_red_overlap_nt": 0,
+          "green_vs_final_subtraction_diff_nt": 0,
+          "evaluated_window_count": 72562,
+          "conventional_window_count": 72562,
+          "eligible_window_count": 72562,
+          "length_penalty_weight": 30.0,
+          "selected_length_nt": 183,
+          "selected_adjusted_score": 64.0081799591002,
+          "offtarget_attempts": 1,
+          "offtarget_rejected_attempts": 0,
+          "issues": [],
+          "green_regions": [
+            {
+              "region_id": "green-001",
+              "start_1based": 5,
+              "end_1based_inclusive": 1111,
+              "length_nt": 1107
+            },
+            {
+              "region_id": "green-002",
+              "start_1based": 1113,
+              "end_1based_inclusive": 1455,
+              "length_nt": 343
+            }
+          ],
+          "best_window_per_region": {
+            "green-001": {
+              "reference_id": "GITV01000607_1",
+              "window_id": "green-001:321-503",
+              "start_1based": 321,
+              "end_1based_inclusive": 503,
+              "length_nt": 183,
+              "efficacy_priority_score": 64.0081799591002,
+              "length_penalty": 0.0,
+              "adjusted_priority_score": 64.0081799591002
+            },
+            "green-002": {
+              "reference_id": "GITV01000607_1",
+              "window_id": "green-002:1164-1359",
+              "start_1based": 1164,
+              "end_1based_inclusive": 1359,
+              "length_nt": 196,
+              "efficacy_priority_score": 57.38636363636363,
+              "length_penalty": 0.0,
+              "adjusted_priority_score": 57.38636363636363
+            }
+          },
+          "green_red_overlap_positions": [],
+          "selected_green_red_overlap_positions": [],
+          "strict_final_green_max_nt": 1107,
+          "raw_main_both_strand_regions": [
+            {
+              "region_id": "green-001",
+              "start_1based": 5,
+              "end_1based_inclusive": 1111,
+              "length_nt": 1107
+            },
+            {
+              "region_id": "green-002",
+              "start_1based": 1113,
+              "end_1based_inclusive": 1455,
+              "length_nt": 343
+            }
+          ]
+        },
+        {
+          "input_index": 7,
+          "gene_id": "cand0021_Rpt3,Rpt3R tcas=656344 StringTie STRG.19698.1 (coincide con Helixer) intrones=8/8 cds_cubierto=1.0",
+          "reference_id": "GITV01003619_1",
+          "reference_status": "complete",
+          "original_record_count": 1410,
+          "raw_alignment_count": 4245,
+          "main_positive_hits": 0,
+          "main_negative_hits": 1418,
+          "green_region_count": 0,
+          "green_nt": 0,
+          "red_nt": 1450,
+          "max_green_length_nt": 0,
+          "max_main_positive_coverage_nt": 0,
+          "max_main_both_strands_coverage_nt": 1111,
+          "green_red_overlap_nt": 0,
+          "green_vs_final_subtraction_diff_nt": 0,
+          "evaluated_window_count": 0,
+          "conventional_window_count": 0,
+          "eligible_window_count": 0,
+          "length_penalty_weight": 30.0,
+          "selected_length_nt": null,
+          "selected_adjusted_score": null,
+          "offtarget_attempts": 0,
+          "offtarget_rejected_attempts": 0,
+          "issues": [],
+          "green_regions": [],
+          "best_window_per_region": {},
+          "green_red_overlap_positions": [],
+          "selected_green_red_overlap_positions": [],
+          "strict_final_green_max_nt": 0,
+          "raw_main_both_strand_regions": [
+            {
+              "region_id": "green-001",
+              "start_1based": 1,
+              "end_1based_inclusive": 1111,
+              "length_nt": 1111
+            },
+            {
+              "region_id": "green-002",
+              "start_1based": 1113,
+              "end_1based_inclusive": 1459,
+              "length_nt": 347
+            }
+          ]
+        },
+        {
+          "input_index": 7,
+          "gene_id": "cand0021_Rpt3,Rpt3R tcas=656344 StringTie STRG.19698.1 (coincide con Helixer) intrones=8/8 cds_cubierto=1.0",
+          "reference_id": "GITV01004017_1",
+          "reference_status": "complete",
+          "original_record_count": 1410,
+          "raw_alignment_count": 4245,
+          "main_positive_hits": 0,
+          "main_negative_hits": 1414,
+          "green_region_count": 0,
+          "green_nt": 0,
+          "red_nt": 1450,
+          "max_green_length_nt": 0,
+          "max_main_positive_coverage_nt": 0,
+          "max_main_both_strands_coverage_nt": 1107,
+          "green_red_overlap_nt": 0,
+          "green_vs_final_subtraction_diff_nt": 0,
+          "evaluated_window_count": 0,
+          "conventional_window_count": 0,
+          "eligible_window_count": 0,
+          "length_penalty_weight": 30.0,
+          "selected_length_nt": null,
+          "selected_adjusted_score": null,
+          "offtarget_attempts": 0,
+          "offtarget_rejected_attempts": 0,
+          "issues": [],
+          "green_regions": [],
+          "best_window_per_region": {},
+          "green_red_overlap_positions": [],
+          "selected_green_red_overlap_positions": [],
+          "strict_final_green_max_nt": 0,
+          "raw_main_both_strand_regions": [
+            {
+              "region_id": "green-001",
+              "start_1based": 5,
+              "end_1based_inclusive": 1111,
+              "length_nt": 1107
+            },
+            {
+              "region_id": "green-002",
+              "start_1based": 1113,
+              "end_1based_inclusive": 1459,
+              "length_nt": 347
+            }
+          ]
+        },
+        {
+          "input_index": 7,
+          "gene_id": "cand0021_Rpt3,Rpt3R tcas=656344 StringTie STRG.19698.1 (coincide con Helixer) intrones=8/8 cds_cubierto=1.0",
+          "reference_id": "GITV01008467_1",
+          "reference_status": "complete",
+          "original_record_count": 1410,
+          "raw_alignment_count": 4245,
+          "main_positive_hits": 0,
+          "main_negative_hits": 1,
+          "green_region_count": 0,
+          "green_nt": 0,
+          "red_nt": 1450,
+          "max_green_length_nt": 0,
+          "max_main_positive_coverage_nt": 0,
+          "max_main_both_strands_coverage_nt": 21,
+          "green_red_overlap_nt": 0,
+          "green_vs_final_subtraction_diff_nt": 0,
+          "evaluated_window_count": 0,
+          "conventional_window_count": 0,
+          "eligible_window_count": 0,
+          "length_penalty_weight": 30.0,
+          "selected_length_nt": null,
+          "selected_adjusted_score": null,
+          "offtarget_attempts": 0,
+          "offtarget_rejected_attempts": 0,
+          "issues": [],
+          "green_regions": [],
+          "best_window_per_region": {},
+          "green_red_overlap_positions": [],
+          "selected_green_red_overlap_positions": [],
+          "strict_final_green_max_nt": 0,
+          "raw_main_both_strand_regions": [
+            {
+              "region_id": "green-001",
+              "start_1based": 1438,
+              "end_1based_inclusive": 1458,
+              "length_nt": 21
+            }
+          ]
+        },
+        {
+          "input_index": 7,
+          "gene_id": "cand0021_Rpt3,Rpt3R tcas=656344 StringTie STRG.19698.1 (coincide con Helixer) intrones=8/8 cds_cubierto=1.0",
+          "reference_id": "GITV01013637_1",
+          "reference_status": "complete",
+          "original_record_count": 1410,
+          "raw_alignment_count": 4245,
+          "main_positive_hits": 0,
+          "main_negative_hits": 1,
+          "green_region_count": 0,
+          "green_nt": 0,
+          "red_nt": 1450,
+          "max_green_length_nt": 0,
+          "max_main_positive_coverage_nt": 0,
+          "max_main_both_strands_coverage_nt": 21,
+          "green_red_overlap_nt": 0,
+          "green_vs_final_subtraction_diff_nt": 0,
+          "evaluated_window_count": 0,
+          "conventional_window_count": 0,
+          "eligible_window_count": 0,
+          "length_penalty_weight": 30.0,
+          "selected_length_nt": null,
+          "selected_adjusted_score": null,
+          "offtarget_attempts": 0,
+          "offtarget_rejected_attempts": 0,
+          "issues": [],
+          "green_regions": [],
+          "best_window_per_region": {},
+          "green_red_overlap_positions": [],
+          "selected_green_red_overlap_positions": [],
+          "strict_final_green_max_nt": 0,
+          "raw_main_both_strand_regions": [
+            {
+              "region_id": "green-001",
+              "start_1based": 1438,
+              "end_1based_inclusive": 1458,
+              "length_nt": 21
+            }
+          ]
+        },
+        {
+          "input_index": 7,
+          "gene_id": "cand0021_Rpt3,Rpt3R tcas=656344 StringTie STRG.19698.1 (coincide con Helixer) intrones=8/8 cds_cubierto=1.0",
+          "reference_id": "GITV01028222_1",
+          "reference_status": "complete",
+          "original_record_count": 1410,
+          "raw_alignment_count": 4245,
+          "main_positive_hits": 0,
+          "main_negative_hits": 1,
+          "green_region_count": 0,
+          "green_nt": 0,
+          "red_nt": 1450,
+          "max_green_length_nt": 0,
+          "max_main_positive_coverage_nt": 0,
+          "max_main_both_strands_coverage_nt": 21,
+          "green_red_overlap_nt": 0,
+          "green_vs_final_subtraction_diff_nt": 0,
+          "evaluated_window_count": 0,
+          "conventional_window_count": 0,
+          "eligible_window_count": 0,
+          "length_penalty_weight": 30.0,
+          "selected_length_nt": null,
+          "selected_adjusted_score": null,
+          "offtarget_attempts": 0,
+          "offtarget_rejected_attempts": 0,
+          "issues": [],
+          "green_regions": [],
+          "best_window_per_region": {},
+          "green_red_overlap_positions": [],
+          "selected_green_red_overlap_positions": [],
+          "strict_final_green_max_nt": 0,
+          "raw_main_both_strand_regions": [
+            {
+              "region_id": "green-001",
+              "start_1based": 1438,
+              "end_1based_inclusive": 1458,
+              "length_nt": 21
+            }
+          ]
+        }
+      ],
+      "schema_notes": [
+        "GITV01000607_1: el resumen añade score_name y score_interpretation; el contenido compartido es idéntico."
+      ],
+      "max_raw_both_reference": "GITV01003619_1",
+      "diagnosis": {
+        "confirmed": "Las dos regiones verdes, de 1.107 y 343 nt, generan 72.562 ventanas convencionales y todas están exportadas. La ganadora de 183 nt es consistente y fue la primera candidata aprobada.",
+        "requires_review": "Hay también alineamientos negativos omitidos, aunque la hebra positiva ya permite regiones largas. Validar experimentalmente el resultado; el puntaje no es eficacia medida."
+      }
+    },
+    {
+      "input_index": 8,
+      "gene_id": "cand0024_VhaSFD tcas=657235 StringTie STRG.6645.2 (coincide con Helixer) intrones=9/9 cds_cubierto=1.0",
+      "query_length_nt": 2207,
+      "counts": {
+        "references": 5,
+        "green_regions": 7,
+        "references_with_green": 2,
+        "references_with_conventional": 0,
+        "windows": 7,
+        "conventional_windows": 0,
+        "raw_export_rows": 1585,
+        "errors": 0,
+        "green_red_overlap_nt": 0,
+        "order_sensitive_references": 0,
+        "negative_only_refs": 3,
+        "offtarget_attempts": 2,
+        "offtarget_rejected_attempts": 0
+      },
+      "max_green_length_nt": 176,
+      "max_main_positive_coverage_nt": 176,
+      "max_main_both_strands_coverage_nt": 221,
+      "unique_green_query_nt": 457,
+      "largest_green_regions": [
+        {
+          "reference_id": "GITV01055406_1",
+          "region_id": "green-001",
+          "start_1based": 1,
+          "end_1based_inclusive": 176,
+          "length_nt": 176
+        },
+        {
+          "reference_id": "GITV01055406_1",
+          "region_id": "green-002",
+          "start_1based": 178,
+          "end_1based_inclusive": 280,
+          "length_nt": 103
+        },
+        {
+          "reference_id": "GITV01006946_1",
+          "region_id": "green-003",
+          "start_1based": 391,
+          "end_1based_inclusive": 446,
+          "length_nt": 56
+        },
+        {
+          "reference_id": "GITV01006946_1",
+          "region_id": "green-002",
+          "start_1based": 334,
+          "end_1based_inclusive": 371,
+          "length_nt": 38
+        },
+        {
+          "reference_id": "GITV01006946_1",
+          "region_id": "green-004",
+          "start_1based": 448,
+          "end_1based_inclusive": 485,
+          "length_nt": 38
+        }
+      ],
+      "best_conventional_window": null,
+      "selected_window": {
+        "window_id": "green-002:334-371",
+        "main_target": "GITV01006946_1",
+        "start_1based": 334,
+        "end_1based_inclusive": 371,
+        "length_nt": 38,
+        "window_class": "short_green_region",
+        "efficacy_priority_score": 72.22222222222221,
+        "length_penalty": 23.666666666666664,
+        "adjusted_priority_score": 48.55555555555555,
+        "is_efficient_true_count": 3,
+        "is_efficient_evaluable_count": 18,
+        "selected_priority_rank": 1
+      },
+      "issues": [],
+      "references": [
+        {
+          "input_index": 8,
+          "gene_id": "cand0024_VhaSFD tcas=657235 StringTie STRG.6645.2 (coincide con Helixer) intrones=9/9 cds_cubierto=1.0",
+          "reference_id": "GITV01003434_1",
+          "reference_status": "complete",
+          "original_record_count": 317,
+          "raw_alignment_count": 1571,
+          "main_positive_hits": 0,
+          "main_negative_hits": 745,
+          "green_region_count": 0,
+          "green_nt": 0,
+          "red_nt": 457,
+          "max_green_length_nt": 0,
+          "max_main_positive_coverage_nt": 0,
+          "max_main_both_strands_coverage_nt": 221,
+          "green_red_overlap_nt": 0,
+          "green_vs_final_subtraction_diff_nt": 0,
+          "evaluated_window_count": 0,
+          "conventional_window_count": 0,
+          "eligible_window_count": 0,
+          "length_penalty_weight": 30.0,
+          "selected_length_nt": null,
+          "selected_adjusted_score": null,
+          "offtarget_attempts": 0,
+          "offtarget_rejected_attempts": 0,
+          "issues": [],
+          "green_regions": [],
+          "best_window_per_region": {},
+          "green_red_overlap_positions": [],
+          "selected_green_red_overlap_positions": [],
+          "strict_final_green_max_nt": 0,
+          "raw_main_both_strand_regions": [
+            {
+              "region_id": "green-001",
+              "start_1based": 259,
+              "end_1based_inclusive": 371,
+              "length_nt": 113
+            },
+            {
+              "region_id": "green-002",
+              "start_1based": 391,
+              "end_1based_inclusive": 611,
+              "length_nt": 221
+            },
+            {
+              "region_id": "green-003",
+              "start_1based": 613,
+              "end_1based_inclusive": 635,
+              "length_nt": 23
+            },
+            {
+              "region_id": "green-004",
+              "start_1based": 658,
+              "end_1based_inclusive": 719,
+              "length_nt": 62
+            },
+            {
+              "region_id": "green-005",
+              "start_1based": 721,
+              "end_1based_inclusive": 941,
+              "length_nt": 221
+            },
+            {
+              "region_id": "green-006",
+              "start_1based": 943,
+              "end_1based_inclusive": 1118,
+              "length_nt": 176
+            },
+            {
+              "region_id": "green-007",
+              "start_1based": 1288,
+              "end_1based_inclusive": 1310,
+              "length_nt": 23
+            },
+            {
+              "region_id": "green-008",
+              "start_1based": 1342,
+              "end_1based_inclusive": 1367,
+              "length_nt": 26
+            },
+            {
+              "region_id": "green-009",
+              "start_1based": 1385,
+              "end_1based_inclusive": 1406,
+              "length_nt": 22
+            },
+            {
+              "region_id": "green-010",
+              "start_1based": 1463,
+              "end_1based_inclusive": 1520,
+              "length_nt": 58
+            }
+          ]
+        },
+        {
+          "input_index": 8,
+          "gene_id": "cand0024_VhaSFD tcas=657235 StringTie STRG.6645.2 (coincide con Helixer) intrones=9/9 cds_cubierto=1.0",
+          "reference_id": "GITV01006946_1",
+          "reference_status": "complete",
+          "original_record_count": 317,
+          "raw_alignment_count": 1571,
+          "main_positive_hits": 78,
+          "main_negative_hits": 0,
+          "green_region_count": 5,
+          "green_nt": 178,
+          "red_nt": 279,
+          "max_green_length_nt": 56,
+          "max_main_positive_coverage_nt": 56,
+          "max_main_both_strands_coverage_nt": 56,
+          "green_red_overlap_nt": 0,
+          "green_vs_final_subtraction_diff_nt": 0,
+          "evaluated_window_count": 5,
+          "conventional_window_count": 0,
+          "eligible_window_count": 5,
+          "length_penalty_weight": 30.0,
+          "selected_length_nt": 38,
+          "selected_adjusted_score": 48.55555555555555,
+          "offtarget_attempts": 1,
+          "offtarget_rejected_attempts": 0,
+          "issues": [],
+          "green_regions": [
+            {
+              "region_id": "green-001",
+              "start_1based": 310,
+              "end_1based_inclusive": 332,
+              "length_nt": 23
+            },
+            {
+              "region_id": "green-002",
+              "start_1based": 334,
+              "end_1based_inclusive": 371,
+              "length_nt": 38
+            },
+            {
+              "region_id": "green-003",
+              "start_1based": 391,
+              "end_1based_inclusive": 446,
+              "length_nt": 56
+            },
+            {
+              "region_id": "green-004",
+              "start_1based": 448,
+              "end_1based_inclusive": 485,
+              "length_nt": 38
+            },
+            {
+              "region_id": "green-005",
+              "start_1based": 487,
+              "end_1based_inclusive": 509,
+              "length_nt": 23
+            }
+          ],
+          "best_window_per_region": {
+            "green-001": {
+              "reference_id": "GITV01006946_1",
+              "window_id": "green-001:310-332",
+              "start_1based": 310,
+              "end_1based_inclusive": 332,
+              "length_nt": 23,
+              "efficacy_priority_score": 33.333333333333336,
+              "length_penalty": 26.166666666666668,
+              "adjusted_priority_score": 7.166666666666668
+            },
+            "green-002": {
+              "reference_id": "GITV01006946_1",
+              "window_id": "green-002:334-371",
+              "start_1based": 334,
+              "end_1based_inclusive": 371,
+              "length_nt": 38,
+              "efficacy_priority_score": 72.22222222222221,
+              "length_penalty": 23.666666666666664,
+              "adjusted_priority_score": 48.55555555555555
+            },
+            "green-003": {
+              "reference_id": "GITV01006946_1",
+              "window_id": "green-003:391-446",
+              "start_1based": 391,
+              "end_1based_inclusive": 446,
+              "length_nt": 56,
+              "efficacy_priority_score": 33.333333333333336,
+              "length_penalty": 20.666666666666668,
+              "adjusted_priority_score": 12.666666666666668
+            },
+            "green-004": {
+              "reference_id": "GITV01006946_1",
+              "window_id": "green-004:448-485",
+              "start_1based": 448,
+              "end_1based_inclusive": 485,
+              "length_nt": 38,
+              "efficacy_priority_score": 66.66666666666667,
+              "length_penalty": 23.666666666666664,
+              "adjusted_priority_score": 43.00000000000001
+            },
+            "green-005": {
+              "reference_id": "GITV01006946_1",
+              "window_id": "green-005:487-509",
+              "start_1based": 487,
+              "end_1based_inclusive": 509,
+              "length_nt": 23,
+              "efficacy_priority_score": 66.66666666666667,
+              "length_penalty": 26.166666666666668,
+              "adjusted_priority_score": 40.5
+            }
+          },
+          "green_red_overlap_positions": [],
+          "selected_green_red_overlap_positions": [],
+          "strict_final_green_max_nt": 56,
+          "raw_main_both_strand_regions": [
+            {
+              "region_id": "green-001",
+              "start_1based": 310,
+              "end_1based_inclusive": 332,
+              "length_nt": 23
+            },
+            {
+              "region_id": "green-002",
+              "start_1based": 334,
+              "end_1based_inclusive": 371,
+              "length_nt": 38
+            },
+            {
+              "region_id": "green-003",
+              "start_1based": 391,
+              "end_1based_inclusive": 446,
+              "length_nt": 56
+            },
+            {
+              "region_id": "green-004",
+              "start_1based": 448,
+              "end_1based_inclusive": 485,
+              "length_nt": 38
+            },
+            {
+              "region_id": "green-005",
+              "start_1based": 487,
+              "end_1based_inclusive": 509,
+              "length_nt": 23
+            }
+          ]
+        },
+        {
+          "input_index": 8,
+          "gene_id": "cand0024_VhaSFD tcas=657235 StringTie STRG.6645.2 (coincide con Helixer) intrones=9/9 cds_cubierto=1.0",
+          "reference_id": "GITV01013099_1",
+          "reference_status": "complete",
+          "original_record_count": 317,
+          "raw_alignment_count": 1571,
+          "main_positive_hits": 0,
+          "main_negative_hits": 423,
+          "green_region_count": 0,
+          "green_nt": 0,
+          "red_nt": 457,
+          "max_green_length_nt": 0,
+          "max_main_positive_coverage_nt": 0,
+          "max_main_both_strands_coverage_nt": 107,
+          "green_red_overlap_nt": 0,
+          "green_vs_final_subtraction_diff_nt": 0,
+          "evaluated_window_count": 0,
+          "conventional_window_count": 0,
+          "eligible_window_count": 0,
+          "length_penalty_weight": 30.0,
+          "selected_length_nt": null,
+          "selected_adjusted_score": null,
+          "offtarget_attempts": 0,
+          "offtarget_rejected_attempts": 0,
+          "issues": [],
+          "green_regions": [],
+          "best_window_per_region": {},
+          "green_red_overlap_positions": [],
+          "selected_green_red_overlap_positions": [],
+          "strict_final_green_max_nt": 0,
+          "raw_main_both_strand_regions": [
+            {
+              "region_id": "green-001",
+              "start_1based": 1498,
+              "end_1based_inclusive": 1520,
+              "length_nt": 23
+            },
+            {
+              "region_id": "green-002",
+              "start_1based": 1522,
+              "end_1based_inclusive": 1577,
+              "length_nt": 56
+            },
+            {
+              "region_id": "green-003",
+              "start_1based": 1579,
+              "end_1based_inclusive": 1685,
+              "length_nt": 107
+            },
+            {
+              "region_id": "green-004",
+              "start_1based": 1687,
+              "end_1based_inclusive": 1754,
+              "length_nt": 68
+            },
+            {
+              "region_id": "green-005",
+              "start_1based": 1756,
+              "end_1based_inclusive": 1854,
+              "length_nt": 99
+            },
+            {
+              "region_id": "green-006",
+              "start_1based": 1856,
+              "end_1based_inclusive": 1890,
+              "length_nt": 35
+            },
+            {
+              "region_id": "green-007",
+              "start_1based": 1900,
+              "end_1based_inclusive": 1923,
+              "length_nt": 24
+            },
+            {
+              "region_id": "green-008",
+              "start_1based": 1929,
+              "end_1based_inclusive": 1967,
+              "length_nt": 39
+            },
+            {
+              "region_id": "green-009",
+              "start_1based": 2000,
+              "end_1based_inclusive": 2040,
+              "length_nt": 41
+            },
+            {
+              "region_id": "green-010",
+              "start_1based": 2056,
+              "end_1based_inclusive": 2137,
+              "length_nt": 82
+            },
+            {
+              "region_id": "green-011",
+              "start_1based": 2139,
+              "end_1based_inclusive": 2207,
+              "length_nt": 69
+            }
+          ]
+        },
+        {
+          "input_index": 8,
+          "gene_id": "cand0024_VhaSFD tcas=657235 StringTie STRG.6645.2 (coincide con Helixer) intrones=9/9 cds_cubierto=1.0",
+          "reference_id": "GITV01033474_1",
+          "reference_status": "complete",
+          "original_record_count": 317,
+          "raw_alignment_count": 1571,
+          "main_positive_hits": 0,
+          "main_negative_hits": 86,
+          "green_region_count": 0,
+          "green_nt": 0,
+          "red_nt": 457,
+          "max_green_length_nt": 0,
+          "max_main_positive_coverage_nt": 0,
+          "max_main_both_strands_coverage_nt": 64,
+          "green_red_overlap_nt": 0,
+          "green_vs_final_subtraction_diff_nt": 0,
+          "evaluated_window_count": 0,
+          "conventional_window_count": 0,
+          "eligible_window_count": 0,
+          "length_penalty_weight": 30.0,
+          "selected_length_nt": null,
+          "selected_adjusted_score": null,
+          "offtarget_attempts": 0,
+          "offtarget_rejected_attempts": 0,
+          "issues": [],
+          "green_regions": [],
+          "best_window_per_region": {},
+          "green_red_overlap_positions": [],
+          "selected_green_red_overlap_positions": [],
+          "strict_final_green_max_nt": 0,
+          "raw_main_both_strand_regions": [
+            {
+              "region_id": "green-001",
+              "start_1based": 1734,
+              "end_1based_inclusive": 1754,
+              "length_nt": 21
+            },
+            {
+              "region_id": "green-002",
+              "start_1based": 1770,
+              "end_1based_inclusive": 1833,
+              "length_nt": 64
+            },
+            {
+              "region_id": "green-003",
+              "start_1based": 1856,
+              "end_1based_inclusive": 1890,
+              "length_nt": 35
+            },
+            {
+              "region_id": "green-004",
+              "start_1based": 1929,
+              "end_1based_inclusive": 1953,
+              "length_nt": 25
+            },
+            {
+              "region_id": "green-005",
+              "start_1based": 2000,
+              "end_1based_inclusive": 2040,
+              "length_nt": 41
+            }
+          ]
+        },
+        {
+          "input_index": 8,
+          "gene_id": "cand0024_VhaSFD tcas=657235 StringTie STRG.6645.2 (coincide con Helixer) intrones=9/9 cds_cubierto=1.0",
+          "reference_id": "GITV01055406_1",
+          "reference_status": "complete",
+          "original_record_count": 317,
+          "raw_alignment_count": 1571,
+          "main_positive_hits": 239,
+          "main_negative_hits": 0,
+          "green_region_count": 2,
+          "green_nt": 279,
+          "red_nt": 178,
+          "max_green_length_nt": 176,
+          "max_main_positive_coverage_nt": 176,
+          "max_main_both_strands_coverage_nt": 176,
+          "green_red_overlap_nt": 0,
+          "green_vs_final_subtraction_diff_nt": 0,
+          "evaluated_window_count": 2,
+          "conventional_window_count": 0,
+          "eligible_window_count": 2,
+          "length_penalty_weight": 30.0,
+          "selected_length_nt": 176,
+          "selected_adjusted_score": 47.837606837606835,
+          "offtarget_attempts": 1,
+          "offtarget_rejected_attempts": 0,
+          "issues": [],
+          "green_regions": [
+            {
+              "region_id": "green-001",
+              "start_1based": 1,
+              "end_1based_inclusive": 176,
+              "length_nt": 176
+            },
+            {
+              "region_id": "green-002",
+              "start_1based": 178,
+              "end_1based_inclusive": 280,
+              "length_nt": 103
+            }
+          ],
+          "best_window_per_region": {
+            "green-001": {
+              "reference_id": "GITV01055406_1",
+              "window_id": "green-001:1-176",
+              "start_1based": 1,
+              "end_1based_inclusive": 176,
+              "length_nt": 176,
+              "efficacy_priority_score": 48.5042735042735,
+              "length_penalty": 0.6666666666666676,
+              "adjusted_priority_score": 47.837606837606835
+            },
+            "green-002": {
+              "reference_id": "GITV01055406_1",
+              "window_id": "green-002:178-280",
+              "start_1based": 178,
+              "end_1based_inclusive": 280,
+              "length_nt": 103,
+              "efficacy_priority_score": 50.602409638554214,
+              "length_penalty": 12.833333333333334,
+              "adjusted_priority_score": 37.76907630522088
+            }
+          },
+          "green_red_overlap_positions": [],
+          "selected_green_red_overlap_positions": [],
+          "strict_final_green_max_nt": 176,
+          "raw_main_both_strand_regions": [
+            {
+              "region_id": "green-001",
+              "start_1based": 1,
+              "end_1based_inclusive": 176,
+              "length_nt": 176
+            },
+            {
+              "region_id": "green-002",
+              "start_1based": 178,
+              "end_1based_inclusive": 280,
+              "length_nt": 103
+            }
+          ]
+        }
+      ],
+      "schema_notes": [
+        "GITV01006946_1: el resumen añade score_name y score_interpretation; el contenido compartido es idéntico.",
+        "GITV01055406_1: el resumen añade score_name y score_interpretation; el contenido compartido es idéntico."
+      ],
+      "max_raw_both_reference": "GITV01003434_1",
+      "diagnosis": {
+        "confirmed": "La región de 176 nt está presente y también fue aprobada como ganadora de otra referencia. Obtiene 47,8376 ajustados, por debajo de los 48,5556 de la ventana de 38 nt. No hay regiones verdes >=180 nt exportadas.",
+        "requires_review": "Existen tramos negativos de 221 nt en GITV01003434_1 que no se exportan. Revisar hebras/orientación y el equilibrio del puntaje: la penalización se aplica pero no impone una longitud mínima ni favorece siempre a la más larga."
+      }
+    }
+  ],
+  "total_windows_checked": 98901,
+  "total_references_checked": 49,
+  "total_issues": 0,
+  "notes": [
+    "score_name y score_interpretation son campos adicionales deliberados del resumen; no se consideran inconsistencias."
+  ],
+  "issue_scope": "issues y total_issues cuentan inconsistencias entre artefactos, coordenadas, fórmulas y reconstrucción original. No cuentan limitaciones heredadas del algoritmo, descritas en findings y diagnosis.",
+  "total_artifact_inconsistencies": 0,
+  "findings": [
+    {
+      "type": "inherited_software_limitation",
+      "description": "data_to_json original emite registros solo dentro de if strand == +. Alineamientos negativos conservados no aparecen en los JSON; 30 de 49 referencias tienen hits exclusivamente negativos."
+    },
+    {
+      "type": "inherited_order_artifact",
+      "description": "El helper original conserva snapshots ordenados: 868 en EloC/GITV01000823_1, 1292 en Rpt4/GITV01003734_1 y 1037 en Rpt4/GITV01016098_1 aparecen verdes y rojas a la vez. No afectan a las ganadoras."
+    },
+    {
+      "type": "auxiliary_script_not_used",
+      "description": "region_verde.py usa min/max sobre posiciones discontinuas y trata coordenadas originales como base 0. Puede unir huecos y desplazar +1; no es la ruta usada por este batch."
+    },
+    {
+      "type": "existing_heuristic_behavior",
+      "description": "Hsp83, mts, snRNP-U1-70K y Rpt4 tienen cero siRNAs eficientes en la ganadora; el score sigue siendo evaluable por GC y diversidad. No hay mínimo de fracción eficiente ni de 180 nt en la selección actual."
+    }
+  ],
+  "quick_tests": {
+    "command": "python -B -m pytest -p no:cacheprovider tests/test_performance_regression.py::test_order_sensitive_green_mask_matches_original_for_shuffled_hits tests/test_length_priority_console.py::test_lengths_preserve_original_science tests/test_length_priority_console.py::test_missing_and_bicc_example -q",
+    "result": "8 passed in 1.50s"
+  },
+  "selected_window_gc_check": {
+    "checked": 8,
+    "mismatches": []
+  }
+}
